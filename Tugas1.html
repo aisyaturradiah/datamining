@@ -52,6 +52,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Diskritisasi" href="diskritisasi.html" />
     <link rel="prev" title="Welcome to your Jupyter Book" href="intro.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -121,6 +122,11 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
    Statistik Deskriptif
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="diskritisasi.html">
+   Diskritisasi
   </a>
  </li>
 </ul>
@@ -333,6 +339,7 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="statistik-deskriptif">
 <h1>Statistik Deskriptif<a class="headerlink" href="#statistik-deskriptif" title="Permalink to this headline">#</a></h1>
+<p>Dari goole colab import drive</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">google.colab</span> <span class="kn">import</span> <span class="n">drive</span>
@@ -380,6 +387,10 @@ title="Print to PDF"
 <ol class="simple">
 <li><p>Membaca data dari URL ( dataset: liver patients)</p></li>
 </ol>
+<p>Dari matplotlib impor rcParams, cycler
+impor matlotlip.pyplot sebagai plt
+impor numpy sebagai np
+plt.ion</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">rcParams</span><span class="p">,</span> <span class="n">cycler</span>
@@ -414,12 +425,13 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/Tugas1_4_0.png" src="_images/Tugas1_4_0.png" />
+<img alt="_images/Tugas1_6_0.png" src="_images/Tugas1_6_0.png" />
 </div>
 </div>
 <ol class="simple">
 <li><p>Membaca data dari URL ( dataset: liver patients)</p></li>
 </ol>
+<p>import dengan menggunakan pandas untuk membaca data dari url</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -429,6 +441,7 @@ title="Print to PDF"
 </div>
 </div>
 <p>Menampilkan dataset</p>
+<p>info()–&gt; untuk menampilkan informasi detail tentang dataframe, seperti jumlah baris data, nama kolom beserta jumlah data dan tipe datanya.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Menampilkan informasi data</span>
@@ -459,6 +472,7 @@ memory usage: 50.2+ KB
 </div>
 </div>
 </div>
+<p>df –&gt; untuk menampikan semua data yang ada dari <a class="reference external" href="http://df.info">df.info</a>() yang sebelumnya untuk menampilkan column, dtype nya.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span>
@@ -740,6 +754,7 @@ memory usage: 50.2+ KB
 <li><p>Membuat statistik Diskriptif dari Data (setiap atribut)</p></li>
 </ol>
 <p>a) Menggunakan fungsi describe untuk menampilkan informasi dari kolom numerik</p>
+<p>describe –&gt; menampilkan deskriptif statistik data, hanya kolom bertipe numerik yang akan ditampilkan statistiknya.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
@@ -1109,7 +1124,7 @@ Dataset --&gt; Mean:  1.2864493996569468 Median:  1.0 Modus:  1
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[Text(0.5, 1.0, &#39;Positive Skewed&#39;)]
 </pre></div>
 </div>
-<img alt="_images/Tugas1_17_2.png" src="_images/Tugas1_17_2.png" />
+<img alt="_images/Tugas1_24_2.png" src="_images/Tugas1_24_2.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1127,7 +1142,7 @@ Dataset --&gt; Mean:  1.2864493996569468 Median:  1.0 Modus:  1
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[Text(0.5, 1.0, &#39;Positive Skewed&#39;)]
 </pre></div>
 </div>
-<img alt="_images/Tugas1_18_2.png" src="_images/Tugas1_18_2.png" />
+<img alt="_images/Tugas1_25_2.png" src="_images/Tugas1_25_2.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1145,7 +1160,7 @@ Dataset --&gt; Mean:  1.2864493996569468 Median:  1.0 Modus:  1
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[Text(0.5, 1.0, &#39;Positive Skewed&#39;)]
 </pre></div>
 </div>
-<img alt="_images/Tugas1_19_2.png" src="_images/Tugas1_19_2.png" />
+<img alt="_images/Tugas1_26_2.png" src="_images/Tugas1_26_2.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1163,7 +1178,7 @@ Dataset --&gt; Mean:  1.2864493996569468 Median:  1.0 Modus:  1
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[Text(0.5, 1.0, &#39;Positive Skewed&#39;)]
 </pre></div>
 </div>
-<img alt="_images/Tugas1_20_2.png" src="_images/Tugas1_20_2.png" />
+<img alt="_images/Tugas1_27_2.png" src="_images/Tugas1_27_2.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1181,7 +1196,7 @@ Dataset --&gt; Mean:  1.2864493996569468 Median:  1.0 Modus:  1
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[Text(0.5, 1.0, &#39;Positive Skewed&#39;)]
 </pre></div>
 </div>
-<img alt="_images/Tugas1_21_2.png" src="_images/Tugas1_21_2.png" />
+<img alt="_images/Tugas1_28_2.png" src="_images/Tugas1_28_2.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1199,7 +1214,7 @@ Dataset --&gt; Mean:  1.2864493996569468 Median:  1.0 Modus:  1
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[Text(0.5, 1.0, &#39;Positive Skewed&#39;)]
 </pre></div>
 </div>
-<img alt="_images/Tugas1_22_2.png" src="_images/Tugas1_22_2.png" />
+<img alt="_images/Tugas1_29_2.png" src="_images/Tugas1_29_2.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1217,7 +1232,7 @@ Dataset --&gt; Mean:  1.2864493996569468 Median:  1.0 Modus:  1
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[Text(0.5, 1.0, &#39;Negative Skewed&#39;)]
 </pre></div>
 </div>
-<img alt="_images/Tugas1_23_2.png" src="_images/Tugas1_23_2.png" />
+<img alt="_images/Tugas1_30_2.png" src="_images/Tugas1_30_2.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1235,7 +1250,7 @@ Dataset --&gt; Mean:  1.2864493996569468 Median:  1.0 Modus:  1
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[Text(0.5, 1.0, &#39;Positive Skewed&#39;)]
 </pre></div>
 </div>
-<img alt="_images/Tugas1_24_2.png" src="_images/Tugas1_24_2.png" />
+<img alt="_images/Tugas1_31_2.png" src="_images/Tugas1_31_2.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1253,7 +1268,7 @@ Dataset --&gt; Mean:  1.2864493996569468 Median:  1.0 Modus:  1
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[Text(0.5, 1.0, &#39;Positive Skewed&#39;)]
 </pre></div>
 </div>
-<img alt="_images/Tugas1_25_2.png" src="_images/Tugas1_25_2.png" />
+<img alt="_images/Tugas1_32_2.png" src="_images/Tugas1_32_2.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1271,7 +1286,7 @@ Dataset --&gt; Mean:  1.2864493996569468 Median:  1.0 Modus:  1
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[Text(0.5, 1.0, &#39;Symetric Skewed&#39;)]
 </pre></div>
 </div>
-<img alt="_images/Tugas1_26_2.png" src="_images/Tugas1_26_2.png" />
+<img alt="_images/Tugas1_33_2.png" src="_images/Tugas1_33_2.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1317,7 +1332,7 @@ Dataset --&gt; Mean:  1.2864493996569468 Median:  1.0 Modus:  1
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[Text(0.5, 1.0, &#39;Positive Skewed&#39;)]
 </pre></div>
 </div>
-<img alt="_images/Tugas1_27_2.png" src="_images/Tugas1_27_2.png" />
+<img alt="_images/Tugas1_34_2.png" src="_images/Tugas1_34_2.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1363,7 +1378,7 @@ Dataset --&gt; Mean:  1.2864493996569468 Median:  1.0 Modus:  1
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[Text(0.5, 1.0, &#39;Positive Skewed&#39;)]
 </pre></div>
 </div>
-<img alt="_images/Tugas1_28_2.png" src="_images/Tugas1_28_2.png" />
+<img alt="_images/Tugas1_35_2.png" src="_images/Tugas1_35_2.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1393,7 +1408,7 @@ Dataset --&gt; Mean:  1.2864493996569468 Median:  1.0 Modus:  1
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[Text(0.5, 1.0, &#39;Negative Skewed&#39;)]
 </pre></div>
 </div>
-<img alt="_images/Tugas1_29_2.png" src="_images/Tugas1_29_2.png" />
+<img alt="_images/Tugas1_36_2.png" src="_images/Tugas1_36_2.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1496,6 +1511,13 @@ Requirement already satisfied: webencodings in /usr/local/lib/python3.7/dist-pac
             <p class="prev-next-subtitle">previous</p>
             <p class="prev-next-title">Welcome to your Jupyter Book</p>
         </div>
+    </a>
+    <a class='right-next' id="next-link" href="diskritisasi.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Diskritisasi</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
     </a>
 </div>
             </footer>
