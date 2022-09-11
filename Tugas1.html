@@ -50,6 +50,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Diskritisasi" href="diskritisasi.html" />
@@ -313,12 +315,43 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#membaca-data-dari-url-dataset-liver-patients">
+   <strong>
+    1. Membaca data dari URL ( dataset: liver patients)
+   </strong>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#membuat-statistik-diskriptif-dari-data-setiap-atribut">
+   2. Membuat statistik Diskriptif dari Data (setiap atribut)
+  </a>
+ </li>
+</ul>
+
+    </nav>
 </div>
     </div>
     <div class="article row">
@@ -330,6 +363,26 @@ title="Print to PDF"
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#membaca-data-dari-url-dataset-liver-patients">
+   <strong>
+    1. Membaca data dari URL ( dataset: liver patients)
+   </strong>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#membuat-statistik-diskriptif-dari-data-setiap-atribut">
+   2. Membuat statistik Diskriptif dari Data (setiap atribut)
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -384,9 +437,6 @@ title="Print to PDF"
 </div>
 </div>
 </div>
-<ol class="simple">
-<li><p>Membaca data dari URL ( dataset: liver patients)</p></li>
-</ol>
 <p>Dari matplotlib impor rcParams, cycler
 impor matlotlip.pyplot sebagai plt
 impor numpy sebagai np
@@ -425,13 +475,12 @@ plt.ion</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/Tugas1_6_0.png" src="_images/Tugas1_6_0.png" />
+<img alt="_images/Tugas1_5_0.png" src="_images/Tugas1_5_0.png" />
 </div>
 </div>
-<ol class="simple">
-<li><p>Membaca data dari URL ( dataset: liver patients)</p></li>
-</ol>
-<p>import dengan menggunakan pandas untuk membaca data dari url</p>
+<section id="membaca-data-dari-url-dataset-liver-patients">
+<h2><strong>1. Membaca data dari URL ( dataset: liver patients)</strong><a class="headerlink" href="#membaca-data-dari-url-dataset-liver-patients" title="Permalink to this headline">#</a></h2>
+<p><em>import dengan menggunakan pandas untuk membaca data dari url</em></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -440,8 +489,10 @@ plt.ion</p>
 </div>
 </div>
 </div>
-<p>Menampilkan dataset</p>
-<p>info()–&gt; untuk menampilkan informasi detail tentang dataframe, seperti jumlah baris data, nama kolom beserta jumlah data dan tipe datanya.</p>
+<p><em>Menampilkan dataset</em></p>
+<ul class="simple">
+<li><p>info() –&gt; <em>untuk menampilkan informasi detail tentang dataframe, seperti jumlah baris data, nama kolom beserta jumlah data dan tipe datanya.</em></p></li>
+</ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Menampilkan informasi data</span>
@@ -472,16 +523,19 @@ memory usage: 50.2+ KB
 </div>
 </div>
 </div>
-<p>df –&gt; untuk menampikan semua data yang ada dari <a class="reference external" href="http://df.info">df.info</a>() yang sebelumnya untuk menampilkan column, dtype nya.</p>
+<ul class="simple">
+<li><p>df –&gt; <em>untuk menampikan semua data yang ada dari <a class="reference external" href="http://df.info">df.info</a>() yang sebelumnya untuk menampilkan column, dtype nya.</em></p></li>
+</ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#menampilkan data</span>
+<span class="n">df</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-e540c5d6-a417-47ba-8755-2178e5b2bd87">
+  <div id="df-90ebb0c3-1180-4db8-8814-e927efe7427f">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -673,7 +727,7 @@ memory usage: 50.2+ KB
 </table>
 <p>583 rows × 11 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-e540c5d6-a417-47ba-8755-2178e5b2bd87')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-90ebb0c3-1180-4db8-8814-e927efe7427f')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -724,12 +778,12 @@ memory usage: 50.2+ KB
 
       <script>
         const buttonEl =
-          document.querySelector('#df-e540c5d6-a417-47ba-8755-2178e5b2bd87 button.colab-df-convert');
+          document.querySelector('#df-90ebb0c3-1180-4db8-8814-e927efe7427f button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-e540c5d6-a417-47ba-8755-2178e5b2bd87');
+          const element = document.querySelector('#df-90ebb0c3-1180-4db8-8814-e927efe7427f');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -750,11 +804,399 @@ memory usage: 50.2+ KB
   </div>
 </div></div>
 </div>
-<ol class="simple">
-<li><p>Membuat statistik Diskriptif dari Data (setiap atribut)</p></li>
-</ol>
-<p>a) Menggunakan fungsi describe untuk menampilkan informasi dari kolom numerik</p>
-<p>describe –&gt; menampilkan deskriptif statistik data, hanya kolom bertipe numerik yang akan ditampilkan statistiknya.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Menampilkan 5 data pertama</span>
+<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="df-db15d1ad-8612-4c95-9b70-c3f766c35075">
+    <div class="colab-df-container">
+      <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Age</th>
+      <th>Gender</th>
+      <th>Total_Bilirubin</th>
+      <th>Direct_Bilirubin</th>
+      <th>Alkaline_Phosphotase</th>
+      <th>Alamine_Aminotransferase</th>
+      <th>Aspartate_Aminotransferase</th>
+      <th>Total_Protiens</th>
+      <th>Albumin</th>
+      <th>Albumin_and_Globulin_Ratio</th>
+      <th>Dataset</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>65</td>
+      <td>Female</td>
+      <td>0.7</td>
+      <td>0.1</td>
+      <td>187</td>
+      <td>16</td>
+      <td>18</td>
+      <td>6.8</td>
+      <td>3.3</td>
+      <td>0.90</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>62</td>
+      <td>Male</td>
+      <td>10.9</td>
+      <td>5.5</td>
+      <td>699</td>
+      <td>64</td>
+      <td>100</td>
+      <td>7.5</td>
+      <td>3.2</td>
+      <td>0.74</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>62</td>
+      <td>Male</td>
+      <td>7.3</td>
+      <td>4.1</td>
+      <td>490</td>
+      <td>60</td>
+      <td>68</td>
+      <td>7.0</td>
+      <td>3.3</td>
+      <td>0.89</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>58</td>
+      <td>Male</td>
+      <td>1.0</td>
+      <td>0.4</td>
+      <td>182</td>
+      <td>14</td>
+      <td>20</td>
+      <td>6.8</td>
+      <td>3.4</td>
+      <td>1.00</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>72</td>
+      <td>Male</td>
+      <td>3.9</td>
+      <td>2.0</td>
+      <td>195</td>
+      <td>27</td>
+      <td>59</td>
+      <td>7.3</td>
+      <td>2.4</td>
+      <td>0.40</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+      <button class="colab-df-convert" onclick="convertToInteractive('df-db15d1ad-8612-4c95-9b70-c3f766c35075')"
+              title="Convert this dataframe to an interactive table."
+              style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+       width="24px">
+    <path d="M0 0h24v24H0V0z" fill="none"/>
+    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
+  </svg>
+      </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      flex-wrap:wrap;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+      <script>
+        const buttonEl =
+          document.querySelector('#df-db15d1ad-8612-4c95-9b70-c3f766c35075 button.colab-df-convert');
+        buttonEl.style.display =
+          google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+        async function convertToInteractive(key) {
+          const element = document.querySelector('#df-db15d1ad-8612-4c95-9b70-c3f766c35075');
+          const dataTable =
+            await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                     [key], {});
+          if (!dataTable) return;
+
+          const docLinkHtml = 'Like what you see? Visit the ' +
+            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+            + ' to learn more about interactive tables.';
+          element.innerHTML = '';
+          dataTable['output_type'] = 'display_data';
+          await google.colab.output.renderOutput(dataTable, element);
+          const docLink = document.createElement('div');
+          docLink.innerHTML = docLinkHtml;
+          element.appendChild(docLink);
+        }
+      </script>
+    </div>
+  </div>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Menampilkan 5 data terakhir</span>
+<span class="n">df</span><span class="o">.</span><span class="n">tail</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="df-3f346a6f-03af-49d0-b8b1-236fe5837568">
+    <div class="colab-df-container">
+      <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Age</th>
+      <th>Gender</th>
+      <th>Total_Bilirubin</th>
+      <th>Direct_Bilirubin</th>
+      <th>Alkaline_Phosphotase</th>
+      <th>Alamine_Aminotransferase</th>
+      <th>Aspartate_Aminotransferase</th>
+      <th>Total_Protiens</th>
+      <th>Albumin</th>
+      <th>Albumin_and_Globulin_Ratio</th>
+      <th>Dataset</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>578</th>
+      <td>60</td>
+      <td>Male</td>
+      <td>0.5</td>
+      <td>0.1</td>
+      <td>500</td>
+      <td>20</td>
+      <td>34</td>
+      <td>5.9</td>
+      <td>1.6</td>
+      <td>0.37</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>579</th>
+      <td>40</td>
+      <td>Male</td>
+      <td>0.6</td>
+      <td>0.1</td>
+      <td>98</td>
+      <td>35</td>
+      <td>31</td>
+      <td>6.0</td>
+      <td>3.2</td>
+      <td>1.10</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>580</th>
+      <td>52</td>
+      <td>Male</td>
+      <td>0.8</td>
+      <td>0.2</td>
+      <td>245</td>
+      <td>48</td>
+      <td>49</td>
+      <td>6.4</td>
+      <td>3.2</td>
+      <td>1.00</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>581</th>
+      <td>31</td>
+      <td>Male</td>
+      <td>1.3</td>
+      <td>0.5</td>
+      <td>184</td>
+      <td>29</td>
+      <td>32</td>
+      <td>6.8</td>
+      <td>3.4</td>
+      <td>1.00</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>582</th>
+      <td>38</td>
+      <td>Male</td>
+      <td>1.0</td>
+      <td>0.3</td>
+      <td>216</td>
+      <td>21</td>
+      <td>24</td>
+      <td>7.3</td>
+      <td>4.4</td>
+      <td>1.50</td>
+      <td>2</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+      <button class="colab-df-convert" onclick="convertToInteractive('df-3f346a6f-03af-49d0-b8b1-236fe5837568')"
+              title="Convert this dataframe to an interactive table."
+              style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+       width="24px">
+    <path d="M0 0h24v24H0V0z" fill="none"/>
+    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
+  </svg>
+      </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      flex-wrap:wrap;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+      <script>
+        const buttonEl =
+          document.querySelector('#df-3f346a6f-03af-49d0-b8b1-236fe5837568 button.colab-df-convert');
+        buttonEl.style.display =
+          google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+        async function convertToInteractive(key) {
+          const element = document.querySelector('#df-3f346a6f-03af-49d0-b8b1-236fe5837568');
+          const dataTable =
+            await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                     [key], {});
+          if (!dataTable) return;
+
+          const docLinkHtml = 'Like what you see? Visit the ' +
+            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+            + ' to learn more about interactive tables.';
+          element.innerHTML = '';
+          dataTable['output_type'] = 'display_data';
+          await google.colab.output.renderOutput(dataTable, element);
+          const docLink = document.createElement('div');
+          docLink.innerHTML = docLinkHtml;
+          element.appendChild(docLink);
+        }
+      </script>
+    </div>
+  </div>
+</div></div>
+</div>
+</section>
+<section id="membuat-statistik-diskriptif-dari-data-setiap-atribut">
+<h2>2. Membuat statistik Diskriptif dari Data (setiap atribut)<a class="headerlink" href="#membuat-statistik-diskriptif-dari-data-setiap-atribut" title="Permalink to this headline">#</a></h2>
+<p><strong>a) Menggunakan fungsi describe untuk menampilkan informasi dari kolom numerik</strong></p>
+<ul class="simple">
+<li><p>describe –&gt; <em>menampilkan deskriptif statistik data, hanya kolom bertipe numerik yang akan ditampilkan statistiknya.</em></p></li>
+</ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
@@ -763,7 +1205,7 @@ memory usage: 50.2+ KB
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-6d6132aa-faba-4ab7-bfc8-7f32cac671e7">
+  <div id="df-5be095b2-abab-4dd0-b176-67e4908d9eb0">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -903,7 +1345,7 @@ memory usage: 50.2+ KB
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-6d6132aa-faba-4ab7-bfc8-7f32cac671e7')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-5be095b2-abab-4dd0-b176-67e4908d9eb0')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -954,12 +1396,12 @@ memory usage: 50.2+ KB
 
       <script>
         const buttonEl =
-          document.querySelector('#df-6d6132aa-faba-4ab7-bfc8-7f32cac671e7 button.colab-df-convert');
+          document.querySelector('#df-5be095b2-abab-4dd0-b176-67e4908d9eb0 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-6d6132aa-faba-4ab7-bfc8-7f32cac671e7');
+          const element = document.querySelector('#df-5be095b2-abab-4dd0-b176-67e4908d9eb0');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -980,7 +1422,7 @@ memory usage: 50.2+ KB
   </div>
 </div></div>
 </div>
-<p>Statistik Diskriptif dalam data ini yaitu:</p>
+<p><strong>Statistik Diskriptif dalam data ini yaitu:</strong></p>
 <ul class="simple">
 <li><p>count: jumlah nilai yang tidak kosong</p></li>
 <li><p>mean: Nilai rata-rata</p></li>
@@ -992,7 +1434,1142 @@ memory usage: 50.2+ KB
 <li><p>median: nilai tengah</p></li>
 <li><p>mode: data yang paling banyak muncul</p></li>
 </ul>
-<p>b) menggunakan mean, median, modus</p>
+<p><strong>b) menggunakan mean, median, modus</strong></p>
+<ul class="simple">
+<li><p><strong>Mean</strong></p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mean</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Age&#39;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Age&#39;</span><span class="p">]),</span><span class="s1">&#39;Total_Bilirubin&#39;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Total_Bilirubin&#39;</span><span class="p">]),</span><span class="s1">&#39;Direct_Bilirubin&#39;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Direct_Bilirubin&#39;</span><span class="p">]),</span>
+        <span class="s1">&#39;Alkaline_Phosphotase&#39;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Alkaline_Phosphotase&#39;</span><span class="p">]),</span><span class="s1">&#39;Alamine_Aminotransferase&#39;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Alamine_Aminotransferase&#39;</span><span class="p">]),</span>
+    <span class="s1">&#39;Aspartate_Aminotransferase&#39;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Aspartate_Aminotransferase&#39;</span><span class="p">]),</span><span class="s1">&#39;Total_Protiens&#39;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Total_Protiens&#39;</span><span class="p">]),</span>
+    <span class="s1">&#39;Albumin&#39;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Albumin&#39;</span><span class="p">]),</span><span class="s1">&#39;Albumin_and_Globulin_Ratio&#39;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Albumin_and_Globulin_Ratio&#39;</span><span class="p">]),</span><span class="s1">&#39;Dataset&#39;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Dataset&#39;</span><span class="p">])</span>
+    <span class="p">}</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">mean</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;mean&#39;</span><span class="p">])</span>
+<span class="n">df</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="df-9e640a29-ba51-4fdd-bc8e-48fd3e9aadd5">
+    <div class="colab-df-container">
+      <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Age</th>
+      <th>Total_Bilirubin</th>
+      <th>Direct_Bilirubin</th>
+      <th>Alkaline_Phosphotase</th>
+      <th>Alamine_Aminotransferase</th>
+      <th>Aspartate_Aminotransferase</th>
+      <th>Total_Protiens</th>
+      <th>Albumin</th>
+      <th>Albumin_and_Globulin_Ratio</th>
+      <th>Dataset</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>mean</th>
+      <td>44.746141</td>
+      <td>3.298799</td>
+      <td>1.486106</td>
+      <td>290.576329</td>
+      <td>80.713551</td>
+      <td>109.910806</td>
+      <td>6.48319</td>
+      <td>3.141852</td>
+      <td>0.947064</td>
+      <td>1.286449</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+      <button class="colab-df-convert" onclick="convertToInteractive('df-9e640a29-ba51-4fdd-bc8e-48fd3e9aadd5')"
+              title="Convert this dataframe to an interactive table."
+              style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+       width="24px">
+    <path d="M0 0h24v24H0V0z" fill="none"/>
+    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
+  </svg>
+      </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      flex-wrap:wrap;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+      <script>
+        const buttonEl =
+          document.querySelector('#df-9e640a29-ba51-4fdd-bc8e-48fd3e9aadd5 button.colab-df-convert');
+        buttonEl.style.display =
+          google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+        async function convertToInteractive(key) {
+          const element = document.querySelector('#df-9e640a29-ba51-4fdd-bc8e-48fd3e9aadd5');
+          const dataTable =
+            await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                     [key], {});
+          if (!dataTable) return;
+
+          const docLinkHtml = 'Like what you see? Visit the ' +
+            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+            + ' to learn more about interactive tables.';
+          element.innerHTML = '';
+          dataTable['output_type'] = 'display_data';
+          await google.colab.output.renderOutput(dataTable, element);
+          const docLink = document.createElement('div');
+          docLink.innerHTML = docLinkHtml;
+          element.appendChild(docLink);
+        }
+      </script>
+    </div>
+  </div>
+</div></div>
+</div>
+<p><strong>RUMUS Mean</strong></p>
+<p><em>Dalam statistika dan matematika, mean disebut juga dengan rata-rata. Jadi, definisi mean adalah nilai rata-rata dari sekumpulan data yang terdiri dari dua atau lebih.</em></p>
+<p><strong>RUMUS Mean untuk data tunggal</strong>
+$<span class="math notranslate nohighlight">\(\bar{x}=\frac{\sum x_i}{n}
+\)</span>$
+<em>Keterangan:</em></p>
+<p><span class="math notranslate nohighlight">\(\bar{x}:\)</span> nilai rata-rata</p>
+<p><span class="math notranslate nohighlight">\(\mathrm{x}_{\mathrm{i}}\)</span> : nilai data ke-i</p>
+<p>n : banyaknya data</p>
+<ul class="simple">
+<li><p><strong>MEDIAN</strong></p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">median</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Age&#39;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">median</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Age&#39;</span><span class="p">]),</span><span class="s1">&#39;Total_Bilirubin&#39;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">median</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Total_Bilirubin&#39;</span><span class="p">]),</span><span class="s1">&#39;Direct_Bilirubin&#39;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">median</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Direct_Bilirubin&#39;</span><span class="p">]),</span>
+        <span class="s1">&#39;Alkaline_Phosphotase&#39;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">median</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Alkaline_Phosphotase&#39;</span><span class="p">]),</span><span class="s1">&#39;Alamine_Aminotransferase&#39;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">median</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Alamine_Aminotransferase&#39;</span><span class="p">]),</span>
+    <span class="s1">&#39;Aspartate_Aminotransferase&#39;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">median</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Aspartate_Aminotransferase&#39;</span><span class="p">]),</span><span class="s1">&#39;Total_Protiens&#39;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">median</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Total_Protiens&#39;</span><span class="p">]),</span>
+    <span class="s1">&#39;Albumin&#39;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">median</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Albumin&#39;</span><span class="p">]),</span><span class="s1">&#39;Albumin_and_Globulin_Ratio&#39;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">median</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Albumin_and_Globulin_Ratio&#39;</span><span class="p">]),</span><span class="s1">&#39;Dataset&#39;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">median</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Dataset&#39;</span><span class="p">])</span>
+    <span class="p">}</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">median</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;median&#39;</span><span class="p">])</span>
+<span class="n">df</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="df-f569361b-07fd-46e1-845c-5217cfa7b875">
+    <div class="colab-df-container">
+      <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Age</th>
+      <th>Total_Bilirubin</th>
+      <th>Direct_Bilirubin</th>
+      <th>Alkaline_Phosphotase</th>
+      <th>Alamine_Aminotransferase</th>
+      <th>Aspartate_Aminotransferase</th>
+      <th>Total_Protiens</th>
+      <th>Albumin</th>
+      <th>Albumin_and_Globulin_Ratio</th>
+      <th>Dataset</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>median</th>
+      <td>44.746141</td>
+      <td>3.298799</td>
+      <td>1.486106</td>
+      <td>290.576329</td>
+      <td>80.713551</td>
+      <td>109.910806</td>
+      <td>6.48319</td>
+      <td>3.141852</td>
+      <td>0.947064</td>
+      <td>1.286449</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+      <button class="colab-df-convert" onclick="convertToInteractive('df-f569361b-07fd-46e1-845c-5217cfa7b875')"
+              title="Convert this dataframe to an interactive table."
+              style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+       width="24px">
+    <path d="M0 0h24v24H0V0z" fill="none"/>
+    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
+  </svg>
+      </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      flex-wrap:wrap;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+      <script>
+        const buttonEl =
+          document.querySelector('#df-f569361b-07fd-46e1-845c-5217cfa7b875 button.colab-df-convert');
+        buttonEl.style.display =
+          google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+        async function convertToInteractive(key) {
+          const element = document.querySelector('#df-f569361b-07fd-46e1-845c-5217cfa7b875');
+          const dataTable =
+            await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                     [key], {});
+          if (!dataTable) return;
+
+          const docLinkHtml = 'Like what you see? Visit the ' +
+            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+            + ' to learn more about interactive tables.';
+          element.innerHTML = '';
+          dataTable['output_type'] = 'display_data';
+          await google.colab.output.renderOutput(dataTable, element);
+          const docLink = document.createElement('div');
+          docLink.innerHTML = docLinkHtml;
+          element.appendChild(docLink);
+        }
+      </script>
+    </div>
+  </div>
+</div></div>
+</div>
+<p><strong>RUMUS MEDIAN</strong></p>
+<p><em>Median disebut juga dengan nilai tengah. Median diperoleh dengan cara mengambil nilai tengah pada data yang telah disusun secara berurutan dari angka terkecil ke terbesar.</em></p>
+<p>Pada data tunggal untuk menentukan median yaitu:
+Misalkan banyaknya data n,</p>
+<p>Untuk <span class="math notranslate nohighlight">\(n\)</span> ganjil: <span class="math notranslate nohighlight">\(M e=x_{\frac{1}{2}(n+1)}\)</span></p>
+<p>Untuk <span class="math notranslate nohighlight">\(n\)</span> genap: <span class="math notranslate nohighlight">\(M e=\frac{\frac{x_n}{2}+\frac{x_n}{2}+1}{2}\)</span></p>
+<p><em>Keterangan:</em></p>
+<p><span class="math notranslate nohighlight">\(x_{\frac{n}{2}}=\)</span> data pada urutan ke- <span class="math notranslate nohighlight">\(\frac{n}{2}\)</span> setelah diurutkan.</p>
+<ul class="simple">
+<li><p><strong>MODUS</strong></p></li>
+</ul>
+<p><em>Modus adalah nilai data yang paling sering muncul atau nilai data yang frekuensinya paling besar.</em></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">statistics</span> <span class="k">as</span> <span class="nn">st</span>
+<span class="kn">from</span> <span class="nn">scipy</span> <span class="kn">import</span> <span class="n">stats</span>
+<span class="n">modus</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Age&#39;</span><span class="p">:</span><span class="n">stats</span><span class="o">.</span><span class="n">mode</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Age&#39;</span><span class="p">]),</span>
+		<span class="s1">&#39;Total_Bilirubin&#39;</span><span class="p">:</span> <span class="n">stats</span><span class="o">.</span><span class="n">mode</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Total_Bilirubin&#39;</span><span class="p">]),</span><span class="s1">&#39;Direct_Bilirubin&#39;</span><span class="p">:</span><span class="n">stats</span><span class="o">.</span><span class="n">mode</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Direct_Bilirubin&#39;</span><span class="p">]),</span>
+    <span class="s1">&#39;Alkaline_Phosphotase&#39;</span><span class="p">:</span><span class="n">stats</span><span class="o">.</span><span class="n">mode</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Alkaline_Phosphotase&#39;</span><span class="p">]),</span><span class="s1">&#39;Alamine_Aminotransferase&#39;</span><span class="p">:</span><span class="n">stats</span><span class="o">.</span><span class="n">mode</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Alamine_Aminotransferase&#39;</span><span class="p">]),</span>
+    <span class="s1">&#39;Aspartate_Aminotransferase&#39;</span><span class="p">:</span><span class="n">stats</span><span class="o">.</span><span class="n">mode</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Aspartate_Aminotransferase&#39;</span><span class="p">]),</span><span class="s1">&#39;Total_Protiens&#39;</span><span class="p">:</span><span class="n">stats</span><span class="o">.</span><span class="n">mode</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Total_Protiens&#39;</span><span class="p">]),</span>
+    <span class="s1">&#39;Albumin&#39;</span><span class="p">:</span><span class="n">stats</span><span class="o">.</span><span class="n">mode</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Albumin&#39;</span><span class="p">]),</span><span class="s1">&#39;Albumin_and_Globulin_Ratio&#39;</span><span class="p">:</span><span class="n">stats</span><span class="o">.</span><span class="n">mode</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Albumin_and_Globulin_Ratio&#39;</span><span class="p">]),</span><span class="s1">&#39;Dataset&#39;</span><span class="p">:</span><span class="n">stats</span><span class="o">.</span><span class="n">mode</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Dataset&#39;</span><span class="p">])</span>
+    <span class="p">}</span>
+
+<span class="n">modus</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;Age&#39;: ModeResult(mode=array([60]), count=array([34])),
+ &#39;Total_Bilirubin&#39;: ModeResult(mode=array([0.8]), count=array([91])),
+ &#39;Direct_Bilirubin&#39;: ModeResult(mode=array([0.2]), count=array([194])),
+ &#39;Alkaline_Phosphotase&#39;: ModeResult(mode=array([198]), count=array([11])),
+ &#39;Alamine_Aminotransferase&#39;: ModeResult(mode=array([25]), count=array([25])),
+ &#39;Aspartate_Aminotransferase&#39;: ModeResult(mode=array([23]), count=array([16])),
+ &#39;Total_Protiens&#39;: ModeResult(mode=array([7.]), count=array([32])),
+ &#39;Albumin&#39;: ModeResult(mode=array([3.]), count=array([45])),
+ &#39;Albumin_and_Globulin_Ratio&#39;: ModeResult(mode=array([1.]), count=array([106])),
+ &#39;Dataset&#39;: ModeResult(mode=array([1]), count=array([416]))}
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p><strong>Standar Deviasi</strong></p></li>
+</ul>
+<p><em>Standar deviasi atau simpangan baku biasanya diajarkan pada ilmu statistik untuk mengukur tingkat kesamaan atau kedekatan dalam suatu kelompok.</em></p>
+<p>Standar deviasi adalah nilai statistik yang sering kali dipakai dalam menentukan kedekatan sebaran data yang ada di dalam sampel dan seberapa dekat titik data individu dengan mean atau rata-rata nilai dari sampel itu sendiri.</p>
+<p><strong>RUMUS STANDAR DEVIASI</strong></p>
+<p>Untuk Data Tunggal :
+<span class="math notranslate nohighlight">\(S=\sqrt{\frac{\sum\left(x_i-\bar{x}\right)^2}{n}}\)</span></p>
+<p><span class="math notranslate nohighlight">\(S=\)</span> Standar deviasi</p>
+<p><span class="math notranslate nohighlight">\(x_i=\)</span> nilai <span class="math notranslate nohighlight">\(\mathrm{x} \mathrm {ke-i}\)</span></p>
+<p><span class="math notranslate nohighlight">\(\bar{x}=\)</span> nilai rata-rata data</p>
+<p><span class="math notranslate nohighlight">\(n=\)</span> jumlah data</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">std</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Age&#39;</span><span class="p">:</span><span class="n">st</span><span class="o">.</span><span class="n">stdev</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Age&#39;</span><span class="p">]),</span><span class="s1">&#39;Total_Bilirubin&#39;</span><span class="p">:</span><span class="n">st</span><span class="o">.</span><span class="n">stdev</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Total_Bilirubin&#39;</span><span class="p">]),</span><span class="s1">&#39;Direct_Bilirubin&#39;</span><span class="p">:</span><span class="n">st</span><span class="o">.</span><span class="n">stdev</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Direct_Bilirubin&#39;</span><span class="p">]),</span>
+       <span class="s1">&#39;Alkaline_Phosphotase&#39;</span><span class="p">:</span><span class="n">st</span><span class="o">.</span><span class="n">stdev</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Alkaline_Phosphotase&#39;</span><span class="p">]),</span><span class="s1">&#39;Alamine_Aminotransferase&#39;</span><span class="p">:</span><span class="n">st</span><span class="o">.</span><span class="n">stdev</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Alamine_Aminotransferase&#39;</span><span class="p">]),</span>
+       <span class="s1">&#39;Aspartate_Aminotransferase&#39;</span><span class="p">:</span><span class="n">st</span><span class="o">.</span><span class="n">stdev</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Aspartate_Aminotransferase&#39;</span><span class="p">]),</span><span class="s1">&#39;Total_Protiens&#39;</span><span class="p">:</span><span class="n">st</span><span class="o">.</span><span class="n">stdev</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Total_Protiens&#39;</span><span class="p">]),</span>
+       <span class="s1">&#39;Albumin&#39;</span><span class="p">:</span><span class="n">st</span><span class="o">.</span><span class="n">stdev</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Albumin&#39;</span><span class="p">]),</span><span class="s1">&#39;Albumin_and_Globulin_Ratio&#39;</span><span class="p">:</span><span class="n">st</span><span class="o">.</span><span class="n">stdev</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Albumin_and_Globulin_Ratio&#39;</span><span class="p">]),</span><span class="s1">&#39;Dataset&#39;</span><span class="p">:</span><span class="n">st</span><span class="o">.</span><span class="n">stdev</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Dataset&#39;</span><span class="p">]),</span>
+       <span class="p">}</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">std</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;std&#39;</span><span class="p">])</span>
+<span class="n">df</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="df-09efff7c-b845-498f-a210-a8a892e1908d">
+    <div class="colab-df-container">
+      <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Age</th>
+      <th>Total_Bilirubin</th>
+      <th>Direct_Bilirubin</th>
+      <th>Alkaline_Phosphotase</th>
+      <th>Alamine_Aminotransferase</th>
+      <th>Aspartate_Aminotransferase</th>
+      <th>Total_Protiens</th>
+      <th>Albumin</th>
+      <th>Albumin_and_Globulin_Ratio</th>
+      <th>Dataset</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>std</th>
+      <td>16.189833</td>
+      <td>6.209522</td>
+      <td>2.808498</td>
+      <td>242.937989</td>
+      <td>182.620356</td>
+      <td>288.918529</td>
+      <td>1.085451</td>
+      <td>0.795519</td>
+      <td>NaN</td>
+      <td>0.45249</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+      <button class="colab-df-convert" onclick="convertToInteractive('df-09efff7c-b845-498f-a210-a8a892e1908d')"
+              title="Convert this dataframe to an interactive table."
+              style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+       width="24px">
+    <path d="M0 0h24v24H0V0z" fill="none"/>
+    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
+  </svg>
+      </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      flex-wrap:wrap;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+      <script>
+        const buttonEl =
+          document.querySelector('#df-09efff7c-b845-498f-a210-a8a892e1908d button.colab-df-convert');
+        buttonEl.style.display =
+          google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+        async function convertToInteractive(key) {
+          const element = document.querySelector('#df-09efff7c-b845-498f-a210-a8a892e1908d');
+          const dataTable =
+            await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                     [key], {});
+          if (!dataTable) return;
+
+          const docLinkHtml = 'Like what you see? Visit the ' +
+            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+            + ' to learn more about interactive tables.';
+          element.innerHTML = '';
+          dataTable['output_type'] = 'display_data';
+          await google.colab.output.renderOutput(dataTable, element);
+          const docLink = document.createElement('div');
+          docLink.innerHTML = docLinkHtml;
+          element.appendChild(docLink);
+        }
+      </script>
+    </div>
+  </div>
+</div></div>
+</div>
+<p><strong>Nilai Minimum</strong></p>
+<p>Dilakukan dengan mengurutkan semua data dari yang terkecil ke terbesar,
+Kemudian diambil nilai yang terkecil <em>teks yang dimiringkan</em></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">min</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Age&#39;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Age&#39;</span><span class="p">]),</span>
+		<span class="s1">&#39;Total_Bilirubin&#39;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Total_Bilirubin&#39;</span><span class="p">]),</span><span class="s1">&#39;Direct_Bilirubin&#39;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Direct_Bilirubin&#39;</span><span class="p">]),</span>
+    <span class="s1">&#39;Alkaline_Phosphotase&#39;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Alkaline_Phosphotase&#39;</span><span class="p">]),</span><span class="s1">&#39;Alamine_Aminotransferase&#39;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Alamine_Aminotransferase&#39;</span><span class="p">]),</span>
+    <span class="s1">&#39;Aspartate_Aminotransferase&#39;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Aspartate_Aminotransferase&#39;</span><span class="p">]),</span><span class="s1">&#39;Total_Protiens&#39;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Total_Protiens&#39;</span><span class="p">]),</span>
+    <span class="s1">&#39;Albumin&#39;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Albumin&#39;</span><span class="p">]),</span><span class="s1">&#39;Albumin_and_Globulin_Ratio&#39;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Albumin_and_Globulin_Ratio&#39;</span><span class="p">]),</span> <span class="s1">&#39;Dataset&#39;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Dataset&#39;</span><span class="p">]),</span>
+    <span class="p">}</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="nb">min</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;min&#39;</span><span class="p">])</span>
+<span class="n">df</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="df-58e3ad91-3422-4c47-a007-c30843d96ff5">
+    <div class="colab-df-container">
+      <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Age</th>
+      <th>Total_Bilirubin</th>
+      <th>Direct_Bilirubin</th>
+      <th>Alkaline_Phosphotase</th>
+      <th>Alamine_Aminotransferase</th>
+      <th>Aspartate_Aminotransferase</th>
+      <th>Total_Protiens</th>
+      <th>Albumin</th>
+      <th>Albumin_and_Globulin_Ratio</th>
+      <th>Dataset</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>min</th>
+      <td>44.746141</td>
+      <td>3.298799</td>
+      <td>1.486106</td>
+      <td>290.576329</td>
+      <td>80.713551</td>
+      <td>109.910806</td>
+      <td>6.48319</td>
+      <td>3.141852</td>
+      <td>0.947064</td>
+      <td>1.286449</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+      <button class="colab-df-convert" onclick="convertToInteractive('df-58e3ad91-3422-4c47-a007-c30843d96ff5')"
+              title="Convert this dataframe to an interactive table."
+              style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+       width="24px">
+    <path d="M0 0h24v24H0V0z" fill="none"/>
+    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
+  </svg>
+      </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      flex-wrap:wrap;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+      <script>
+        const buttonEl =
+          document.querySelector('#df-58e3ad91-3422-4c47-a007-c30843d96ff5 button.colab-df-convert');
+        buttonEl.style.display =
+          google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+        async function convertToInteractive(key) {
+          const element = document.querySelector('#df-58e3ad91-3422-4c47-a007-c30843d96ff5');
+          const dataTable =
+            await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                     [key], {});
+          if (!dataTable) return;
+
+          const docLinkHtml = 'Like what you see? Visit the ' +
+            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+            + ' to learn more about interactive tables.';
+          element.innerHTML = '';
+          dataTable['output_type'] = 'display_data';
+          await google.colab.output.renderOutput(dataTable, element);
+          const docLink = document.createElement('div');
+          docLink.innerHTML = docLinkHtml;
+          element.appendChild(docLink);
+        }
+      </script>
+    </div>
+  </div>
+</div></div>
+</div>
+<p>Persentil dalam statistik dan statistika istilah persentil kerapkali dipergunakan untuk memahami dan menginterpretasikan data, yang menunjukkan nilai di bawah yang persentase tertentu dari suatu kumpulan data yang ada.</p>
+<p><strong>RUMUS PERSENTIL DATA TUNGGAL</strong></p>
+<div class="math notranslate nohighlight">
+\[
+P_i=\text { data } k e-\frac{i(n+1)}{100}
+\]</div>
+<p>Jika persentil 25% maka:
+$<span class="math notranslate nohighlight">\(
+P_i=\text { data } k e-\frac{25(n+1)}{100}
+\)</span>$</p>
+<p>Jika persentil 50% maka:
+$<span class="math notranslate nohighlight">\(
+P_i=\text { data } k e-\frac{50(n+1)}{100}
+\)</span>$</p>
+<p>Jika persentil 75% maka:
+$<span class="math notranslate nohighlight">\(
+P_i=\text { data } k e-\frac{75(n+1)}{100}
+\)</span>$</p>
+<p>Keterangan:</p>
+<p><span class="math notranslate nohighlight">\(\mathrm{P}=\)</span> persentil ke <span class="math notranslate nohighlight">\(-\mathrm{i}\)</span></p>
+<div class="math notranslate nohighlight">
+\[
+i=1,2,3, \ldots, 99
+\]</div>
+<p>n = banyak data</p>
+<p><strong>- percentil 25%</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">percentile25</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Age&#39;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Age&#39;</span><span class="p">],</span><span class="mi">25</span><span class="p">),</span>
+		<span class="s1">&#39;Total_Bilirubin&#39;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Total_Bilirubin&#39;</span><span class="p">],</span><span class="mi">25</span><span class="p">),</span><span class="s1">&#39;Direct_Bilirubin&#39;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Direct_Bilirubin&#39;</span><span class="p">],</span><span class="mi">25</span><span class="p">),</span>
+    <span class="s1">&#39;Alkaline_Phosphotase&#39;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Alkaline_Phosphotase&#39;</span><span class="p">],</span><span class="mi">25</span><span class="p">),</span><span class="s1">&#39;Alamine_Aminotransferase&#39;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Alamine_Aminotransferase&#39;</span><span class="p">],</span><span class="mi">25</span><span class="p">),</span>
+    <span class="s1">&#39;Aspartate_Aminotransferase&#39;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Aspartate_Aminotransferase&#39;</span><span class="p">],</span><span class="mi">25</span><span class="p">),</span><span class="s1">&#39;Total_Protiens&#39;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Total_Protiens&#39;</span><span class="p">],</span><span class="mi">25</span><span class="p">),</span>
+    <span class="s1">&#39;Albumin&#39;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Albumin&#39;</span><span class="p">],</span><span class="mi">25</span><span class="p">),</span><span class="s1">&#39;Albumin_and_Globulin_Ratio&#39;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Albumin_and_Globulin_Ratio&#39;</span><span class="p">],</span><span class="mi">25</span><span class="p">),</span> <span class="s1">&#39;Dataset&#39;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Dataset&#39;</span><span class="p">],</span><span class="mi">25</span><span class="p">)</span>
+    <span class="p">}</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">percentile25</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;25%&#39;</span><span class="p">])</span>
+<span class="n">df</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="df-eeb9e13d-57d7-453f-8b72-0bf602916de0">
+    <div class="colab-df-container">
+      <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Age</th>
+      <th>Total_Bilirubin</th>
+      <th>Direct_Bilirubin</th>
+      <th>Alkaline_Phosphotase</th>
+      <th>Alamine_Aminotransferase</th>
+      <th>Aspartate_Aminotransferase</th>
+      <th>Total_Protiens</th>
+      <th>Albumin</th>
+      <th>Albumin_and_Globulin_Ratio</th>
+      <th>Dataset</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>25%</th>
+      <td>44.746141</td>
+      <td>3.298799</td>
+      <td>1.486106</td>
+      <td>290.576329</td>
+      <td>80.713551</td>
+      <td>109.910806</td>
+      <td>6.48319</td>
+      <td>3.141852</td>
+      <td>0.947064</td>
+      <td>1.286449</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+      <button class="colab-df-convert" onclick="convertToInteractive('df-eeb9e13d-57d7-453f-8b72-0bf602916de0')"
+              title="Convert this dataframe to an interactive table."
+              style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+       width="24px">
+    <path d="M0 0h24v24H0V0z" fill="none"/>
+    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
+  </svg>
+      </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      flex-wrap:wrap;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+      <script>
+        const buttonEl =
+          document.querySelector('#df-eeb9e13d-57d7-453f-8b72-0bf602916de0 button.colab-df-convert');
+        buttonEl.style.display =
+          google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+        async function convertToInteractive(key) {
+          const element = document.querySelector('#df-eeb9e13d-57d7-453f-8b72-0bf602916de0');
+          const dataTable =
+            await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                     [key], {});
+          if (!dataTable) return;
+
+          const docLinkHtml = 'Like what you see? Visit the ' +
+            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+            + ' to learn more about interactive tables.';
+          element.innerHTML = '';
+          dataTable['output_type'] = 'display_data';
+          await google.colab.output.renderOutput(dataTable, element);
+          const docLink = document.createElement('div');
+          docLink.innerHTML = docLinkHtml;
+          element.appendChild(docLink);
+        }
+      </script>
+    </div>
+  </div>
+</div></div>
+</div>
+<p><strong>RUMUS percentil 25%</strong></p>
+<p>Jika persentil 25% maka:
+$<span class="math notranslate nohighlight">\(
+P_i=\text { data } k e-\frac{25(n+1)}{100}
+\)</span>$</p>
+<p><strong>- percentil 50%</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">percentile50</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Age&#39;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Age&#39;</span><span class="p">],</span><span class="mi">50</span><span class="p">),</span>
+		<span class="s1">&#39;Total_Bilirubin&#39;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Total_Bilirubin&#39;</span><span class="p">],</span><span class="mi">50</span><span class="p">),</span><span class="s1">&#39;Direct_Bilirubin&#39;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Direct_Bilirubin&#39;</span><span class="p">],</span><span class="mi">50</span><span class="p">),</span>
+    <span class="s1">&#39;Alkaline_Phosphotase&#39;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Alkaline_Phosphotase&#39;</span><span class="p">],</span><span class="mi">50</span><span class="p">),</span><span class="s1">&#39;Alamine_Aminotransferase&#39;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Alamine_Aminotransferase&#39;</span><span class="p">],</span><span class="mi">50</span><span class="p">),</span>
+    <span class="s1">&#39;Aspartate_Aminotransferase&#39;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Aspartate_Aminotransferase&#39;</span><span class="p">],</span><span class="mi">50</span><span class="p">),</span><span class="s1">&#39;Total_Protiens&#39;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Total_Protiens&#39;</span><span class="p">],</span><span class="mi">50</span><span class="p">),</span>
+    <span class="s1">&#39;Albumin&#39;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Albumin&#39;</span><span class="p">],</span><span class="mi">50</span><span class="p">),</span><span class="s1">&#39;Albumin_and_Globulin_Ratio&#39;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Albumin_and_Globulin_Ratio&#39;</span><span class="p">],</span><span class="mi">50</span><span class="p">),</span><span class="s1">&#39;Dataset&#39;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Dataset&#39;</span><span class="p">],</span><span class="mi">50</span><span class="p">),</span> 
+    <span class="p">}</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">percentile50</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;50%&#39;</span><span class="p">])</span>
+<span class="n">df</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>RUMUS percentil 50%</strong></p>
+<p>Jika persentil 50% maka:
+$<span class="math notranslate nohighlight">\(
+P_i=\text { data } k e-\frac{50(n+1)}{100}
+\)</span>$</p>
+<p><strong>- persentil 75%</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">percentile75</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Age&#39;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Age&#39;</span><span class="p">],</span><span class="mi">75</span><span class="p">),</span>
+		<span class="s1">&#39;Total_Bilirubin&#39;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Total_Bilirubin&#39;</span><span class="p">],</span><span class="mi">75</span><span class="p">),</span><span class="s1">&#39;Direct_Bilirubin&#39;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Direct_Bilirubin&#39;</span><span class="p">],</span><span class="mi">75</span><span class="p">),</span>
+    <span class="s1">&#39;Alkaline_Phosphotase&#39;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Alkaline_Phosphotase&#39;</span><span class="p">],</span><span class="mi">75</span><span class="p">),</span><span class="s1">&#39;Alamine_Aminotransferase&#39;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Alamine_Aminotransferase&#39;</span><span class="p">],</span><span class="mi">75</span><span class="p">),</span>
+    <span class="s1">&#39;Aspartate_Aminotransferase&#39;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Aspartate_Aminotransferase&#39;</span><span class="p">],</span><span class="mi">75</span><span class="p">),</span><span class="s1">&#39;Total_Protiens&#39;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="mi">75</span><span class="p">[</span><span class="s1">&#39;Total_Protiens&#39;</span><span class="p">],</span><span class="mi">75</span><span class="p">),</span>
+    <span class="s1">&#39;Albumin&#39;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Albumin&#39;</span><span class="p">],</span><span class="mi">75</span><span class="p">),</span><span class="s1">&#39;Albumin_and_Globulin_Ratio&#39;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="mi">75</span><span class="p">[</span><span class="s1">&#39;Albumin_and_Globulin_Ratio&#39;</span><span class="p">],</span><span class="mi">75</span><span class="p">),</span><span class="s1">&#39;Dataset&#39;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Dataset&#39;</span><span class="p">],</span><span class="mi">75</span><span class="p">),</span> 
+    <span class="p">}</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">percentile75</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;75%&#39;</span><span class="p">])</span>
+<span class="n">df</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>RUMUS persentil 75%</strong></p>
+<p>Jika persentil 75% maka:
+$<span class="math notranslate nohighlight">\(
+P_i=\text { data } k e-\frac{75(n+1)}{100}
+\)</span>$</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">max</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Age&#39;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Age&#39;</span><span class="p">]),</span>
+		<span class="s1">&#39;Total_Bilirubin&#39;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Total_Bilirubin&#39;</span><span class="p">]),</span><span class="s1">&#39;Direct_Bilirubin&#39;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Direct_Bilirubin&#39;</span><span class="p">]),</span>
+    <span class="s1">&#39;Alkaline_Phosphotase&#39;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Alkaline_Phosphotase&#39;</span><span class="p">]),</span><span class="s1">&#39;Alamine_Aminotransferase&#39;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Alamine_Aminotransferase&#39;</span><span class="p">]),</span>
+    <span class="s1">&#39;Aspartate_Aminotransferase&#39;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Aspartate_Aminotransferase&#39;</span><span class="p">]),</span><span class="s1">&#39;Total_Protiens&#39;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Total_Protiens&#39;</span><span class="p">]),</span>
+    <span class="s1">&#39;Albumin&#39;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Albumin&#39;</span><span class="p">]),</span><span class="s1">&#39;Albumin_and_Globulin_Ratio&#39;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Albumin_and_Globulin_Ratio&#39;</span><span class="p">]),</span><span class="s1">&#39;Dataset&#39;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Dataset&#39;</span><span class="p">]),</span>
+    <span class="p">}</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="nb">max</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;max&#39;</span><span class="p">])</span>
+<span class="n">df</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="df-ce65973b-1e75-40d2-a472-2aa810a433bc">
+    <div class="colab-df-container">
+      <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Age</th>
+      <th>Total_Bilirubin</th>
+      <th>Direct_Bilirubin</th>
+      <th>Alkaline_Phosphotase</th>
+      <th>Alamine_Aminotransferase</th>
+      <th>Aspartate_Aminotransferase</th>
+      <th>Total_Protiens</th>
+      <th>Albumin</th>
+      <th>Albumin_and_Globulin_Ratio</th>
+      <th>Dataset</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>max</th>
+      <td>44.746141</td>
+      <td>3.298799</td>
+      <td>1.486106</td>
+      <td>290.576329</td>
+      <td>80.713551</td>
+      <td>109.910806</td>
+      <td>6.48319</td>
+      <td>3.141852</td>
+      <td>0.947064</td>
+      <td>1.286449</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+      <button class="colab-df-convert" onclick="convertToInteractive('df-ce65973b-1e75-40d2-a472-2aa810a433bc')"
+              title="Convert this dataframe to an interactive table."
+              style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+       width="24px">
+    <path d="M0 0h24v24H0V0z" fill="none"/>
+    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
+  </svg>
+      </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      flex-wrap:wrap;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+      <script>
+        const buttonEl =
+          document.querySelector('#df-ce65973b-1e75-40d2-a472-2aa810a433bc button.colab-df-convert');
+        buttonEl.style.display =
+          google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+        async function convertToInteractive(key) {
+          const element = document.querySelector('#df-ce65973b-1e75-40d2-a472-2aa810a433bc');
+          const dataTable =
+            await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                     [key], {});
+          if (!dataTable) return;
+
+          const docLinkHtml = 'Like what you see? Visit the ' +
+            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+            + ' to learn more about interactive tables.';
+          element.innerHTML = '';
+          dataTable['output_type'] = 'display_data';
+          await google.colab.output.renderOutput(dataTable, element);
+          const docLink = document.createElement('div');
+          docLink.innerHTML = docLinkHtml;
+          element.appendChild(docLink);
+        }
+      </script>
+    </div>
+  </div>
+</div></div>
+</div>
+<p><strong>Nilai Maksimum</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">max</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Age&#39;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Age&#39;</span><span class="p">]),</span>
+		<span class="s1">&#39;Total_Bilirubin&#39;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Total_Bilirubin&#39;</span><span class="p">]),</span><span class="s1">&#39;Direct_Bilirubin&#39;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Direct_Bilirubin&#39;</span><span class="p">]),</span>
+    <span class="s1">&#39;Alkaline_Phosphotase&#39;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Alkaline_Phosphotase&#39;</span><span class="p">]),</span><span class="s1">&#39;Alamine_Aminotransferase&#39;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Alamine_Aminotransferase&#39;</span><span class="p">]),</span>
+    <span class="s1">&#39;Aspartate_Aminotransferase&#39;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Aspartate_Aminotransferase&#39;</span><span class="p">]),</span><span class="s1">&#39;Total_Protiens&#39;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Total_Protiens&#39;</span><span class="p">]),</span>
+    <span class="s1">&#39;Albumin&#39;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Albumin&#39;</span><span class="p">]),</span><span class="s1">&#39;Albumin_and_Globulin_Ratio&#39;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Albumin_and_Globulin_Ratio&#39;</span><span class="p">])</span>
+    <span class="p">}</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="nb">max</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;max&#39;</span><span class="p">])</span>
+<span class="n">df</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="df-a2f8137e-4aec-4bc2-b961-6aacd7bc58c0">
+    <div class="colab-df-container">
+      <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Age</th>
+      <th>Total_Bilirubin</th>
+      <th>Direct_Bilirubin</th>
+      <th>Alkaline_Phosphotase</th>
+      <th>Alamine_Aminotransferase</th>
+      <th>Aspartate_Aminotransferase</th>
+      <th>Total_Protiens</th>
+      <th>Albumin</th>
+      <th>Albumin_and_Globulin_Ratio</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>max</th>
+      <td>44.746141</td>
+      <td>3.298799</td>
+      <td>1.486106</td>
+      <td>290.576329</td>
+      <td>80.713551</td>
+      <td>109.910806</td>
+      <td>6.48319</td>
+      <td>3.141852</td>
+      <td>0.947064</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+      <button class="colab-df-convert" onclick="convertToInteractive('df-a2f8137e-4aec-4bc2-b961-6aacd7bc58c0')"
+              title="Convert this dataframe to an interactive table."
+              style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+       width="24px">
+    <path d="M0 0h24v24H0V0z" fill="none"/>
+    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
+  </svg>
+      </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      flex-wrap:wrap;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+      <script>
+        const buttonEl =
+          document.querySelector('#df-a2f8137e-4aec-4bc2-b961-6aacd7bc58c0 button.colab-df-convert');
+        buttonEl.style.display =
+          google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+        async function convertToInteractive(key) {
+          const element = document.querySelector('#df-a2f8137e-4aec-4bc2-b961-6aacd7bc58c0');
+          const dataTable =
+            await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                     [key], {});
+          if (!dataTable) return;
+
+          const docLinkHtml = 'Like what you see? Visit the ' +
+            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+            + ' to learn more about interactive tables.';
+          element.innerHTML = '';
+          dataTable['output_type'] = 'display_data';
+          await google.colab.output.renderOutput(dataTable, element);
+          const docLink = document.createElement('div');
+          docLink.innerHTML = docLinkHtml;
+          element.appendChild(docLink);
+        }
+      </script>
+    </div>
+  </div>
+</div></div>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># import library</span>
@@ -1124,7 +2701,7 @@ Dataset --&gt; Mean:  1.2864493996569468 Median:  1.0 Modus:  1
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[Text(0.5, 1.0, &#39;Positive Skewed&#39;)]
 </pre></div>
 </div>
-<img alt="_images/Tugas1_24_2.png" src="_images/Tugas1_24_2.png" />
+<img alt="_images/Tugas1_50_2.png" src="_images/Tugas1_50_2.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1142,7 +2719,7 @@ Dataset --&gt; Mean:  1.2864493996569468 Median:  1.0 Modus:  1
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[Text(0.5, 1.0, &#39;Positive Skewed&#39;)]
 </pre></div>
 </div>
-<img alt="_images/Tugas1_25_2.png" src="_images/Tugas1_25_2.png" />
+<img alt="_images/Tugas1_51_2.png" src="_images/Tugas1_51_2.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1160,7 +2737,7 @@ Dataset --&gt; Mean:  1.2864493996569468 Median:  1.0 Modus:  1
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[Text(0.5, 1.0, &#39;Positive Skewed&#39;)]
 </pre></div>
 </div>
-<img alt="_images/Tugas1_26_2.png" src="_images/Tugas1_26_2.png" />
+<img alt="_images/Tugas1_52_2.png" src="_images/Tugas1_52_2.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1178,7 +2755,7 @@ Dataset --&gt; Mean:  1.2864493996569468 Median:  1.0 Modus:  1
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[Text(0.5, 1.0, &#39;Positive Skewed&#39;)]
 </pre></div>
 </div>
-<img alt="_images/Tugas1_27_2.png" src="_images/Tugas1_27_2.png" />
+<img alt="_images/Tugas1_53_2.png" src="_images/Tugas1_53_2.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1196,7 +2773,7 @@ Dataset --&gt; Mean:  1.2864493996569468 Median:  1.0 Modus:  1
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[Text(0.5, 1.0, &#39;Positive Skewed&#39;)]
 </pre></div>
 </div>
-<img alt="_images/Tugas1_28_2.png" src="_images/Tugas1_28_2.png" />
+<img alt="_images/Tugas1_54_2.png" src="_images/Tugas1_54_2.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1214,7 +2791,7 @@ Dataset --&gt; Mean:  1.2864493996569468 Median:  1.0 Modus:  1
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[Text(0.5, 1.0, &#39;Positive Skewed&#39;)]
 </pre></div>
 </div>
-<img alt="_images/Tugas1_29_2.png" src="_images/Tugas1_29_2.png" />
+<img alt="_images/Tugas1_55_2.png" src="_images/Tugas1_55_2.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1232,7 +2809,7 @@ Dataset --&gt; Mean:  1.2864493996569468 Median:  1.0 Modus:  1
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[Text(0.5, 1.0, &#39;Negative Skewed&#39;)]
 </pre></div>
 </div>
-<img alt="_images/Tugas1_30_2.png" src="_images/Tugas1_30_2.png" />
+<img alt="_images/Tugas1_56_2.png" src="_images/Tugas1_56_2.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1250,7 +2827,7 @@ Dataset --&gt; Mean:  1.2864493996569468 Median:  1.0 Modus:  1
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[Text(0.5, 1.0, &#39;Positive Skewed&#39;)]
 </pre></div>
 </div>
-<img alt="_images/Tugas1_31_2.png" src="_images/Tugas1_31_2.png" />
+<img alt="_images/Tugas1_57_2.png" src="_images/Tugas1_57_2.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1268,7 +2845,7 @@ Dataset --&gt; Mean:  1.2864493996569468 Median:  1.0 Modus:  1
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[Text(0.5, 1.0, &#39;Positive Skewed&#39;)]
 </pre></div>
 </div>
-<img alt="_images/Tugas1_32_2.png" src="_images/Tugas1_32_2.png" />
+<img alt="_images/Tugas1_58_2.png" src="_images/Tugas1_58_2.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1286,7 +2863,7 @@ Dataset --&gt; Mean:  1.2864493996569468 Median:  1.0 Modus:  1
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[Text(0.5, 1.0, &#39;Symetric Skewed&#39;)]
 </pre></div>
 </div>
-<img alt="_images/Tugas1_33_2.png" src="_images/Tugas1_33_2.png" />
+<img alt="_images/Tugas1_59_2.png" src="_images/Tugas1_59_2.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1332,7 +2909,7 @@ Dataset --&gt; Mean:  1.2864493996569468 Median:  1.0 Modus:  1
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[Text(0.5, 1.0, &#39;Positive Skewed&#39;)]
 </pre></div>
 </div>
-<img alt="_images/Tugas1_34_2.png" src="_images/Tugas1_34_2.png" />
+<img alt="_images/Tugas1_60_2.png" src="_images/Tugas1_60_2.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1378,7 +2955,7 @@ Dataset --&gt; Mean:  1.2864493996569468 Median:  1.0 Modus:  1
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[Text(0.5, 1.0, &#39;Positive Skewed&#39;)]
 </pre></div>
 </div>
-<img alt="_images/Tugas1_35_2.png" src="_images/Tugas1_35_2.png" />
+<img alt="_images/Tugas1_61_2.png" src="_images/Tugas1_61_2.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1408,7 +2985,7 @@ Dataset --&gt; Mean:  1.2864493996569468 Median:  1.0 Modus:  1
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[Text(0.5, 1.0, &#39;Negative Skewed&#39;)]
 </pre></div>
 </div>
-<img alt="_images/Tugas1_36_2.png" src="_images/Tugas1_36_2.png" />
+<img alt="_images/Tugas1_62_2.png" src="_images/Tugas1_62_2.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1476,6 +3053,7 @@ Requirement already satisfied: webencodings in /usr/local/lib/python3.7/dist-pac
 </div>
 </div>
 </div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
