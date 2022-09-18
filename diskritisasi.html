@@ -431,6 +431,11 @@ title="Print to PDF"
       </ul>
      </li>
      <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#equal-frequency">
+       Equal Frequency
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
       <a class="reference internal nav-link" href="#qcut">
        Qcut
       </a>
@@ -455,9 +460,41 @@ title="Print to PDF"
          Petal Length
         </a>
        </li>
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#id6">
+         Data Categorycal
+        </a>
+       </li>
       </ul>
      </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#entropy">
+       ENTROPY
+      </a>
+     </li>
     </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id7">
+   Petal Width
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id8">
+     Sepal Width
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id9">
+     Petal Length
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id10">
+     Sepal Length
+    </a>
    </li>
    <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#split-1-4-4">
@@ -590,6 +627,11 @@ title="Print to PDF"
       </ul>
      </li>
      <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#equal-frequency">
+       Equal Frequency
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
       <a class="reference internal nav-link" href="#qcut">
        Qcut
       </a>
@@ -614,9 +656,41 @@ title="Print to PDF"
          Petal Length
         </a>
        </li>
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#id6">
+         Data Categorycal
+        </a>
+       </li>
       </ul>
      </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#entropy">
+       ENTROPY
+      </a>
+     </li>
     </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id7">
+   Petal Width
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id8">
+     Sepal Width
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id9">
+     Petal Length
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id10">
+     Sepal Length
+    </a>
    </li>
    <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#split-1-4-4">
@@ -709,129 +783,6 @@ title="Print to PDF"
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">HTTPError</span>Traceback (most recent call last)
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="n">ff5d5bdee363</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="ne">----&gt; </span><span class="mi">3</span> <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;https://raw.githubusercontent.com/aisyaturradiah/datamining/gh-pages/IRIS.csv&#39;</span><span class="p">)</span>
-
-<span class="nn">/usr/local/lib/python3.7/dist-packages/pandas/util/_decorators.py</span> in <span class="ni">wrapper</span><span class="nt">(*args, **kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">309</span>                     <span class="n">stacklevel</span><span class="o">=</span><span class="n">stacklevel</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">310</span>                 <span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">311</span>             <span class="k">return</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">312</span> 
-<span class="g g-Whitespace">    </span><span class="mi">313</span>         <span class="k">return</span> <span class="n">wrapper</span>
-
-<span class="nn">/usr/local/lib/python3.7/dist-packages/pandas/io/parsers/readers.py</span> in <span class="ni">read_csv</span><span class="nt">(filepath_or_buffer, sep, delimiter, header, names, index_col, usecols, squeeze, prefix, mangle_dupe_cols, dtype, engine, converters, true_values, false_values, skipinitialspace, skiprows, skipfooter, nrows, na_values, keep_default_na, na_filter, verbose, skip_blank_lines, parse_dates, infer_datetime_format, keep_date_col, date_parser, dayfirst, cache_dates, iterator, chunksize, compression, thousands, decimal, lineterminator, quotechar, quoting, doublequote, escapechar, comment, encoding, encoding_errors, dialect, error_bad_lines, warn_bad_lines, on_bad_lines, delim_whitespace, low_memory, memory_map, float_precision, storage_options)</span>
-<span class="g g-Whitespace">    </span><span class="mi">584</span>     <span class="n">kwds</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">kwds_defaults</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">585</span> 
-<span class="ne">--&gt; </span><span class="mi">586</span>     <span class="k">return</span> <span class="n">_read</span><span class="p">(</span><span class="n">filepath_or_buffer</span><span class="p">,</span> <span class="n">kwds</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">587</span> 
-<span class="g g-Whitespace">    </span><span class="mi">588</span> 
-
-<span class="nn">/usr/local/lib/python3.7/dist-packages/pandas/io/parsers/readers.py</span> in <span class="ni">_read</span><span class="nt">(filepath_or_buffer, kwds)</span>
-<span class="g g-Whitespace">    </span><span class="mi">480</span> 
-<span class="g g-Whitespace">    </span><span class="mi">481</span>     <span class="c1"># Create the parser.</span>
-<span class="ne">--&gt; </span><span class="mi">482</span>     <span class="n">parser</span> <span class="o">=</span> <span class="n">TextFileReader</span><span class="p">(</span><span class="n">filepath_or_buffer</span><span class="p">,</span> <span class="o">**</span><span class="n">kwds</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">483</span> 
-<span class="g g-Whitespace">    </span><span class="mi">484</span>     <span class="k">if</span> <span class="n">chunksize</span> <span class="ow">or</span> <span class="n">iterator</span><span class="p">:</span>
-
-<span class="nn">/usr/local/lib/python3.7/dist-packages/pandas/io/parsers/readers.py</span> in <span class="ni">__init__</span><span class="nt">(self, f, engine, **kwds)</span>
-<span class="g g-Whitespace">    </span><span class="mi">809</span>             <span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="p">[</span><span class="s2">&quot;has_index_names&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">kwds</span><span class="p">[</span><span class="s2">&quot;has_index_names&quot;</span><span class="p">]</span>
-<span class="g g-Whitespace">    </span><span class="mi">810</span> 
-<span class="ne">--&gt; </span><span class="mi">811</span>         <span class="bp">self</span><span class="o">.</span><span class="n">_engine</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_make_engine</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">engine</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">812</span> 
-<span class="g g-Whitespace">    </span><span class="mi">813</span>     <span class="k">def</span> <span class="nf">close</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-
-<span class="nn">/usr/local/lib/python3.7/dist-packages/pandas/io/parsers/readers.py</span> in <span class="ni">_make_engine</span><span class="nt">(self, engine)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1038</span>             <span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1039</span>         <span class="c1"># error: Too many arguments for &quot;ParserBase&quot;</span>
-<span class="ne">-&gt; </span><span class="mi">1040</span>         <span class="k">return</span> <span class="n">mapping</span><span class="p">[</span><span class="n">engine</span><span class="p">](</span><span class="bp">self</span><span class="o">.</span><span class="n">f</span><span class="p">,</span> <span class="o">**</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="p">)</span>  <span class="c1"># type: ignore[call-arg]</span>
-<span class="g g-Whitespace">   </span><span class="mi">1041</span> 
-<span class="g g-Whitespace">   </span><span class="mi">1042</span>     <span class="k">def</span> <span class="nf">_failover_to_python</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-
-<span class="nn">/usr/local/lib/python3.7/dist-packages/pandas/io/parsers/c_parser_wrapper.py</span> in <span class="ni">__init__</span><span class="nt">(self, src, **kwds)</span>
-<span class="g g-Whitespace">     </span><span class="mi">49</span> 
-<span class="g g-Whitespace">     </span><span class="mi">50</span>         <span class="c1"># open handles</span>
-<span class="ne">---&gt; </span><span class="mi">51</span>         <span class="bp">self</span><span class="o">.</span><span class="n">_open_handles</span><span class="p">(</span><span class="n">src</span><span class="p">,</span> <span class="n">kwds</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">52</span>         <span class="k">assert</span> <span class="bp">self</span><span class="o">.</span><span class="n">handles</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
-<span class="g g-Whitespace">     </span><span class="mi">53</span> 
-
-<span class="nn">/usr/local/lib/python3.7/dist-packages/pandas/io/parsers/base_parser.py</span> in <span class="ni">_open_handles</span><span class="nt">(self, src, kwds)</span>
-<span class="g g-Whitespace">    </span><span class="mi">227</span>             <span class="n">memory_map</span><span class="o">=</span><span class="n">kwds</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;memory_map&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">),</span>
-<span class="g g-Whitespace">    </span><span class="mi">228</span>             <span class="n">storage_options</span><span class="o">=</span><span class="n">kwds</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;storage_options&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
-<span class="ne">--&gt; </span><span class="mi">229</span>             <span class="n">errors</span><span class="o">=</span><span class="n">kwds</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;encoding_errors&quot;</span><span class="p">,</span> <span class="s2">&quot;strict&quot;</span><span class="p">),</span>
-<span class="g g-Whitespace">    </span><span class="mi">230</span>         <span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">231</span> 
-
-<span class="nn">/usr/local/lib/python3.7/dist-packages/pandas/io/common.py</span> in <span class="ni">get_handle</span><span class="nt">(path_or_buf, mode, encoding, compression, memory_map, is_text, errors, storage_options)</span>
-<span class="g g-Whitespace">    </span><span class="mi">612</span>         <span class="n">compression</span><span class="o">=</span><span class="n">compression</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">613</span>         <span class="n">mode</span><span class="o">=</span><span class="n">mode</span><span class="p">,</span>
-<span class="ne">--&gt; </span><span class="mi">614</span>         <span class="n">storage_options</span><span class="o">=</span><span class="n">storage_options</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">615</span>     <span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">616</span> 
-
-<span class="nn">/usr/local/lib/python3.7/dist-packages/pandas/io/common.py</span> in <span class="ni">_get_filepath_or_buffer</span><span class="nt">(filepath_or_buffer, encoding, compression, mode, storage_options)</span>
-<span class="g g-Whitespace">    </span><span class="mi">310</span>         <span class="c1"># assuming storage_options is to be interpreted as headers</span>
-<span class="g g-Whitespace">    </span><span class="mi">311</span>         <span class="n">req_info</span> <span class="o">=</span> <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="n">filepath_or_buffer</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">storage_options</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">312</span>         <span class="k">with</span> <span class="n">urlopen</span><span class="p">(</span><span class="n">req_info</span><span class="p">)</span> <span class="k">as</span> <span class="n">req</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">313</span>             <span class="n">content_encoding</span> <span class="o">=</span> <span class="n">req</span><span class="o">.</span><span class="n">headers</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;Content-Encoding&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">314</span>             <span class="k">if</span> <span class="n">content_encoding</span> <span class="o">==</span> <span class="s2">&quot;gzip&quot;</span><span class="p">:</span>
-
-<span class="nn">/usr/local/lib/python3.7/dist-packages/pandas/io/common.py</span> in <span class="ni">urlopen</span><span class="nt">(*args, **kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">210</span>     <span class="kn">import</span> <span class="nn">urllib.request</span>
-<span class="g g-Whitespace">    </span><span class="mi">211</span> 
-<span class="ne">--&gt; </span><span class="mi">212</span>     <span class="k">return</span> <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">213</span> 
-<span class="g g-Whitespace">    </span><span class="mi">214</span> 
-
-<span class="nn">/usr/lib/python3.7/urllib/request.py</span> in <span class="ni">urlopen</span><span class="nt">(url, data, timeout, cafile, capath, cadefault, context)</span>
-<span class="g g-Whitespace">    </span><span class="mi">220</span>     <span class="k">else</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">221</span>         <span class="n">opener</span> <span class="o">=</span> <span class="n">_opener</span>
-<span class="ne">--&gt; </span><span class="mi">222</span>     <span class="k">return</span> <span class="n">opener</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">timeout</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">223</span> 
-<span class="g g-Whitespace">    </span><span class="mi">224</span> <span class="k">def</span> <span class="nf">install_opener</span><span class="p">(</span><span class="n">opener</span><span class="p">):</span>
-
-<span class="nn">/usr/lib/python3.7/urllib/request.py</span> in <span class="ni">open</span><span class="nt">(self, fullurl, data, timeout)</span>
-<span class="g g-Whitespace">    </span><span class="mi">529</span>         <span class="k">for</span> <span class="n">processor</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">process_response</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">protocol</span><span class="p">,</span> <span class="p">[]):</span>
-<span class="g g-Whitespace">    </span><span class="mi">530</span>             <span class="n">meth</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">processor</span><span class="p">,</span> <span class="n">meth_name</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">531</span>             <span class="n">response</span> <span class="o">=</span> <span class="n">meth</span><span class="p">(</span><span class="n">req</span><span class="p">,</span> <span class="n">response</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">532</span> 
-<span class="g g-Whitespace">    </span><span class="mi">533</span>         <span class="k">return</span> <span class="n">response</span>
-
-<span class="nn">/usr/lib/python3.7/urllib/request.py</span> in <span class="ni">http_response</span><span class="nt">(self, request, response)</span>
-<span class="g g-Whitespace">    </span><span class="mi">639</span>         <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="mi">200</span> <span class="o">&lt;=</span> <span class="n">code</span> <span class="o">&lt;</span> <span class="mi">300</span><span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">640</span>             <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">error</span><span class="p">(</span>
-<span class="ne">--&gt; </span><span class="mi">641</span>                 <span class="s1">&#39;http&#39;</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="n">response</span><span class="p">,</span> <span class="n">code</span><span class="p">,</span> <span class="n">msg</span><span class="p">,</span> <span class="n">hdrs</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">642</span> 
-<span class="g g-Whitespace">    </span><span class="mi">643</span>         <span class="k">return</span> <span class="n">response</span>
-
-<span class="nn">/usr/lib/python3.7/urllib/request.py</span> in <span class="ni">error</span><span class="nt">(self, proto, *args)</span>
-<span class="g g-Whitespace">    </span><span class="mi">567</span>         <span class="k">if</span> <span class="n">http_err</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">568</span>             <span class="n">args</span> <span class="o">=</span> <span class="p">(</span><span class="nb">dict</span><span class="p">,</span> <span class="s1">&#39;default&#39;</span><span class="p">,</span> <span class="s1">&#39;http_error_default&#39;</span><span class="p">)</span> <span class="o">+</span> <span class="n">orig_args</span>
-<span class="ne">--&gt; </span><span class="mi">569</span>             <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_call_chain</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">570</span> 
-<span class="g g-Whitespace">    </span><span class="mi">571</span> <span class="c1"># XXX probably also want an abstract factory that knows when it makes</span>
-
-<span class="nn">/usr/lib/python3.7/urllib/request.py</span> in <span class="ni">_call_chain</span><span class="nt">(self, chain, kind, meth_name, *args)</span>
-<span class="g g-Whitespace">    </span><span class="mi">501</span>         <span class="k">for</span> <span class="n">handler</span> <span class="ow">in</span> <span class="n">handlers</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">502</span>             <span class="n">func</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">handler</span><span class="p">,</span> <span class="n">meth_name</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">503</span>             <span class="n">result</span> <span class="o">=</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">504</span>             <span class="k">if</span> <span class="n">result</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">505</span>                 <span class="k">return</span> <span class="n">result</span>
-
-<span class="nn">/usr/lib/python3.7/urllib/request.py</span> in <span class="ni">http_error_default</span><span class="nt">(self, req, fp, code, msg, hdrs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">647</span> <span class="k">class</span> <span class="nc">HTTPDefaultErrorHandler</span><span class="p">(</span><span class="n">BaseHandler</span><span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">648</span>     <span class="k">def</span> <span class="nf">http_error_default</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">req</span><span class="p">,</span> <span class="n">fp</span><span class="p">,</span> <span class="n">code</span><span class="p">,</span> <span class="n">msg</span><span class="p">,</span> <span class="n">hdrs</span><span class="p">):</span>
-<span class="ne">--&gt; </span><span class="mi">649</span>         <span class="k">raise</span> <span class="n">HTTPError</span><span class="p">(</span><span class="n">req</span><span class="o">.</span><span class="n">full_url</span><span class="p">,</span> <span class="n">code</span><span class="p">,</span> <span class="n">msg</span><span class="p">,</span> <span class="n">hdrs</span><span class="p">,</span> <span class="n">fp</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">650</span> 
-<span class="g g-Whitespace">    </span><span class="mi">651</span> <span class="k">class</span> <span class="nc">HTTPRedirectHandler</span><span class="p">(</span><span class="n">BaseHandler</span><span class="p">):</span>
-
-<span class="ne">HTTPError</span>: HTTP Error 404: Not Found
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -841,7 +792,7 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-8191b421-7bbf-4b4b-bbe1-da6e5c16d199">
+  <div id="df-f7dddbac-0e24-4ac0-af7a-47c666d68f8f">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -961,7 +912,7 @@ title="Print to PDF"
 </table>
 <p>150 rows × 5 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-8191b421-7bbf-4b4b-bbe1-da6e5c16d199')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-f7dddbac-0e24-4ac0-af7a-47c666d68f8f')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -1012,12 +963,12 @@ title="Print to PDF"
 
       <script>
         const buttonEl =
-          document.querySelector('#df-8191b421-7bbf-4b4b-bbe1-da6e5c16d199 button.colab-df-convert');
+          document.querySelector('#df-f7dddbac-0e24-4ac0-af7a-47c666d68f8f button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-8191b421-7bbf-4b4b-bbe1-da6e5c16d199');
+          const element = document.querySelector('#df-f7dddbac-0e24-4ac0-af7a-47c666d68f8f');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -1047,7 +998,7 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-7dc228d0-a7e4-4e0d-9287-39830133473b">
+  <div id="df-13d680eb-e2da-41b0-9ffb-c8adb52d7772">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -1158,7 +1109,7 @@ title="Print to PDF"
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-7dc228d0-a7e4-4e0d-9287-39830133473b')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-13d680eb-e2da-41b0-9ffb-c8adb52d7772')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -1209,12 +1160,12 @@ title="Print to PDF"
 
       <script>
         const buttonEl =
-          document.querySelector('#df-7dc228d0-a7e4-4e0d-9287-39830133473b button.colab-df-convert');
+          document.querySelector('#df-13d680eb-e2da-41b0-9ffb-c8adb52d7772 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-7dc228d0-a7e4-4e0d-9287-39830133473b');
+          const element = document.querySelector('#df-13d680eb-e2da-41b0-9ffb-c8adb52d7772');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -1309,7 +1260,7 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-31bc8e19-a425-4275-8a72-5b5fbc83e6c8">
+  <div id="df-477e423f-25c8-41a4-bc27-3284f4972a48">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -1393,7 +1344,7 @@ title="Print to PDF"
 </table>
 <p>150 rows × 2 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-31bc8e19-a425-4275-8a72-5b5fbc83e6c8')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-477e423f-25c8-41a4-bc27-3284f4972a48')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -1444,12 +1395,12 @@ title="Print to PDF"
 
       <script>
         const buttonEl =
-          document.querySelector('#df-31bc8e19-a425-4275-8a72-5b5fbc83e6c8 button.colab-df-convert');
+          document.querySelector('#df-477e423f-25c8-41a4-bc27-3284f4972a48 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-31bc8e19-a425-4275-8a72-5b5fbc83e6c8');
+          const element = document.querySelector('#df-477e423f-25c8-41a4-bc27-3284f4972a48');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -1472,22 +1423,15 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">KBins</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># equal-width intervals binning with label</span>
 <span class="n">labelled_sepal_width_ew_binning</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Lebar            88
-Sedikit Lebar    47
-Sangat Lebar     15
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>medium    88
+small     47
+large     15
 Name: sepal_width, dtype: int64
 </pre></div>
 </div>
@@ -1541,7 +1485,7 @@ Name: sepal_width, dtype: int64
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-f1f3ca87-14f5-450f-a82e-26d3af11c1dd">
+  <div id="df-95d1367a-efb2-493d-bdce-9d4d8a7fa000">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -1625,7 +1569,7 @@ Name: sepal_width, dtype: int64
 </table>
 <p>150 rows × 2 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-f1f3ca87-14f5-450f-a82e-26d3af11c1dd')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-95d1367a-efb2-493d-bdce-9d4d8a7fa000')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -1676,12 +1620,12 @@ Name: sepal_width, dtype: int64
 
       <script>
         const buttonEl =
-          document.querySelector('#df-f1f3ca87-14f5-450f-a82e-26d3af11c1dd button.colab-df-convert');
+          document.querySelector('#df-95d1367a-efb2-493d-bdce-9d4d8a7fa000 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-f1f3ca87-14f5-450f-a82e-26d3af11c1dd');
+          const element = document.querySelector('#df-95d1367a-efb2-493d-bdce-9d4d8a7fa000');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -1767,7 +1711,7 @@ Name: petal_width, dtype: int64
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-8ec8b0f4-38a4-42b4-a919-df4a2c8b9cfc">
+  <div id="df-7527b150-005f-49df-9ed8-bb31f74450bd">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -1851,7 +1795,7 @@ Name: petal_width, dtype: int64
 </table>
 <p>150 rows × 2 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-8ec8b0f4-38a4-42b4-a919-df4a2c8b9cfc')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-7527b150-005f-49df-9ed8-bb31f74450bd')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -1902,12 +1846,12 @@ Name: petal_width, dtype: int64
 
       <script>
         const buttonEl =
-          document.querySelector('#df-8ec8b0f4-38a4-42b4-a919-df4a2c8b9cfc button.colab-df-convert');
+          document.querySelector('#df-7527b150-005f-49df-9ed8-bb31f74450bd button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-8ec8b0f4-38a4-42b4-a919-df4a2c8b9cfc');
+          const element = document.querySelector('#df-7527b150-005f-49df-9ed8-bb31f74450bd');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -1992,7 +1936,7 @@ Name: sepal_length, dtype: int64
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-fcb4ed3f-67a8-4584-bc71-0b5f62a9af2e">
+  <div id="df-3aa20bc8-2578-4910-ab4f-bcbf4fc5a3ea">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -2076,7 +2020,7 @@ Name: sepal_length, dtype: int64
 </table>
 <p>150 rows × 2 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-fcb4ed3f-67a8-4584-bc71-0b5f62a9af2e')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-3aa20bc8-2578-4910-ab4f-bcbf4fc5a3ea')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -2127,12 +2071,12 @@ Name: sepal_length, dtype: int64
 
       <script>
         const buttonEl =
-          document.querySelector('#df-fcb4ed3f-67a8-4584-bc71-0b5f62a9af2e button.colab-df-convert');
+          document.querySelector('#df-3aa20bc8-2578-4910-ab4f-bcbf4fc5a3ea button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-fcb4ed3f-67a8-4584-bc71-0b5f62a9af2e');
+          const element = document.querySelector('#df-3aa20bc8-2578-4910-ab4f-bcbf4fc5a3ea');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -2188,6 +2132,12 @@ Name: petal_length, dtype: int64
 </section>
 <section id="data-categorycal">
 <h4>Data Categorycal<a class="headerlink" href="#data-categorycal" title="Permalink to this headline">#</a></h4>
+</section>
+</section>
+<section id="equal-frequency">
+<h3>Equal Frequency<a class="headerlink" href="#equal-frequency" title="Permalink to this headline">#</a></h3>
+<p>Equal Frequeny merupkan metode dikritisasi yang membagi data numerik menjadi beberapa kelompok dengan jumlah anggota per kelompok yang kurang lebih sama besar.</p>
+<p>Untuk menghitung equal frequency, dibutuhkan library pandas dengan menggunakan method “qcut”.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">((</span><span class="n">petal_width_ew_binning</span><span class="p">,</span> <span class="n">sepal_width_ew_binning</span><span class="p">,</span> <span class="n">sepal_length_ew_binning</span><span class="p">,</span> <span class="n">petal_length_ew_binning</span><span class="p">),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
@@ -2196,7 +2146,7 @@ Name: petal_length, dtype: int64
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-d8fce143-5ead-4375-82a2-054671646a54">
+  <div id="df-2b33dca3-0dbb-4a17-bd9a-3d244d16219f">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -2216,47 +2166,47 @@ Name: petal_length, dtype: int64
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>PetalWidthCm</th>
-      <th>SepalWidthCm</th>
-      <th>SepalLengthCm</th>
-      <th>PetalLengthCm</th>
+      <th>petal_width</th>
+      <th>sepal_width</th>
+      <th>sepal_length</th>
+      <th>petal_length</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>0</th>
-      <td>Sedikit Besar</td>
-      <td>Besar</td>
-      <td>Sedikit Besar</td>
-      <td>Sedikit Besar</td>
+      <td>small</td>
+      <td>medium</td>
+      <td>small</td>
+      <td>small</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>Sedikit Besar</td>
-      <td>Besar</td>
-      <td>Sedikit Besar</td>
-      <td>Sedikit Besar</td>
+      <td>small</td>
+      <td>medium</td>
+      <td>small</td>
+      <td>small</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>Sedikit Besar</td>
-      <td>Besar</td>
-      <td>Sedikit Besar</td>
-      <td>Sedikit Besar</td>
+      <td>small</td>
+      <td>medium</td>
+      <td>small</td>
+      <td>small</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>Sedikit Besar</td>
-      <td>Besar</td>
-      <td>Sedikit Besar</td>
-      <td>Sedikit Besar</td>
+      <td>small</td>
+      <td>medium</td>
+      <td>small</td>
+      <td>small</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>Sedikit Besar</td>
-      <td>Besar</td>
-      <td>Sedikit Besar</td>
-      <td>Sedikit Besar</td>
+      <td>small</td>
+      <td>medium</td>
+      <td>small</td>
+      <td>small</td>
     </tr>
     <tr>
       <th>...</th>
@@ -2267,44 +2217,44 @@ Name: petal_length, dtype: int64
     </tr>
     <tr>
       <th>145</th>
-      <td>Sangat Besar</td>
-      <td>Besar</td>
-      <td>Besar</td>
-      <td>Sangat Besar</td>
+      <td>large</td>
+      <td>medium</td>
+      <td>medium</td>
+      <td>large</td>
     </tr>
     <tr>
       <th>146</th>
-      <td>Sangat Besar</td>
-      <td>Sedikit Besar</td>
-      <td>Besar</td>
-      <td>Sangat Besar</td>
+      <td>large</td>
+      <td>small</td>
+      <td>medium</td>
+      <td>large</td>
     </tr>
     <tr>
       <th>147</th>
-      <td>Sangat Besar</td>
-      <td>Besar</td>
-      <td>Besar</td>
-      <td>Sangat Besar</td>
+      <td>large</td>
+      <td>medium</td>
+      <td>medium</td>
+      <td>large</td>
     </tr>
     <tr>
       <th>148</th>
-      <td>Sangat Besar</td>
-      <td>Besar</td>
-      <td>Besar</td>
-      <td>Sangat Besar</td>
+      <td>large</td>
+      <td>medium</td>
+      <td>medium</td>
+      <td>large</td>
     </tr>
     <tr>
       <th>149</th>
-      <td>Sangat Besar</td>
-      <td>Besar</td>
-      <td>Besar</td>
-      <td>Sangat Besar</td>
+      <td>large</td>
+      <td>medium</td>
+      <td>medium</td>
+      <td>large</td>
     </tr>
   </tbody>
 </table>
 <p>150 rows × 4 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-d8fce143-5ead-4375-82a2-054671646a54')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-2b33dca3-0dbb-4a17-bd9a-3d244d16219f')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -2355,12 +2305,12 @@ Name: petal_length, dtype: int64
 
       <script>
         const buttonEl =
-          document.querySelector('#df-d8fce143-5ead-4375-82a2-054671646a54 button.colab-df-convert');
+          document.querySelector('#df-2b33dca3-0dbb-4a17-bd9a-3d244d16219f button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-d8fce143-5ead-4375-82a2-054671646a54');
+          const element = document.querySelector('#df-2b33dca3-0dbb-4a17-bd9a-3d244d16219f');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -2381,7 +2331,6 @@ Name: petal_length, dtype: int64
   </div>
 </div></div>
 </div>
-</section>
 </section>
 <section id="qcut">
 <h3>Qcut<a class="headerlink" href="#qcut" title="Permalink to this headline">#</a></h3>
@@ -2424,7 +2373,7 @@ Name: petal_length, dtype: int64
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-35d03c1e-0485-49b1-9f7a-57fb19d75a24">
+  <div id="df-7c567e34-e955-4213-b410-51a906e4b0f3">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -2508,7 +2457,7 @@ Name: petal_length, dtype: int64
 </table>
 <p>150 rows × 2 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-35d03c1e-0485-49b1-9f7a-57fb19d75a24')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-7c567e34-e955-4213-b410-51a906e4b0f3')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -2559,12 +2508,12 @@ Name: petal_length, dtype: int64
 
       <script>
         const buttonEl =
-          document.querySelector('#df-35d03c1e-0485-49b1-9f7a-57fb19d75a24 button.colab-df-convert');
+          document.querySelector('#df-7c567e34-e955-4213-b410-51a906e4b0f3 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-35d03c1e-0485-49b1-9f7a-57fb19d75a24');
+          const element = document.querySelector('#df-7c567e34-e955-4213-b410-51a906e4b0f3');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -2650,7 +2599,7 @@ Name: sepal_width, dtype: int64
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-75c6d0cc-8689-4f79-a931-04a7ca74b341">
+  <div id="df-ef366962-fd50-42b2-892a-55f2c220421f">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -2734,7 +2683,7 @@ Name: sepal_width, dtype: int64
 </table>
 <p>150 rows × 2 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-75c6d0cc-8689-4f79-a931-04a7ca74b341')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-ef366962-fd50-42b2-892a-55f2c220421f')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -2785,12 +2734,12 @@ Name: sepal_width, dtype: int64
 
       <script>
         const buttonEl =
-          document.querySelector('#df-75c6d0cc-8689-4f79-a931-04a7ca74b341 button.colab-df-convert');
+          document.querySelector('#df-ef366962-fd50-42b2-892a-55f2c220421f button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-75c6d0cc-8689-4f79-a931-04a7ca74b341');
+          const element = document.querySelector('#df-ef366962-fd50-42b2-892a-55f2c220421f');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -2876,7 +2825,7 @@ Name: petal_width, dtype: int64
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-a5db0aa8-c6cc-46b1-ac99-490fc456e6b8">
+  <div id="df-8cae7c4b-808d-4a16-9419-484b7780d063">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -2960,7 +2909,7 @@ Name: petal_width, dtype: int64
 </table>
 <p>150 rows × 2 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-a5db0aa8-c6cc-46b1-ac99-490fc456e6b8')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-8cae7c4b-808d-4a16-9419-484b7780d063')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -3011,12 +2960,12 @@ Name: petal_width, dtype: int64
 
       <script>
         const buttonEl =
-          document.querySelector('#df-a5db0aa8-c6cc-46b1-ac99-490fc456e6b8 button.colab-df-convert');
+          document.querySelector('#df-8cae7c4b-808d-4a16-9419-484b7780d063 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-a5db0aa8-c6cc-46b1-ac99-490fc456e6b8');
+          const element = document.querySelector('#df-8cae7c4b-808d-4a16-9419-484b7780d063');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -3102,7 +3051,7 @@ Name: sepal_length, dtype: int64
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-a1a81077-d192-443a-b023-2a4a31e815de">
+  <div id="df-d876f008-496c-4154-a358-f3251854a494">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -3130,27 +3079,27 @@ Name: sepal_length, dtype: int64
     <tr>
       <th>0</th>
       <td>1.4</td>
-      <td>Sedikit Lebar</td>
+      <td>small</td>
     </tr>
     <tr>
       <th>1</th>
       <td>1.4</td>
-      <td>Sedikit Lebar</td>
+      <td>small</td>
     </tr>
     <tr>
       <th>2</th>
       <td>1.3</td>
-      <td>Sedikit Lebar</td>
+      <td>small</td>
     </tr>
     <tr>
       <th>3</th>
       <td>1.5</td>
-      <td>Sedikit Lebar</td>
+      <td>small</td>
     </tr>
     <tr>
       <th>4</th>
       <td>1.4</td>
-      <td>Sedikit Lebar</td>
+      <td>small</td>
     </tr>
     <tr>
       <th>...</th>
@@ -3160,33 +3109,33 @@ Name: sepal_length, dtype: int64
     <tr>
       <th>145</th>
       <td>5.2</td>
-      <td>Sangat Lebar</td>
+      <td>large</td>
     </tr>
     <tr>
       <th>146</th>
       <td>5.0</td>
-      <td>Sangat Lebar</td>
+      <td>large</td>
     </tr>
     <tr>
       <th>147</th>
       <td>5.2</td>
-      <td>Sangat Lebar</td>
+      <td>large</td>
     </tr>
     <tr>
       <th>148</th>
       <td>5.4</td>
-      <td>Sangat Lebar</td>
+      <td>large</td>
     </tr>
     <tr>
       <th>149</th>
       <td>5.1</td>
-      <td>Sangat Lebar</td>
+      <td>large</td>
     </tr>
   </tbody>
 </table>
 <p>150 rows × 2 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-a1a81077-d192-443a-b023-2a4a31e815de')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-d876f008-496c-4154-a358-f3251854a494')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -3237,12 +3186,12 @@ Name: sepal_length, dtype: int64
 
       <script>
         const buttonEl =
-          document.querySelector('#df-a1a81077-d192-443a-b023-2a4a31e815de button.colab-df-convert');
+          document.querySelector('#df-d876f008-496c-4154-a358-f3251854a494 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-a1a81077-d192-443a-b023-2a4a31e815de');
+          const element = document.querySelector('#df-d876f008-496c-4154-a358-f3251854a494');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -3271,9 +3220,9 @@ Name: sepal_length, dtype: int64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Lebar            54
-Sedikit Lebar    50
-Sangat Lebar     46
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>medium    54
+small     50
+large     46
 Name: petal_length, dtype: int64
 </pre></div>
 </div>
@@ -3295,6 +3244,202 @@ Name: petal_length, dtype: int64
 </div>
 </div>
 </div>
+</section>
+<section id="id6">
+<h4>Data Categorycal<a class="headerlink" href="#id6" title="Permalink to this headline">#</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">((</span><span class="n">petal_width_ef_binning</span><span class="p">,</span> <span class="n">sepal_width_ef_binning</span><span class="p">,</span> <span class="n">sepal_length_ef_binning</span><span class="p">,</span> <span class="n">petal_length_ef_binning</span><span class="p">),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="df-208774e1-3384-4373-a19c-9ea61b78ce0c">
+    <div class="colab-df-container">
+      <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>petal_width</th>
+      <th>sepal_width</th>
+      <th>sepal_length</th>
+      <th>petal_length</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>small</td>
+      <td>large</td>
+      <td>small</td>
+      <td>small</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>small</td>
+      <td>medium</td>
+      <td>small</td>
+      <td>small</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>small</td>
+      <td>medium</td>
+      <td>small</td>
+      <td>small</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>small</td>
+      <td>medium</td>
+      <td>small</td>
+      <td>small</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>small</td>
+      <td>large</td>
+      <td>small</td>
+      <td>small</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>145</th>
+      <td>large</td>
+      <td>medium</td>
+      <td>large</td>
+      <td>large</td>
+    </tr>
+    <tr>
+      <th>146</th>
+      <td>large</td>
+      <td>small</td>
+      <td>medium</td>
+      <td>large</td>
+    </tr>
+    <tr>
+      <th>147</th>
+      <td>large</td>
+      <td>medium</td>
+      <td>large</td>
+      <td>large</td>
+    </tr>
+    <tr>
+      <th>148</th>
+      <td>large</td>
+      <td>large</td>
+      <td>medium</td>
+      <td>large</td>
+    </tr>
+    <tr>
+      <th>149</th>
+      <td>large</td>
+      <td>medium</td>
+      <td>medium</td>
+      <td>large</td>
+    </tr>
+  </tbody>
+</table>
+<p>150 rows × 4 columns</p>
+</div>
+      <button class="colab-df-convert" onclick="convertToInteractive('df-208774e1-3384-4373-a19c-9ea61b78ce0c')"
+              title="Convert this dataframe to an interactive table."
+              style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+       width="24px">
+    <path d="M0 0h24v24H0V0z" fill="none"/>
+    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
+  </svg>
+      </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      flex-wrap:wrap;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+      <script>
+        const buttonEl =
+          document.querySelector('#df-208774e1-3384-4373-a19c-9ea61b78ce0c button.colab-df-convert');
+        buttonEl.style.display =
+          google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+        async function convertToInteractive(key) {
+          const element = document.querySelector('#df-208774e1-3384-4373-a19c-9ea61b78ce0c');
+          const dataTable =
+            await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                     [key], {});
+          if (!dataTable) return;
+
+          const docLinkHtml = 'Like what you see? Visit the ' +
+            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+            + ' to learn more about interactive tables.';
+          element.innerHTML = '';
+          dataTable['output_type'] = 'display_data';
+          await google.colab.output.renderOutput(dataTable, element);
+          const docLink = document.createElement('div');
+          docLink.innerHTML = docLinkHtml;
+          element.appendChild(docLink);
+        }
+      </script>
+    </div>
+  </div>
+</div></div>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sample</span> <span class="o">=</span> <span class="n">df</span><span class="p">[[</span><span class="s2">&quot;sepal_length&quot;</span><span class="p">]]</span>
@@ -3304,7 +3449,7 @@ Name: petal_length, dtype: int64
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-fb4a085b-19ba-4967-a1c8-49489a8db4ab">
+  <div id="df-f39e471d-4292-4dc7-9213-4ec586a05f56">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -3363,7 +3508,7 @@ Name: petal_length, dtype: int64
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-fb4a085b-19ba-4967-a1c8-49489a8db4ab')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-f39e471d-4292-4dc7-9213-4ec586a05f56')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -3414,12 +3559,209 @@ Name: petal_length, dtype: int64
 
       <script>
         const buttonEl =
-          document.querySelector('#df-fb4a085b-19ba-4967-a1c8-49489a8db4ab button.colab-df-convert');
+          document.querySelector('#df-f39e471d-4292-4dc7-9213-4ec586a05f56 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-fb4a085b-19ba-4967-a1c8-49489a8db4ab');
+          const element = document.querySelector('#df-f39e471d-4292-4dc7-9213-4ec586a05f56');
+          const dataTable =
+            await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                     [key], {});
+          if (!dataTable) return;
+
+          const docLinkHtml = 'Like what you see? Visit the ' +
+            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+            + ' to learn more about interactive tables.';
+          element.innerHTML = '';
+          dataTable['output_type'] = 'display_data';
+          await google.colab.output.renderOutput(dataTable, element);
+          const docLink = document.createElement('div');
+          docLink.innerHTML = docLinkHtml;
+          element.appendChild(docLink);
+        }
+      </script>
+    </div>
+  </div>
+</div></div>
+</div>
+</section>
+</section>
+<section id="entropy">
+<h3>ENTROPY<a class="headerlink" href="#entropy" title="Permalink to this headline">#</a></h3>
+<p>Diskritisasi berbasis entropi (entropy based discretization) adalah salah satu jenis algoritma diskritisasi terawasi yang menggunakan mekanisme top- down. Tujuan dari algoritma ini adalah mendapatkan partisi yang mengandung baris data dari kelas yang sama sebanyak mungkin.</p>
+<ul class="simple">
+<li><p>Rumus Entropy:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[Entropy (D_{1}) = -\sum_{i=1}^{m} Pi \log_{2} Pi\]</div>
+<blockquote>
+<div><ul class="simple">
+<li><p>Rumus Gain:</p></li>
+</ul>
+</div></blockquote>
+<div class="math notranslate nohighlight">
+\[Gain(E_{new}) = E_{initial} - E_{new}\]</div>
+<blockquote>
+<div><ul class="simple">
+<li><p>Rumus Info:</p></li>
+</ul>
+</div></blockquote>
+<div class="math notranslate nohighlight">
+\[Info_{A}(D) = \frac{|D_{_{1}}|}{|D|} Entropy(D_{1}) + \frac{|D_{2}|}{|D|} Entropy(D_{2})\]</div>
+<p>Menambahkan sempel data yang akan di hitung</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sample</span> <span class="o">=</span> <span class="n">df</span><span class="p">[[</span><span class="s2">&quot;petal_width&quot;</span><span class="p">,</span><span class="s2">&quot;sepal_width&quot;</span><span class="p">,</span><span class="s2">&quot;sepal_length&quot;</span><span class="p">,</span><span class="s2">&quot;petal_length&quot;</span><span class="p">]]</span>
+<span class="n">sample</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="df-f60f8415-a28e-4f6c-b813-cb908c240576">
+    <div class="colab-df-container">
+      <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>petal_width</th>
+      <th>sepal_width</th>
+      <th>sepal_length</th>
+      <th>petal_length</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>count</th>
+      <td>150.000000</td>
+      <td>150.000000</td>
+      <td>150.000000</td>
+      <td>150.000000</td>
+    </tr>
+    <tr>
+      <th>mean</th>
+      <td>1.198667</td>
+      <td>3.054000</td>
+      <td>5.843333</td>
+      <td>3.758667</td>
+    </tr>
+    <tr>
+      <th>std</th>
+      <td>0.763161</td>
+      <td>0.433594</td>
+      <td>0.828066</td>
+      <td>1.764420</td>
+    </tr>
+    <tr>
+      <th>min</th>
+      <td>0.100000</td>
+      <td>2.000000</td>
+      <td>4.300000</td>
+      <td>1.000000</td>
+    </tr>
+    <tr>
+      <th>25%</th>
+      <td>0.300000</td>
+      <td>2.800000</td>
+      <td>5.100000</td>
+      <td>1.600000</td>
+    </tr>
+    <tr>
+      <th>50%</th>
+      <td>1.300000</td>
+      <td>3.000000</td>
+      <td>5.800000</td>
+      <td>4.350000</td>
+    </tr>
+    <tr>
+      <th>75%</th>
+      <td>1.800000</td>
+      <td>3.300000</td>
+      <td>6.400000</td>
+      <td>5.100000</td>
+    </tr>
+    <tr>
+      <th>max</th>
+      <td>2.500000</td>
+      <td>4.400000</td>
+      <td>7.900000</td>
+      <td>6.900000</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+      <button class="colab-df-convert" onclick="convertToInteractive('df-f60f8415-a28e-4f6c-b813-cb908c240576')"
+              title="Convert this dataframe to an interactive table."
+              style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+       width="24px">
+    <path d="M0 0h24v24H0V0z" fill="none"/>
+    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
+  </svg>
+      </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      flex-wrap:wrap;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+      <script>
+        const buttonEl =
+          document.querySelector('#df-f60f8415-a28e-4f6c-b813-cb908c240576 button.colab-df-convert');
+        buttonEl.style.display =
+          google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+        async function convertToInteractive(key) {
+          const element = document.querySelector('#df-f60f8415-a28e-4f6c-b813-cb908c240576');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -3450,16 +3792,8 @@ Name: petal_length, dtype: int64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/local/lib/python3.7/dist-packages/ipykernel_launcher.py:2: SettingWithCopyWarning: 
-A value is trying to be set on a copy of a slice from a DataFrame.
-Try using .loc[row_indexer,col_indexer] = value instead
-
-See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
-  
-</pre></div>
-</div>
 <div class="output text_html">
-  <div id="df-3a1c105b-b3a7-4b7a-bb66-a885c91f7587">
+  <div id="df-dacc4899-e909-46f8-9a36-679cf1940335">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -3479,71 +3813,107 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
   <thead>
     <tr style="text-align: right;">
       <th></th>
+      <th>petal_width</th>
+      <th>sepal_width</th>
       <th>sepal_length</th>
+      <th>petal_length</th>
       <th>category</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>0</th>
+      <td>0.2</td>
+      <td>3.5</td>
       <td>5.1</td>
+      <td>1.4</td>
       <td>A</td>
     </tr>
     <tr>
       <th>1</th>
+      <td>0.2</td>
+      <td>3.0</td>
       <td>4.9</td>
+      <td>1.4</td>
       <td>B</td>
     </tr>
     <tr>
       <th>2</th>
+      <td>0.2</td>
+      <td>3.2</td>
       <td>4.7</td>
+      <td>1.3</td>
       <td>B</td>
     </tr>
     <tr>
       <th>3</th>
+      <td>0.2</td>
+      <td>3.1</td>
       <td>4.6</td>
+      <td>1.5</td>
       <td>A</td>
     </tr>
     <tr>
       <th>4</th>
+      <td>0.2</td>
+      <td>3.6</td>
       <td>5.0</td>
+      <td>1.4</td>
       <td>B</td>
     </tr>
     <tr>
       <th>...</th>
       <td>...</td>
       <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
     </tr>
     <tr>
       <th>145</th>
+      <td>2.3</td>
+      <td>3.0</td>
       <td>6.7</td>
+      <td>5.2</td>
       <td>A</td>
     </tr>
     <tr>
       <th>146</th>
+      <td>1.9</td>
+      <td>2.5</td>
       <td>6.3</td>
+      <td>5.0</td>
       <td>B</td>
     </tr>
     <tr>
       <th>147</th>
+      <td>2.0</td>
+      <td>3.0</td>
       <td>6.5</td>
+      <td>5.2</td>
       <td>B</td>
     </tr>
     <tr>
       <th>148</th>
+      <td>2.3</td>
+      <td>3.4</td>
       <td>6.2</td>
+      <td>5.4</td>
       <td>B</td>
     </tr>
     <tr>
       <th>149</th>
+      <td>1.8</td>
+      <td>3.0</td>
       <td>5.9</td>
+      <td>5.1</td>
       <td>B</td>
     </tr>
   </tbody>
 </table>
-<p>150 rows × 2 columns</p>
+<p>150 rows × 5 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-3a1c105b-b3a7-4b7a-bb66-a885c91f7587')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-dacc4899-e909-46f8-9a36-679cf1940335')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -3594,12 +3964,12 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 
       <script>
         const buttonEl =
-          document.querySelector('#df-3a1c105b-b3a7-4b7a-bb66-a885c91f7587 button.colab-df-convert');
+          document.querySelector('#df-dacc4899-e909-46f8-9a36-679cf1940335 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-3a1c105b-b3a7-4b7a-bb66-a885c91f7587');
+          const element = document.querySelector('#df-dacc4899-e909-46f8-9a36-679cf1940335');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -3620,7 +3990,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
   </div>
 </div></div>
 </div>
-<p>Membuat fungsi GetOverollCategory (keseluruhan) yang digunakan untuk menghitung data keseluruhan yang nantinya digunakan untuk menghitung entropy</p>
+<p>Dalam membuat fungsi GetOverollCategory (keseluruhan) yang digunakan untuk menghitung data keseluruhan yang nantinya digunakan untuk menghitung entropy</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">GetOverollCategory</span><span class="p">(</span><span class="n">col</span><span class="p">):</span>
@@ -3632,7 +4002,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 </div>
 </div>
 </div>
-<p>Fungsi splitter digunakan untuk membuat split antara value yang telah ditentukan lalu mengembalikan data yang telah dipisahkan</p>
+<p>Dalam fungsi splitter digunakan untuk membuat split antara value yang telah ditentukan lalu mengembalikan data yang telah dipisahkan</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">splitter</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">col</span><span class="p">):</span>
@@ -3689,6 +4059,300 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 </div>
 </div>
 </div>
+</section>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="id7">
+<h1>Petal Width<a class="headerlink" href="#id7" title="Permalink to this headline">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Membuat Dinitial</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">GetOverollCategory</span><span class="p">((</span><span class="s2">&quot;petal_width&quot;</span><span class="p">))</span>
+<span class="n">entropy_a</span> <span class="o">=</span> <span class="n">entropy</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">entropy_a</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(68, 82, 150)
+0.993707106604508
+</pre></div>
+</div>
+</div>
+</div>
+<p>Melakukan beberapa fungsi split untuk mendapatkan informasi yang terbaik</p>
+<ul class="simple">
+<li><p>SPLIT 1 : 0.1</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">split1</span> <span class="o">=</span> <span class="n">splitter</span><span class="p">(</span><span class="mf">0.1</span><span class="p">,</span><span class="s2">&quot;petal_width&quot;</span><span class="p">)</span>
+<span class="n">info_split1</span> <span class="o">=</span> <span class="n">info</span><span class="p">(</span><span class="n">split1</span><span class="p">)</span>
+<span class="n">gain</span><span class="p">(</span><span class="n">entropy_a</span><span class="p">,</span> <span class="n">info_split1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.01104847098180839
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>SPLIT 2 : 1.3</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">split2</span> <span class="o">=</span> <span class="n">splitter</span><span class="p">(</span><span class="mf">1.3</span><span class="p">,</span><span class="s2">&quot;petal_width&quot;</span><span class="p">)</span>
+<span class="n">info_split2</span> <span class="o">=</span> <span class="n">info</span><span class="p">(</span><span class="n">split2</span><span class="p">)</span>
+<span class="n">gain</span><span class="p">(</span><span class="n">entropy_a</span><span class="p">,</span> <span class="n">info_split2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.00021232279799998643
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>SPLIT 3 : 2.4</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">split3</span> <span class="o">=</span> <span class="n">splitter</span><span class="p">(</span><span class="mf">2.4</span><span class="p">,</span><span class="s2">&quot;petal_width&quot;</span><span class="p">)</span>
+<span class="n">info_split3</span> <span class="o">=</span> <span class="n">info</span><span class="p">(</span><span class="n">split3</span><span class="p">)</span>
+<span class="n">gain</span><span class="p">(</span><span class="n">entropy_a</span><span class="p">,</span> <span class="n">info_split3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.0008771143281794958
+</pre></div>
+</div>
+</div>
+</div>
+<p>Jadi pada percobaan split atribut petal width di dapat bahwa split ke 2 dengan nilai 1.3 merupakan hasil keuntungan informasi terbaik yakni dengan hasil 0.00021232279799998643</p>
+<section id="id8">
+<h2>Sepal Width<a class="headerlink" href="#id8" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Membuat Dinitial</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">GetOverollCategory</span><span class="p">((</span><span class="s2">&quot;sepal_width&quot;</span><span class="p">))</span>
+<span class="n">entropy_b</span> <span class="o">=</span> <span class="n">entropy</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">entropy_b</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(68, 82, 150)
+0.993707106604508
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>SPLIT 1 : 2.2</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">split1</span> <span class="o">=</span> <span class="n">splitter</span><span class="p">(</span><span class="mf">2.2</span><span class="p">,</span><span class="s2">&quot;sepal_width&quot;</span><span class="p">)</span>
+<span class="n">info_split1</span> <span class="o">=</span> <span class="n">info</span><span class="p">(</span><span class="n">split1</span><span class="p">)</span>
+<span class="n">gain</span><span class="p">(</span><span class="n">entropy_b</span><span class="p">,</span> <span class="n">info_split1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.0001729324189373438
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>SPLIT 2 : 3.0</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">split2</span> <span class="o">=</span> <span class="n">splitter</span><span class="p">(</span><span class="mf">3.0</span><span class="p">,</span><span class="s2">&quot;sepal_width&quot;</span><span class="p">)</span>
+<span class="n">info_split2</span> <span class="o">=</span> <span class="n">info</span><span class="p">(</span><span class="n">split2</span><span class="p">)</span>
+<span class="n">gain</span><span class="p">(</span><span class="n">entropy_b</span><span class="p">,</span> <span class="n">info_split2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.0009879303562354558
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>SPLIT 3 : 4.0</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">split3</span> <span class="o">=</span> <span class="n">splitter</span><span class="p">(</span><span class="mf">4.0</span><span class="p">,</span><span class="s2">&quot;sepal_width&quot;</span><span class="p">)</span>
+<span class="n">info_split3</span> <span class="o">=</span> <span class="n">info</span><span class="p">(</span><span class="n">split3</span><span class="p">)</span>
+<span class="n">gain</span><span class="p">(</span><span class="n">entropy_b</span><span class="p">,</span> <span class="n">info_split3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.00271470605919788
+</pre></div>
+</div>
+</div>
+</div>
+<p>Jadi dalam percobaan split atribut sepal width di dapati bahwa split ke 1 dengan nilai 2.2 merupakan hasil keuntungan informasi terbaik yakni dengan hasil 0.0001729324189373438</p>
+</section>
+<section id="id9">
+<h2>Petal Length<a class="headerlink" href="#id9" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Membuat Dinitial</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">GetOverollCategory</span><span class="p">((</span><span class="s2">&quot;petal_length&quot;</span><span class="p">))</span>
+<span class="n">entropy_c</span> <span class="o">=</span> <span class="n">entropy</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">entropy_c</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(68, 82, 150)
+0.993707106604508
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>SPLIT 1 : 1.2</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">split1</span> <span class="o">=</span> <span class="n">splitter</span><span class="p">(</span><span class="mf">1.2</span><span class="p">,</span><span class="s2">&quot;petal_length&quot;</span><span class="p">)</span>
+<span class="n">info_split1</span> <span class="o">=</span> <span class="n">info</span><span class="p">(</span><span class="n">split1</span><span class="p">)</span>
+<span class="n">gain</span><span class="p">(</span><span class="n">entropy_c</span><span class="p">,</span> <span class="n">info_split1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.003488151753460178
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>SPLIT 2 : 4.5</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">split2</span> <span class="o">=</span> <span class="n">splitter</span><span class="p">(</span><span class="mf">4.5</span><span class="p">,</span><span class="s2">&quot;petal_length&quot;</span><span class="p">)</span>
+<span class="n">info_split2</span> <span class="o">=</span> <span class="n">info</span><span class="p">(</span><span class="n">split2</span><span class="p">)</span>
+<span class="n">gain</span><span class="p">(</span><span class="n">entropy_c</span><span class="p">,</span> <span class="n">info_split2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.00010279135197621692
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>SPLIT 3 : 6.6</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">split3</span> <span class="o">=</span> <span class="n">splitter</span><span class="p">(</span><span class="mf">6.6</span><span class="p">,</span><span class="s2">&quot;petal_length&quot;</span><span class="p">)</span>
+<span class="n">info_split3</span> <span class="o">=</span> <span class="n">info</span><span class="p">(</span><span class="n">split3</span><span class="p">)</span>
+<span class="n">gain</span><span class="p">(</span><span class="n">entropy_c</span><span class="p">,</span> <span class="n">info_split3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.0008771143281794958
+</pre></div>
+</div>
+</div>
+</div>
+<p>Jadi dalam percobaan split atribut petal length  bahwa split ke 2 dengan nilai 4.5 merupakan hasil keuntungan informasi terbaik yakni dengan hasil 0.00010279135197621692</p>
+</section>
+<section id="id10">
+<h2>Sepal Length<a class="headerlink" href="#id10" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Membuat Dinitial</span>
+<span class="n">d</span> <span class="o">=</span> <span class="n">GetOverollCategory</span><span class="p">((</span><span class="s2">&quot;sepal_length&quot;</span><span class="p">))</span>
+<span class="n">entropy_d</span> <span class="o">=</span> <span class="n">entropy</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">entropy_d</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(68, 82, 150)
+0.993707106604508
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>SPLIT 1 : 4.5</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">split1</span> <span class="o">=</span> <span class="n">splitter</span><span class="p">(</span><span class="mf">4.5</span><span class="p">,</span><span class="s2">&quot;sepal_length&quot;</span><span class="p">)</span>
+<span class="n">info_split1</span> <span class="o">=</span> <span class="n">info</span><span class="p">(</span><span class="n">split1</span><span class="p">)</span>
+<span class="n">gain</span><span class="p">(</span><span class="n">entropy_d</span><span class="p">,</span> <span class="n">info_split1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.0069930419733333915
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>SPLIT 2 : 5.8</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">split2</span> <span class="o">=</span> <span class="n">splitter</span><span class="p">(</span><span class="mf">5.8</span><span class="p">,</span><span class="s2">&quot;sepal_length&quot;</span><span class="p">)</span>
+<span class="n">info_split2</span> <span class="o">=</span> <span class="n">info</span><span class="p">(</span><span class="n">split2</span><span class="p">)</span>
+<span class="n">gain</span><span class="p">(</span><span class="n">entropy_d</span><span class="p">,</span> <span class="n">info_split2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.0038893799103313365
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>SPLIT 3 : 7.5</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">split3</span> <span class="o">=</span> <span class="n">splitter</span><span class="p">(</span><span class="mf">7.5</span><span class="p">,</span><span class="s2">&quot;sepal_length&quot;</span><span class="p">)</span>
+<span class="n">info_split3</span> <span class="o">=</span> <span class="n">info</span><span class="p">(</span><span class="n">split3</span><span class="p">)</span>
+<span class="n">gain</span><span class="p">(</span><span class="n">entropy_d</span><span class="p">,</span> <span class="n">info_split3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.0017898381837971877
+</pre></div>
+</div>
+</div>
+</div>
+<p>Jadi pada percobaan split atribut petal length di dapati bahwa split ke 3 dengan nilai 7.5 merupakan hasil keuntungan informasi terbaik yakni dengan hasil 0.0017898381837971877</p>
 <p>Membuat Dinitial</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -3701,14 +4365,14 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(68, 82, 150)
-0.993707106604508
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.993707106604508
 </pre></div>
 </div>
 </div>
 </div>
 <p>Melakukan beberapa tes split untuk menari informasi yang terbaik</p>
-</section>
-</section>
 </section>
 <section id="split-1-4-4">
 <h2><em>Split 1 : 4.4</em><a class="headerlink" href="#split-1-4-4" title="Permalink to this headline">#</a></h2>
