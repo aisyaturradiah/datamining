@@ -52,8 +52,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Tugas 4" href="naive%20bayes.html" />
-    <link rel="prev" title="Tugas 3" href="KNN.html" />
+    <link rel="prev" title="Tugas 4" href="naive%20bayes.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -134,16 +133,16 @@ const thebe_selector_output = ".output, .cell_output"
    Tugas 3
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   Tugas 5
-  </a>
- </li>
  <li class="toctree-l1">
   <a class="reference internal" href="naive%20bayes.html">
    <strong>
     Tugas 4
    </strong>
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Tugas 5
   </a>
  </li>
 </ul>
@@ -514,7 +513,7 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-aa6d1322-4bd9-4733-867b-e9e6874630d3">
+  <div id="df-739b0b5e-722d-4046-a7d1-99d9eda5edfc">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -634,7 +633,7 @@ title="Print to PDF"
 </table>
 <p>150 rows × 5 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-aa6d1322-4bd9-4733-867b-e9e6874630d3')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-739b0b5e-722d-4046-a7d1-99d9eda5edfc')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -685,12 +684,12 @@ title="Print to PDF"
 
       <script>
         const buttonEl =
-          document.querySelector('#df-aa6d1322-4bd9-4733-867b-e9e6874630d3 button.colab-df-convert');
+          document.querySelector('#df-739b0b5e-722d-4046-a7d1-99d9eda5edfc button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-aa6d1322-4bd9-4733-867b-e9e6874630d3');
+          const element = document.querySelector('#df-739b0b5e-722d-4046-a7d1-99d9eda5edfc');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -768,11 +767,11 @@ title="Print to PDF"
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-       0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
-       1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
-       1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 1, 2, 2, 2,
+       0, 0, 0, 0, 0, 0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2,
        2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2,
-       2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2], dtype=int32)
+       2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1,
+       1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+       1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], dtype=int32)
 </pre></div>
 </div>
 </div>
@@ -796,8 +795,8 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[5.006     , 3.418     , 1.464     , 0.244     , 0.        ],
-       [5.91568627, 2.76470588, 4.26470588, 1.33333333, 1.01960784],
-       [6.62244898, 2.98367347, 5.57346939, 2.03265306, 2.        ]])
+       [6.62244898, 2.98367347, 5.57346939, 2.03265306, 2.        ],
+       [5.91568627, 2.76470588, 4.26470588, 1.33333333, 1.01960784]])
 </pre></div>
 </div>
 </div>
@@ -821,7 +820,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7f3861cb0ad0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7fb6a9856a50&gt;
 </pre></div>
 </div>
 <img alt="_images/k_means_23_1.png" src="_images/k_means_23_1.png" />
@@ -844,12 +843,12 @@ title="Print to PDF"
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                 precision    recall  f1-score   support
 
     Iris-setosa       1.00      1.00      1.00        50
-Iris-versicolor       0.98      1.00      0.99        50
- Iris-virginica       1.00      0.98      0.99        50
+Iris-versicolor       0.00      0.00      0.00        50
+ Iris-virginica       0.02      0.02      0.02        50
 
-       accuracy                           0.99       150
-      macro avg       0.99      0.99      0.99       150
-   weighted avg       0.99      0.99      0.99       150
+       accuracy                           0.34       150
+      macro avg       0.34      0.34      0.34       150
+   weighted avg       0.34      0.34      0.34       150
 </pre></div>
 </div>
 </div>
@@ -883,19 +882,12 @@ Iris-versicolor       0.98      1.00      0.99        50
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="KNN.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="naive%20bayes.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Tugas 3</p>
+            <p class="prev-next-title"><strong>Tugas 4</strong></p>
         </div>
-    </a>
-    <a class='right-next' id="next-link" href="naive%20bayes.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><strong>Tugas 4</strong></p>
-    </div>
-    <i class="fas fa-angle-right"></i>
     </a>
 </div>
             </footer>
