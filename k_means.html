@@ -52,7 +52,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Pengertian Decision Tree" href="des3.html" />
+    <link rel="next" title="Tugas 6" href="des3.html" />
     <link rel="prev" title="Tugas 4" href="naive%20bayes.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -149,7 +149,7 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="des3.html">
    <strong>
-    Pengertian Decision Tree
+    Tugas 6
    </strong>
   </a>
  </li>
@@ -373,7 +373,7 @@ title="Print to PDF"
 <li><p>Menentukan pusat cluster baru dengan menghitung rata-rata dari anggota cluster</p></li>
 <li><p>Mengulangi langkah ketiga dan keempat hingga tidak ada data yang berpindah tempat.</p></li>
 </ol>
-<section class="tex2jax_ignore mathjax_ignore" id="implementasi-code">
+<section id="implementasi-code">
 <h1>IMPLEMENTASI CODE<a class="headerlink" href="#implementasi-code" title="Permalink to this headline">#</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -400,7 +400,7 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-4ea0ce91-5871-48da-ae5b-b99a444b9cbb">
+  <div id="df-4a76d756-f7e3-4e47-884c-6474ead0aaf3">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -520,7 +520,7 @@ title="Print to PDF"
 </table>
 <p>150 rows × 5 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-4ea0ce91-5871-48da-ae5b-b99a444b9cbb')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-4a76d756-f7e3-4e47-884c-6474ead0aaf3')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -571,12 +571,12 @@ title="Print to PDF"
 
       <script>
         const buttonEl =
-          document.querySelector('#df-4ea0ce91-5871-48da-ae5b-b99a444b9cbb button.colab-df-convert');
+          document.querySelector('#df-4a76d756-f7e3-4e47-884c-6474ead0aaf3 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-4ea0ce91-5871-48da-ae5b-b99a444b9cbb');
+          const element = document.querySelector('#df-4a76d756-f7e3-4e47-884c-6474ead0aaf3');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -654,11 +654,11 @@ title="Print to PDF"
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-       0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
-       1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
-       1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 1, 2, 2, 2,
+       0, 0, 0, 0, 0, 0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2,
        2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2,
-       2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2], dtype=int32)
+       2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1,
+       1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+       1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], dtype=int32)
 </pre></div>
 </div>
 </div>
@@ -682,8 +682,8 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[5.006     , 3.418     , 1.464     , 0.244     , 0.        ],
-       [5.91568627, 2.76470588, 4.26470588, 1.33333333, 1.01960784],
-       [6.62244898, 2.98367347, 5.57346939, 2.03265306, 2.        ]])
+       [6.62244898, 2.98367347, 5.57346939, 2.03265306, 2.        ],
+       [5.91568627, 2.76470588, 4.26470588, 1.33333333, 1.01960784]])
 </pre></div>
 </div>
 </div>
@@ -707,7 +707,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7fc40e0d8b50&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7f3489cc5c50&gt;
 </pre></div>
 </div>
 <img alt="_images/k_means_20_1.png" src="_images/k_means_20_1.png" />
@@ -730,12 +730,12 @@ title="Print to PDF"
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                 precision    recall  f1-score   support
 
     Iris-setosa       1.00      1.00      1.00        50
-Iris-versicolor       0.98      1.00      0.99        50
- Iris-virginica       1.00      0.98      0.99        50
+Iris-versicolor       0.00      0.00      0.00        50
+ Iris-virginica       0.02      0.02      0.02        50
 
-       accuracy                           0.99       150
-      macro avg       0.99      0.99      0.99       150
-   weighted avg       0.99      0.99      0.99       150
+       accuracy                           0.34       150
+      macro avg       0.34      0.34      0.34       150
+   weighted avg       0.34      0.34      0.34       150
 </pre></div>
 </div>
 </div>
@@ -779,7 +779,7 @@ Iris-versicolor       0.98      1.00      0.99        50
     <a class='right-next' id="next-link" href="des3.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><strong>Pengertian Decision Tree</strong></p>
+        <p class="prev-next-title"><strong>Tugas 6</strong></p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
