@@ -153,6 +153,13 @@ const thebe_selector_output = ".output, .cell_output"
    </strong>
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="UTS.html">
+   <strong>
+    UTS
+   </strong>
+  </a>
+ </li>
 </ul>
 
     </div>
@@ -470,7 +477,7 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-6bb73630-b762-46d5-8fea-73335896d421">
+  <div id="df-8309125d-3fd5-44bd-930c-5f4680517634">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -590,7 +597,7 @@ title="Print to PDF"
 </table>
 <p>150 rows × 5 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-6bb73630-b762-46d5-8fea-73335896d421')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-8309125d-3fd5-44bd-930c-5f4680517634')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -641,12 +648,12 @@ title="Print to PDF"
 
       <script>
         const buttonEl =
-          document.querySelector('#df-6bb73630-b762-46d5-8fea-73335896d421 button.colab-df-convert');
+          document.querySelector('#df-8309125d-3fd5-44bd-930c-5f4680517634 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-6bb73630-b762-46d5-8fea-73335896d421');
+          const element = document.querySelector('#df-8309125d-3fd5-44bd-930c-5f4680517634');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -722,13 +729,13 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
-       1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
-       1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-       0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 2, 2, 2, 2, 0, 2, 2, 2,
+       0, 0, 0, 0, 0, 0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2,
        2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2,
-       2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2], dtype=int32)
+       2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1,
+       1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+       1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], dtype=int32)
 </pre></div>
 </div>
 </div>
@@ -751,9 +758,9 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[5.91568627, 2.76470588, 4.26470588, 1.33333333, 1.01960784],
-       [5.006     , 3.418     , 1.464     , 0.244     , 0.        ],
-       [6.62244898, 2.98367347, 5.57346939, 2.03265306, 2.        ]])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[5.006     , 3.418     , 1.464     , 0.244     , 0.        ],
+       [6.62244898, 2.98367347, 5.57346939, 2.03265306, 2.        ],
+       [5.91568627, 2.76470588, 4.26470588, 1.33333333, 1.01960784]])
 </pre></div>
 </div>
 </div>
@@ -777,7 +784,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7fc0a33bee10&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7f6f370b19d0&gt;
 </pre></div>
 </div>
 <img alt="_images/k_means_20_1.png" src="_images/k_means_20_1.png" />
@@ -799,13 +806,13 @@ title="Print to PDF"
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                 precision    recall  f1-score   support
 
-    Iris-setosa       0.00      0.00      0.00        50
+    Iris-setosa       1.00      1.00      1.00        50
 Iris-versicolor       0.00      0.00      0.00        50
- Iris-virginica       1.00      0.98      0.99        50
+ Iris-virginica       0.02      0.02      0.02        50
 
-       accuracy                           0.33       150
-      macro avg       0.33      0.33      0.33       150
-   weighted avg       0.33      0.33      0.33       150
+       accuracy                           0.34       150
+      macro avg       0.34      0.34      0.34       150
+   weighted avg       0.34      0.34      0.34       150
 </pre></div>
 </div>
 </div>
