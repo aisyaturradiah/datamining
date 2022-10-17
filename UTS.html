@@ -50,6 +50,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="prev" title="Tugas 6" href="des3.html" />
@@ -383,6 +385,23 @@ title="Print to PDF"
     <a class="reference internal nav-link" href="#cara-kerja-knn">
      Cara Kerja KNN
     </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#persiapan-lingkungan">
+       Persiapan Lingkungan
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#melakukan-perhitungan-data">
+     Melakukan Perhitungan Data
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#terdapat-kesimpulan-mengenai-hasil-analisa-dari-metode-knn">
+     Terdapat kesimpulan mengenai hasil analisa dari metode KNN
+    </a>
    </li>
   </ul>
  </li>
@@ -446,6 +465,23 @@ title="Print to PDF"
     <a class="reference internal nav-link" href="#cara-kerja-knn">
      Cara Kerja KNN
     </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#persiapan-lingkungan">
+       Persiapan Lingkungan
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#melakukan-perhitungan-data">
+     Melakukan Perhitungan Data
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#terdapat-kesimpulan-mengenai-hasil-analisa-dari-metode-knn">
+     Terdapat kesimpulan mengenai hasil analisa dari metode KNN
+    </a>
    </li>
   </ul>
  </li>
@@ -484,6 +520,9 @@ title="Print to PDF"
                 
   <section id="uts">
 <h1><strong>UTS</strong><a class="headerlink" href="#uts" title="Permalink to this headline">#</a></h1>
+<p><strong>NAMA : AISYATUR RADIAH</strong></p>
+<p><strong>NIM  : 200411100116</strong></p>
+<p><strong>UTS  : PENAMBANGAN DATA (A)</strong></p>
 <p>Lakukan analisa terhadap data pada  <a class="reference external" href="https://archive.ics.uci.edu/ml/datasets/Breast+Cancer+Coimbra">https://archive.ics.uci.edu/ml/datasets/Breast+Cancer+Coimbra</a>  dengan menggunakan klasifikasi</p>
 <ul class="simple">
 <li><p>metode KNN</p></li>
@@ -503,12 +542,876 @@ title="Print to PDF"
 <li><p>hitung jarak setiap tetangga terhadap rumah tersebut, lalu urutkan hasilnya berdasarkan jarak, mulai dari yang terkecil ke yang terbesar.</p></li>
 <li><p>ambil 3 (k) tetangga yg paling dekat, lalu tentukan kelas dari data baru tersebut sesuai dengan tetangga terdekatnya.</p></li>
 </ol>
+<section id="persiapan-lingkungan">
+<h3>Persiapan Lingkungan<a class="headerlink" href="#persiapan-lingkungan" title="Permalink to this headline">#</a></h3>
+<ol class="simple">
+<li><p>Impor <em>train_test_split</em> dari <em>sklearn</em></p></li>
+<li><p>Impor <em>KNeighborsClassifier</em> dari <em>sklearn</em></p></li>
+<li><p>Impor <em>pandas library</em></p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span> <span class="c1">#split dataset into train and test data</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.neighbors</span> <span class="kn">import</span> <span class="n">KNeighborsClassifier</span><span class="c1"># Create KNN classifier</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">warnings</span>
+<span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s1">&#39;ignore&#39;</span><span class="p">,</span> <span class="n">category</span><span class="o">=</span><span class="ne">UserWarning</span><span class="p">,</span> <span class="n">append</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dataset_url</span> <span class="o">=</span> <span class="s2">&quot;https://raw.githubusercontent.com/aisyaturradiah/datamining/gh-pages/dataR2.csv&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">dataset_url</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="df-3fd84ff1-7c87-4472-9e3c-bccbcf1365a2">
+    <div class="colab-df-container">
+      <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Age</th>
+      <th>BMI</th>
+      <th>Glucose</th>
+      <th>Insulin</th>
+      <th>HOMA</th>
+      <th>Leptin</th>
+      <th>Adiponectin</th>
+      <th>Resistin</th>
+      <th>MCP.1</th>
+      <th>Classification</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>48</td>
+      <td>23.500000</td>
+      <td>70</td>
+      <td>2.707</td>
+      <td>0.467409</td>
+      <td>8.8071</td>
+      <td>9.702400</td>
+      <td>7.99585</td>
+      <td>417.114</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>83</td>
+      <td>20.690495</td>
+      <td>92</td>
+      <td>3.115</td>
+      <td>0.706897</td>
+      <td>8.8438</td>
+      <td>5.429285</td>
+      <td>4.06405</td>
+      <td>468.786</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>82</td>
+      <td>23.124670</td>
+      <td>91</td>
+      <td>4.498</td>
+      <td>1.009651</td>
+      <td>17.9393</td>
+      <td>22.432040</td>
+      <td>9.27715</td>
+      <td>554.697</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>68</td>
+      <td>21.367521</td>
+      <td>77</td>
+      <td>3.226</td>
+      <td>0.612725</td>
+      <td>9.8827</td>
+      <td>7.169560</td>
+      <td>12.76600</td>
+      <td>928.220</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>86</td>
+      <td>21.111111</td>
+      <td>92</td>
+      <td>3.549</td>
+      <td>0.805386</td>
+      <td>6.6994</td>
+      <td>4.819240</td>
+      <td>10.57635</td>
+      <td>773.920</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+      <button class="colab-df-convert" onclick="convertToInteractive('df-3fd84ff1-7c87-4472-9e3c-bccbcf1365a2')"
+              title="Convert this dataframe to an interactive table."
+              style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+       width="24px">
+    <path d="M0 0h24v24H0V0z" fill="none"/>
+    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
+  </svg>
+      </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      flex-wrap:wrap;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+      <script>
+        const buttonEl =
+          document.querySelector('#df-3fd84ff1-7c87-4472-9e3c-bccbcf1365a2 button.colab-df-convert');
+        buttonEl.style.display =
+          google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+        async function convertToInteractive(key) {
+          const element = document.querySelector('#df-3fd84ff1-7c87-4472-9e3c-bccbcf1365a2');
+          const dataTable =
+            await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                     [key], {});
+          if (!dataTable) return;
+
+          const docLinkHtml = 'Like what you see? Visit the ' +
+            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+            + ' to learn more about interactive tables.';
+          element.innerHTML = '';
+          dataTable['output_type'] = 'display_data';
+          await google.colab.output.renderOutput(dataTable, element);
+          const docLink = document.createElement('div');
+          docLink.innerHTML = docLinkHtml;
+          element.appendChild(docLink);
+        }
+      </script>
+    </div>
+  </div>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="df-07c5446d-d557-427d-8cb8-2a073d260865">
+    <div class="colab-df-container">
+      <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Age</th>
+      <th>BMI</th>
+      <th>Glucose</th>
+      <th>Insulin</th>
+      <th>HOMA</th>
+      <th>Leptin</th>
+      <th>Adiponectin</th>
+      <th>Resistin</th>
+      <th>MCP.1</th>
+      <th>Classification</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>count</th>
+      <td>116.000000</td>
+      <td>116.000000</td>
+      <td>116.000000</td>
+      <td>116.000000</td>
+      <td>116.000000</td>
+      <td>116.000000</td>
+      <td>116.000000</td>
+      <td>116.000000</td>
+      <td>116.000000</td>
+      <td>116.000000</td>
+    </tr>
+    <tr>
+      <th>mean</th>
+      <td>57.301724</td>
+      <td>27.582111</td>
+      <td>97.793103</td>
+      <td>10.012086</td>
+      <td>2.694988</td>
+      <td>26.615080</td>
+      <td>10.180874</td>
+      <td>14.725966</td>
+      <td>534.647000</td>
+      <td>1.551724</td>
+    </tr>
+    <tr>
+      <th>std</th>
+      <td>16.112766</td>
+      <td>5.020136</td>
+      <td>22.525162</td>
+      <td>10.067768</td>
+      <td>3.642043</td>
+      <td>19.183294</td>
+      <td>6.843341</td>
+      <td>12.390646</td>
+      <td>345.912663</td>
+      <td>0.499475</td>
+    </tr>
+    <tr>
+      <th>min</th>
+      <td>24.000000</td>
+      <td>18.370000</td>
+      <td>60.000000</td>
+      <td>2.432000</td>
+      <td>0.467409</td>
+      <td>4.311000</td>
+      <td>1.656020</td>
+      <td>3.210000</td>
+      <td>45.843000</td>
+      <td>1.000000</td>
+    </tr>
+    <tr>
+      <th>25%</th>
+      <td>45.000000</td>
+      <td>22.973205</td>
+      <td>85.750000</td>
+      <td>4.359250</td>
+      <td>0.917966</td>
+      <td>12.313675</td>
+      <td>5.474283</td>
+      <td>6.881763</td>
+      <td>269.978250</td>
+      <td>1.000000</td>
+    </tr>
+    <tr>
+      <th>50%</th>
+      <td>56.000000</td>
+      <td>27.662416</td>
+      <td>92.000000</td>
+      <td>5.924500</td>
+      <td>1.380939</td>
+      <td>20.271000</td>
+      <td>8.352692</td>
+      <td>10.827740</td>
+      <td>471.322500</td>
+      <td>2.000000</td>
+    </tr>
+    <tr>
+      <th>75%</th>
+      <td>71.000000</td>
+      <td>31.241442</td>
+      <td>102.000000</td>
+      <td>11.189250</td>
+      <td>2.857787</td>
+      <td>37.378300</td>
+      <td>11.815970</td>
+      <td>17.755207</td>
+      <td>700.085000</td>
+      <td>2.000000</td>
+    </tr>
+    <tr>
+      <th>max</th>
+      <td>89.000000</td>
+      <td>38.578759</td>
+      <td>201.000000</td>
+      <td>58.460000</td>
+      <td>25.050342</td>
+      <td>90.280000</td>
+      <td>38.040000</td>
+      <td>82.100000</td>
+      <td>1698.440000</td>
+      <td>2.000000</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+      <button class="colab-df-convert" onclick="convertToInteractive('df-07c5446d-d557-427d-8cb8-2a073d260865')"
+              title="Convert this dataframe to an interactive table."
+              style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+       width="24px">
+    <path d="M0 0h24v24H0V0z" fill="none"/>
+    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
+  </svg>
+      </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      flex-wrap:wrap;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+      <script>
+        const buttonEl =
+          document.querySelector('#df-07c5446d-d557-427d-8cb8-2a073d260865 button.colab-df-convert');
+        buttonEl.style.display =
+          google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+        async function convertToInteractive(key) {
+          const element = document.querySelector('#df-07c5446d-d557-427d-8cb8-2a073d260865');
+          const dataTable =
+            await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                     [key], {});
+          if (!dataTable) return;
+
+          const docLinkHtml = 'Like what you see? Visit the ' +
+            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+            + ' to learn more about interactive tables.';
+          element.innerHTML = '';
+          dataTable['output_type'] = 'display_data';
+          await google.colab.output.renderOutput(dataTable, element);
+          const docLink = document.createElement('div');
+          docLink.innerHTML = docLinkHtml;
+          element.appendChild(docLink);
+        }
+      </script>
+    </div>
+  </div>
+</div></div>
+</div>
+<p>terdapat data yang ditampilkan yaitu data Age, BMI, Glucose, Insulin, HOMA, Leptin, Adiponectin, Resistin, MCP.1, dan juga Classification</p>
+<p>Malakukan pengecekan dari number rows dan juga columns datasetnya</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#check number of rows and columns in dataset</span>
+<span class="n">df</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(116, 10)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#check number of rows and columns in dataset</span>
+<span class="n">df</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(116, 10)
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="melakukan-perhitungan-data">
+<h2>Melakukan Perhitungan Data<a class="headerlink" href="#melakukan-perhitungan-data" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p>Melakukan pemisahan kolom “Classification” dari <em>dataframe</em></p></li>
+<li><p>Melakukan pengambilan kolom “Classification” sebagai target kolom untuk kategori kelas</p></li>
+<li><p>Melakukan pemisahan  data latih dengan data tes</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># data latih (nilai data)</span>
+<span class="n">X_train</span> 
+
+<span class="c1"># data tes (nilai data)</span>
+<span class="n">X_test</span> 
+
+<span class="c1"># data latih (kelas data)</span>
+<span class="n">y_train</span>
+
+<span class="c1"># data tes (kelas data)</span>
+<span class="n">y_test</span>
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#create a dataframe with all training data except the target column</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Classification&quot;</span><span class="p">])</span><span class="c1">#check that the target variable has been removed</span>
+<span class="n">X</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="df-4846259c-bc5c-45fe-884f-3c4e36ac261b">
+    <div class="colab-df-container">
+      <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Age</th>
+      <th>BMI</th>
+      <th>Glucose</th>
+      <th>Insulin</th>
+      <th>HOMA</th>
+      <th>Leptin</th>
+      <th>Adiponectin</th>
+      <th>Resistin</th>
+      <th>MCP.1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>48</td>
+      <td>23.500000</td>
+      <td>70</td>
+      <td>2.707</td>
+      <td>0.467409</td>
+      <td>8.8071</td>
+      <td>9.702400</td>
+      <td>7.99585</td>
+      <td>417.114</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>83</td>
+      <td>20.690495</td>
+      <td>92</td>
+      <td>3.115</td>
+      <td>0.706897</td>
+      <td>8.8438</td>
+      <td>5.429285</td>
+      <td>4.06405</td>
+      <td>468.786</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>82</td>
+      <td>23.124670</td>
+      <td>91</td>
+      <td>4.498</td>
+      <td>1.009651</td>
+      <td>17.9393</td>
+      <td>22.432040</td>
+      <td>9.27715</td>
+      <td>554.697</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>68</td>
+      <td>21.367521</td>
+      <td>77</td>
+      <td>3.226</td>
+      <td>0.612725</td>
+      <td>9.8827</td>
+      <td>7.169560</td>
+      <td>12.76600</td>
+      <td>928.220</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>86</td>
+      <td>21.111111</td>
+      <td>92</td>
+      <td>3.549</td>
+      <td>0.805386</td>
+      <td>6.6994</td>
+      <td>4.819240</td>
+      <td>10.57635</td>
+      <td>773.920</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+      <button class="colab-df-convert" onclick="convertToInteractive('df-4846259c-bc5c-45fe-884f-3c4e36ac261b')"
+              title="Convert this dataframe to an interactive table."
+              style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+       width="24px">
+    <path d="M0 0h24v24H0V0z" fill="none"/>
+    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
+  </svg>
+      </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      flex-wrap:wrap;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+      <script>
+        const buttonEl =
+          document.querySelector('#df-4846259c-bc5c-45fe-884f-3c4e36ac261b button.colab-df-convert');
+        buttonEl.style.display =
+          google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+        async function convertToInteractive(key) {
+          const element = document.querySelector('#df-4846259c-bc5c-45fe-884f-3c4e36ac261b');
+          const dataTable =
+            await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                     [key], {});
+          if (!dataTable) return;
+
+          const docLinkHtml = 'Like what you see? Visit the ' +
+            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+            + ' to learn more about interactive tables.';
+          element.innerHTML = '';
+          dataTable['output_type'] = 'display_data';
+          await google.colab.output.renderOutput(dataTable, element);
+          const docLink = document.createElement('div');
+          docLink.innerHTML = docLinkHtml;
+          element.appendChild(docLink);
+        }
+      </script>
+    </div>
+  </div>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># separate target values</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;Classification&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>  <span class="c1"># view target values</span>
+<span class="n">y</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">10</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([1, 1, 1, 1, 1, 1, 1, 1, 1, 1])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># percent_amount_of_test_data = / HUNDRED_PERCENT</span>
+<span class="n">percent_amount_of_test_data</span> <span class="o">=</span> <span class="mf">0.2</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">test_size</span> <span class="o">=</span> <span class="n">percent_amount_of_test_data</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">stratify</span><span class="o">=</span><span class="n">y</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>Menentukan nilai K = 10 (10 tetangga terdekat)</p></li>
+<li><p>Membuat sebuah data latih</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">knn_classifier</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">train_data</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">amount_of_neighbor</span> <span class="o">=</span> <span class="mi">10</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Fit the classifier to the data</span>
+<span class="n">knn</span> <span class="o">=</span> <span class="n">KNeighborsClassifier</span><span class="p">(</span><span class="n">n_neighbors</span> <span class="o">=</span> <span class="n">amount_of_neighbor</span><span class="p">)</span>
+
+<span class="c1"># create train data</span>
+<span class="n">knn</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span><span class="n">y_train</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>KNeighborsClassifier(n_neighbors=10)
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>Malakukan uji coba atau tes mengenai data target terhadap data latih</p></li>
+<li><p>Menampilkan data predksi 10 data pertama</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">knn_classifier</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">test_data</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#show first 5 model predictions on the test data</span>
+<span class="n">knn</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([1, 1, 1, 2, 1, 2, 1, 1, 1, 1, 2, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2,
+       1, 2])
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>Malakukan Cetak prediksi nilai dari data tes yang dilakukan</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">knn_classifier</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">test_data</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#check accuracy of our model on the test data</span>
+<span class="n">knn</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.5
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>Melakukan pengecekan sebuah data dengan nilainya</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Test Data (1)</span>
+<span class="p">[</span>
+    <span class="p">[</span>
+        <span class="mi">45</span><span class="p">,</span> 
+        <span class="mf">21.30394858</span><span class="p">,</span> 
+        <span class="mi">102</span><span class="p">,</span> 
+        <span class="mf">13.852</span><span class="p">,</span> 
+        <span class="mf">3.4851632</span><span class="p">,</span> 
+        <span class="mf">7.6476</span><span class="p">,</span> 
+        <span class="mf">21.056625</span><span class="p">,</span> 
+        <span class="mf">23.03408</span><span class="p">,</span>	
+        <span class="mf">552.444</span>
+    <span class="p">]</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Custom value to predict (1) based on manual calculation</span>
+<span class="n">knn</span><span class="o">.</span><span class="n">predict</span><span class="p">([[</span><span class="mi">45</span><span class="p">,</span> <span class="mf">21.30394858</span><span class="p">,</span> <span class="mi">102</span><span class="p">,</span> <span class="mf">13.852</span><span class="p">,</span> <span class="mf">3.4851632</span><span class="p">,</span> <span class="mf">7.6476</span><span class="p">,</span> <span class="mf">21.056625</span><span class="p">,</span> <span class="mf">23.03408</span><span class="p">,</span>	<span class="mf">552.444</span><span class="p">]])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([1])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Custom value to predict (2)</span>
+<span class="n">knn</span><span class="o">.</span><span class="n">predict</span><span class="p">([[</span><span class="mi">72</span><span class="p">,</span><span class="mf">25.59</span><span class="p">,</span><span class="mi">82</span><span class="p">,</span><span class="mf">2.82</span><span class="p">,</span><span class="mf">0.570392</span><span class="p">,</span><span class="mf">24.96</span><span class="p">,</span><span class="mf">33.75</span><span class="p">,</span><span class="mf">3.27</span><span class="p">,</span><span class="mf">392.46</span><span class="p">]])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([2])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Custom value to predict (3) based on manual calculation</span>
+<span class="n">knn</span><span class="o">.</span><span class="n">predict</span><span class="p">([[</span><span class="mi">20</span><span class="p">,</span><span class="mi">35</span><span class="p">,</span>   <span class="mi">79</span><span class="p">,</span><span class="mf">2.5</span><span class="p">,</span> <span class="mf">0.4</span><span class="p">,</span>     <span class="mi">25</span><span class="p">,</span>   <span class="mi">32</span><span class="p">,</span>   <span class="mf">3.1</span><span class="p">,</span> <span class="mi">393</span><span class="p">]])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([1])
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="terdapat-kesimpulan-mengenai-hasil-analisa-dari-metode-knn">
+<h2>Terdapat kesimpulan mengenai hasil analisa dari metode KNN<a class="headerlink" href="#terdapat-kesimpulan-mengenai-hasil-analisa-dari-metode-knn" title="Permalink to this headline">#</a></h2>
+<p>Dataset Breast Cances Combria terdiri dari 116 data, yang dimana data yang diambil yaitu <strong>80%</strong> dari data latih yaitu data Breast Cancer Combria. Kemudian data yang diambil yaitu data tesnya sebanyak <strong>20%</strong> dari data Breast Cancer Combria untuk data tesnya, sehingga nanti di tetapkan mengenai nilai K = 10, dan mengenai hasilnya yaitu 10 data pertama dari 20% data latih. Sehingga ddapat kita lihat dibawah ini yaitu:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">1 = Healthy controls </span>
+<span class="sd">2 = Patients</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Dari penjelasan mengenai kesimpulan diatas maka hasil akurasi yaitu  <span class="math notranslate nohighlight">\( 0.5\% \)</span></p>
 </section>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="metode-decision-tree">
 <h1><strong>Metode Decision Tree</strong><a class="headerlink" href="#metode-decision-tree" title="Permalink to this headline">#</a></h1>
 <section id="algoritma-decision-tree">
 <h2><strong>Algoritma Decision Tree</strong><a class="headerlink" href="#algoritma-decision-tree" title="Permalink to this headline">#</a></h2>
+<p>Decision tree adalah metode non parametrik yang digunakan untuk klasifikasi dan regresi. Decision tree merupakan metode non parametrik yang digunakan untuk klasifikasi dan regresi. Tujuan dari decision tree adalah membuat model yang memprediksi nilai variabel target dengan mengikuti aturan keputusan sederhana dari fitur data yang tersedia.</p>
+<p>Tujuan : membuat model yang memprediksi nilai variabel target dengan mengikuti aturan keputusan sederhana dari fitur data yang tersedia.</p>
+<p>Terdapat beberapa komponen dalam Decision Tree ini, antara lain sebagai berikut :</p>
+<ol class="simple">
+<li><p>Root Node: akar, karena dalam decesion tree ini adalah pohon terbalik maka nantinya akan menghasilkan sebuah pohon keputusan, jadi akan berada diatasnya.</p></li>
+<li><p>Leaf Node: Daun, yang berada pada cabang, dari root node yang dibuat, sehingga  nantinya akan menghasilkan sebuah ranting, atau cabang.</p></li>
+<li><p>Internal Node: yaitu bagian yang berada antara root node dan leaf node.</p></li>
+</ol>
 <ul class="simple">
 <li><p>Decision Tree adalah jenis white box algoritma dalam machine learning yang
 menggunakan internal decision making logic. Hal ini tidak terdapat dapat pada jenis black box algoritma yaitu neural network. Waktu pengambilan data training decision tree lebih cepat dibandingkan Neural Network.</p></li>
@@ -523,6 +1426,7 @@ menggunakan internal decision making logic. Hal ini tidak terdapat dapat pada je
 <li><p>Mulai membangun pohon dengan mengulangi proses ini secara rekursif, untuk setiap cabang sampai salah satu dari kondisi tersebut akan cocok</p></li>
 </ul>
 <p><img alt="original image" src="https://cdn.mathpix.com/snip/images/z9qk6qpPrC1Jp2o_xKzcXC8bWwIVeHcHj_H6wbaRTrs.original.fullsize.png" /></p>
+<p>Melakukan import</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -534,6 +1438,7 @@ menggunakan internal decision making logic. Hal ini tidak terdapat dapat pada je
 </div>
 </div>
 </div>
+<p>Mengecek data url</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">url</span> <span class="o">=</span> <span class="s1">&#39;https://raw.githubusercontent.com/aisyaturradiah/datamining/gh-pages/dataR2.csv&#39;</span>
@@ -542,6 +1447,7 @@ menggunakan internal decision making logic. Hal ini tidak terdapat dapat pada je
 </div>
 </div>
 </div>
+<p>Menampilkan data dari head</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
@@ -550,7 +1456,7 @@ menggunakan internal decision making logic. Hal ini tidak terdapat dapat pada je
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-3d9d28ad-ed26-4add-a725-03eb520058ce">
+  <div id="df-22c89fcc-89fb-4a38-8492-219576e81f0d">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -730,7 +1636,7 @@ menggunakan internal decision making logic. Hal ini tidak terdapat dapat pada je
 </table>
 <p>115 rows × 10 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-3d9d28ad-ed26-4add-a725-03eb520058ce')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-22c89fcc-89fb-4a38-8492-219576e81f0d')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -781,12 +1687,12 @@ menggunakan internal decision making logic. Hal ini tidak terdapat dapat pada je
 
       <script>
         const buttonEl =
-          document.querySelector('#df-3d9d28ad-ed26-4add-a725-03eb520058ce button.colab-df-convert');
+          document.querySelector('#df-22c89fcc-89fb-4a38-8492-219576e81f0d button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-3d9d28ad-ed26-4add-a725-03eb520058ce');
+          const element = document.querySelector('#df-22c89fcc-89fb-4a38-8492-219576e81f0d');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -807,44 +1713,233 @@ menggunakan internal decision making logic. Hal ini tidak terdapat dapat pada je
   </div>
 </div></div>
 </div>
+<p>Menampilkan seluruh dataset</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">describe</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;bound method NDFrame.describe of      Age        BMI  Glucose  Insulin      HOMA   Leptin  Adiponectin  \
-0     48  23.500000       70    2.707  0.467409   8.8071     9.702400   
-1     83  20.690495       92    3.115  0.706897   8.8438     5.429285   
-2     82  23.124670       91    4.498  1.009651  17.9393    22.432040   
-3     68  21.367521       77    3.226  0.612725   9.8827     7.169560   
-4     86  21.111111       92    3.549  0.805386   6.6994     4.819240   
-..   ...        ...      ...      ...       ...      ...          ...   
-111   45  26.850000       92    3.330  0.755688  54.6800    12.100000   
-112   62  26.840000      100    4.530  1.117400  12.4500    21.420000   
-113   65  32.050000       97    5.730  1.370998  61.4800    22.540000   
-114   72  25.590000       82    2.820  0.570392  24.9600    33.750000   
-115   86  27.180000      138   19.910  6.777364  90.2800    14.110000   
+<div class="output text_html">
+  <div id="df-3a90ed96-26f2-407d-8ee1-972e88a063fe">
+    <div class="colab-df-container">
+      <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
-     Resistin    MCP.1  Classification  
-0     7.99585  417.114               1  
-1     4.06405  468.786               1  
-2     9.27715  554.697               1  
-3    12.76600  928.220               1  
-4    10.57635  773.920               1  
-..        ...      ...             ...  
-111  10.96000  268.230               2  
-112   7.32000  330.160               2  
-113  10.33000  314.050               2  
-114   3.27000  392.460               2  
-115   4.35000   90.090               2  
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
 
-[116 rows x 10 columns]&gt;
-</pre></div>
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Age</th>
+      <th>BMI</th>
+      <th>Glucose</th>
+      <th>Insulin</th>
+      <th>HOMA</th>
+      <th>Leptin</th>
+      <th>Adiponectin</th>
+      <th>Resistin</th>
+      <th>MCP.1</th>
+      <th>Classification</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>count</th>
+      <td>116.000000</td>
+      <td>116.000000</td>
+      <td>116.000000</td>
+      <td>116.000000</td>
+      <td>116.000000</td>
+      <td>116.000000</td>
+      <td>116.000000</td>
+      <td>116.000000</td>
+      <td>116.000000</td>
+      <td>116.000000</td>
+    </tr>
+    <tr>
+      <th>mean</th>
+      <td>57.301724</td>
+      <td>27.582111</td>
+      <td>97.793103</td>
+      <td>10.012086</td>
+      <td>2.694988</td>
+      <td>26.615080</td>
+      <td>10.180874</td>
+      <td>14.725966</td>
+      <td>534.647000</td>
+      <td>1.551724</td>
+    </tr>
+    <tr>
+      <th>std</th>
+      <td>16.112766</td>
+      <td>5.020136</td>
+      <td>22.525162</td>
+      <td>10.067768</td>
+      <td>3.642043</td>
+      <td>19.183294</td>
+      <td>6.843341</td>
+      <td>12.390646</td>
+      <td>345.912663</td>
+      <td>0.499475</td>
+    </tr>
+    <tr>
+      <th>min</th>
+      <td>24.000000</td>
+      <td>18.370000</td>
+      <td>60.000000</td>
+      <td>2.432000</td>
+      <td>0.467409</td>
+      <td>4.311000</td>
+      <td>1.656020</td>
+      <td>3.210000</td>
+      <td>45.843000</td>
+      <td>1.000000</td>
+    </tr>
+    <tr>
+      <th>25%</th>
+      <td>45.000000</td>
+      <td>22.973205</td>
+      <td>85.750000</td>
+      <td>4.359250</td>
+      <td>0.917966</td>
+      <td>12.313675</td>
+      <td>5.474283</td>
+      <td>6.881763</td>
+      <td>269.978250</td>
+      <td>1.000000</td>
+    </tr>
+    <tr>
+      <th>50%</th>
+      <td>56.000000</td>
+      <td>27.662416</td>
+      <td>92.000000</td>
+      <td>5.924500</td>
+      <td>1.380939</td>
+      <td>20.271000</td>
+      <td>8.352692</td>
+      <td>10.827740</td>
+      <td>471.322500</td>
+      <td>2.000000</td>
+    </tr>
+    <tr>
+      <th>75%</th>
+      <td>71.000000</td>
+      <td>31.241442</td>
+      <td>102.000000</td>
+      <td>11.189250</td>
+      <td>2.857787</td>
+      <td>37.378300</td>
+      <td>11.815970</td>
+      <td>17.755207</td>
+      <td>700.085000</td>
+      <td>2.000000</td>
+    </tr>
+    <tr>
+      <th>max</th>
+      <td>89.000000</td>
+      <td>38.578759</td>
+      <td>201.000000</td>
+      <td>58.460000</td>
+      <td>25.050342</td>
+      <td>90.280000</td>
+      <td>38.040000</td>
+      <td>82.100000</td>
+      <td>1698.440000</td>
+      <td>2.000000</td>
+    </tr>
+  </tbody>
+</table>
 </div>
+      <button class="colab-df-convert" onclick="convertToInteractive('df-3a90ed96-26f2-407d-8ee1-972e88a063fe')"
+              title="Convert this dataframe to an interactive table."
+              style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+       width="24px">
+    <path d="M0 0h24v24H0V0z" fill="none"/>
+    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
+  </svg>
+      </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      flex-wrap:wrap;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+      <script>
+        const buttonEl =
+          document.querySelector('#df-3a90ed96-26f2-407d-8ee1-972e88a063fe button.colab-df-convert');
+        buttonEl.style.display =
+          google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+        async function convertToInteractive(key) {
+          const element = document.querySelector('#df-3a90ed96-26f2-407d-8ee1-972e88a063fe');
+          const dataTable =
+            await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                     [key], {});
+          if (!dataTable) return;
+
+          const docLinkHtml = 'Like what you see? Visit the ' +
+            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+            + ' to learn more about interactive tables.';
+          element.innerHTML = '';
+          dataTable['output_type'] = 'display_data';
+          await google.colab.output.renderOutput(dataTable, element);
+          const docLink = document.createElement('div');
+          docLink.innerHTML = docLinkHtml;
+          element.appendChild(docLink);
+        }
+      </script>
+    </div>
+  </div>
+</div></div>
 </div>
-</div>
+<p>Mengecek variabel independent dari Classification, dengan x sebagai variabel independent</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># x sebagai variable independent</span>
@@ -885,6 +1980,7 @@ menggunakan internal decision making logic. Hal ini tidak terdapat dapat pada je
 </div>
 </div>
 </div>
+<p>Mengecek variabel independent dari Classification, dengan y sebagai variabel independent</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># y sebagai variable dependent</span>
@@ -956,6 +2052,7 @@ Name: Classification, Length: 116, dtype: int64&gt;
 </div>
 </div>
 </div>
+<p>Membangun decision tree dan melakukan prediksi</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># membangun decision tree menggunakan gini</span>
@@ -968,6 +2065,7 @@ Name: Classification, Length: 116, dtype: int64&gt;
 </div>
 </div>
 </div>
+<p>Menampilkan Precision, recall, f1-score dan support</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">classification_report</span>
@@ -978,16 +2076,17 @@ Name: Classification, Length: 116, dtype: int64&gt;
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>              precision    recall  f1-score   support
 
-           1       0.82      0.69      0.75        13
-           2       0.78      0.88      0.82        16
+           1       0.80      0.62      0.70        13
+           2       0.74      0.88      0.80        16
 
-    accuracy                           0.79        29
-   macro avg       0.80      0.78      0.79        29
-weighted avg       0.80      0.79      0.79        29
+    accuracy                           0.76        29
+   macro avg       0.77      0.75      0.75        29
+weighted avg       0.77      0.76      0.75        29
 </pre></div>
 </div>
 </div>
 </div>
+<p>Menampilkan hasil dari decision tree yang dilakukan dengan create the tree plot,  dan juga show the plot</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">15</span><span class="p">))</span>
@@ -1002,9 +2101,11 @@ weighted avg       0.80      0.79      0.79        29
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/UTS_20_0.png" src="_images/UTS_20_0.png" />
+<img alt="_images/UTS_60_0.png" src="_images/UTS_60_0.png" />
 </div>
 </div>
+<p><strong>Kesimpulan</strong></p>
+<p>Decision tree atau biasa disebut dengan pohon keputusan merupakan salah satu  metode non parametrik yang digunakan  untuk klasifikasi, salah satunya yaitu dataset mengenai Dataset Breast Cances Combria, dari hasil metode yang dilakukan yaitu mulai dari menginport data dari url, melakukan pengecekan seluruh datasetnya, membangun decision tree dan prdiksi. Maka didapatkan hasil dari Dataset Breast Cances Combria  yaitu untuk acurracy 0,76%, 0,80%, recall 0,62%, dan fi-score 0,70%. Sehingga pada bagian code trakhir terdapat decision tree dengan menggunakan “gini”</p>
 </section>
 </section>
 
