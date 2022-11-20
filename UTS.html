@@ -426,22 +426,20 @@ title="Print to PDF"
     Metode Decision Tree
    </strong>
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#algoritma-decision-tree">
-     <strong>
-      Algoritma Decision Tree
-     </strong>
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#kerja-algoritma-decision-tree">
-     <strong>
-      Kerja Algoritma Decision Tree
-     </strong>
-    </a>
-   </li>
-  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#algoritma-decision-tree">
+   <strong>
+    Algoritma Decision Tree
+   </strong>
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#kerja-algoritma-decision-tree">
+   <strong>
+    Kerja Algoritma Decision Tree
+   </strong>
+  </a>
  </li>
 </ul>
 
@@ -506,22 +504,20 @@ title="Print to PDF"
     Metode Decision Tree
    </strong>
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#algoritma-decision-tree">
-     <strong>
-      Algoritma Decision Tree
-     </strong>
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#kerja-algoritma-decision-tree">
-     <strong>
-      Kerja Algoritma Decision Tree
-     </strong>
-    </a>
-   </li>
-  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#algoritma-decision-tree">
+   <strong>
+    Algoritma Decision Tree
+   </strong>
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#kerja-algoritma-decision-tree">
+   <strong>
+    Kerja Algoritma Decision Tree
+   </strong>
+  </a>
  </li>
 </ul>
 
@@ -545,7 +541,7 @@ title="Print to PDF"
 </ul>
 <p>Proses analisa dilaporkan dan diupload di github ( menggunakan jupyter book)</p>
 </section>
-<section class="tex2jax_ignore mathjax_ignore" id="metode-knn">
+<section id="metode-knn">
 <h1><strong>Metode KNN</strong><a class="headerlink" href="#metode-knn" title="Permalink to this headline">#</a></h1>
 <p>Algoritma k-Neighbor adalah agoritma supervided learning dimana hasil dari instance yang baru diklasifikasikan berdasarkan mayoritas dari kategori k-tetangga terdekat.</p>
 <p>KNN (K-Nearest Neighbor) adalah algoritma klasifikasi terawasi sederhana yang dapat kita gunakan untuk menetapkan kelas ke titik data baru. Hal ini dapat digunakan untuk regresi juga, KNN tidak membuat asumsi pada distribusi data, sehingga non-parametrik. Itu menyimpan semua data pelatihan untuk membuat prediksi masa depan dengan menghitung kesamaan antara sampel input dan setiap instance pelatihan.</p>
@@ -1359,10 +1355,11 @@ title="Print to PDF"
 Keuntungan dengan Algoritma K-NN yaitu kuat dalam mentraining data yang noisy,Algoritma K-NN sangat efektif jika datanya besar, dan mudah diimplementasikan.</p>
 </section>
 </section>
-<section class="tex2jax_ignore mathjax_ignore" id="metode-decision-tree">
+<section id="metode-decision-tree">
 <h1><strong>Metode Decision Tree</strong><a class="headerlink" href="#metode-decision-tree" title="Permalink to this headline">#</a></h1>
+</section>
 <section id="algoritma-decision-tree">
-<h2><strong>Algoritma Decision Tree</strong><a class="headerlink" href="#algoritma-decision-tree" title="Permalink to this headline">#</a></h2>
+<h1><strong>Algoritma Decision Tree</strong><a class="headerlink" href="#algoritma-decision-tree" title="Permalink to this headline">#</a></h1>
 <p>Decision tree adalah metode non parametrik yang digunakan untuk klasifikasi dan regresi. Decision tree merupakan metode non parametrik yang digunakan untuk klasifikasi dan regresi. Tujuan dari decision tree adalah membuat model yang memprediksi nilai variabel target dengan mengikuti aturan keputusan sederhana dari fitur data yang tersedia.</p>
 <p>Tujuan : membuat model yang memprediksi nilai variabel target dengan mengikuti aturan keputusan sederhana dari fitur data yang tersedia.</p>
 <p>Terdapat beberapa komponen dalam Decision Tree ini, antara lain sebagai berikut :</p>
@@ -1378,7 +1375,7 @@ menggunakan internal decision making logic. Hal ini tidak terdapat dapat pada je
 </ul>
 </section>
 <section id="kerja-algoritma-decision-tree">
-<h2><strong>Kerja Algoritma Decision Tree</strong><a class="headerlink" href="#kerja-algoritma-decision-tree" title="Permalink to this headline">#</a></h2>
+<h1><strong>Kerja Algoritma Decision Tree</strong><a class="headerlink" href="#kerja-algoritma-decision-tree" title="Permalink to this headline">#</a></h1>
 <ul class="simple">
 <li><p>Memilih atribut terbaik menggunakan Attribution Selection Measures (ASM) untuk membagi records data</p></li>
 <li><p>Membuat atribut menjadi decision node dan memecah dataset menjadi subsets yang lebih kecil.</p></li>
@@ -2065,7 +2062,6 @@ weighted avg       0.77      0.76      0.75        29
 </div>
 <p><strong>Kesimpulan</strong></p>
 <p>Decision tree atau biasa disebut dengan pohon keputusan merupakan salah satu  metode non parametrik yang digunakan  untuk klasifikasi, salah satunya yaitu dataset mengenai Dataset Breast Cances Combria, dari hasil metode yang dilakukan yaitu mulai dari menginport data dari url, melakukan pengecekan seluruh datasetnya, membangun decision tree dan prediksi. Maka didapatkan hasil dari Dataset Breast Cances Combria  yaitu untuk acurracy 0,76%, 0,80%, recall 0,62%, dan fi-score 0,70%. Sehingga pada bagian code trakhir terdapat decision tree dengan menggunakan “gini”. Salah satu keuntungan dari pohon keputusan adalah outputnya mudah dibaca dan diinterpretasikan, bahkan tanpa memerlukan pengetahuan statistik. Dan dalam metode decision tree ini terdapat root node, leaf node, dan internal node, dan bisa diliha pada hasil gambar diatas.</p>
-</section>
 </section>
 
     <script type="text/x-thebe-config">
