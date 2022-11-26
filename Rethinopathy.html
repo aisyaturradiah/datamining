@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Normalisasi &#8212; Aisyatur Radiah_200411100116</title>
+    <title>Normalisasi Min and Max &#8212; Aisyatur Radiah_200411100116</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -138,6 +138,14 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="KNN.html">
+   Tugas 3
+   <strong>
+    KNN (K-Nearest Neighbors) IRIS DATASET
+   </strong>
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="naive%20bayes.html">
    Tugas 4
    <strong>
@@ -172,7 +180,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Normalisasi
+   Normalisasi Min and Max
   </a>
  </li>
  <li class="toctree-l1">
@@ -390,20 +398,13 @@ title="Print to PDF"
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#">
-   Normalisasi
+   Normalisasi Min and Max
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#normalisasi-min-and-max">
-     Normalisasi Min and Max
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#save-model-preprocessing">
-     Save Model Preprocessing
-    </a>
-   </li>
-  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#save-model-preprocessing">
+   Save Model Preprocessing
+  </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#encoder-label">
@@ -478,7 +479,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Normalisasi</h1>
+                <h1>Normalisasi Min and Max</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -490,20 +491,13 @@ title="Print to PDF"
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#">
-   Normalisasi
+   Normalisasi Min and Max
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#normalisasi-min-and-max">
-     Normalisasi Min and Max
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#save-model-preprocessing">
-     Save Model Preprocessing
-    </a>
-   </li>
-  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#save-model-preprocessing">
+   Save Model Preprocessing
+  </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#encoder-label">
@@ -618,7 +612,7 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-259d0322-e3b7-408c-a70a-b3243fbdb0a1">
+  <div id="df-7a47426d-97c5-4887-8eda-d06fd9f37532">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -918,7 +912,7 @@ title="Print to PDF"
 </table>
 <p>1151 rows × 20 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-259d0322-e3b7-408c-a70a-b3243fbdb0a1')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-7a47426d-97c5-4887-8eda-d06fd9f37532')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -969,12 +963,12 @@ title="Print to PDF"
 
       <script>
         const buttonEl =
-          document.querySelector('#df-259d0322-e3b7-408c-a70a-b3243fbdb0a1 button.colab-df-convert');
+          document.querySelector('#df-7a47426d-97c5-4887-8eda-d06fd9f37532 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-259d0322-e3b7-408c-a70a-b3243fbdb0a1');
+          const element = document.querySelector('#df-7a47426d-97c5-4887-8eda-d06fd9f37532');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -1072,7 +1066,7 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-08419012-26f6-4047-afd2-e13fb33ac3a2">
+  <div id="df-845ae4f6-8d0c-4b2c-83aa-7a77c3df2357">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -1372,7 +1366,7 @@ title="Print to PDF"
 </table>
 <p>1151 rows × 20 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-08419012-26f6-4047-afd2-e13fb33ac3a2')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-845ae4f6-8d0c-4b2c-83aa-7a77c3df2357')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -1423,12 +1417,12 @@ title="Print to PDF"
 
       <script>
         const buttonEl =
-          document.querySelector('#df-08419012-26f6-4047-afd2-e13fb33ac3a2 button.colab-df-convert');
+          document.querySelector('#df-845ae4f6-8d0c-4b2c-83aa-7a77c3df2357 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-08419012-26f6-4047-afd2-e13fb33ac3a2');
+          const element = document.querySelector('#df-845ae4f6-8d0c-4b2c-83aa-7a77c3df2357');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -1458,7 +1452,7 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-ddda7f44-f115-4404-80b4-e8f666045e82">
+  <div id="df-e38e6d75-6ce1-4620-bf17-c87c3d6b6c36">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -1746,7 +1740,7 @@ title="Print to PDF"
 </table>
 <p>1151 rows × 19 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-ddda7f44-f115-4404-80b4-e8f666045e82')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-e38e6d75-6ce1-4620-bf17-c87c3d6b6c36')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -1797,12 +1791,12 @@ title="Print to PDF"
 
       <script>
         const buttonEl =
-          document.querySelector('#df-ddda7f44-f115-4404-80b4-e8f666045e82 button.colab-df-convert');
+          document.querySelector('#df-e38e6d75-6ce1-4620-bf17-c87c3d6b6c36 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-ddda7f44-f115-4404-80b4-e8f666045e82');
+          const element = document.querySelector('#df-e38e6d75-6ce1-4620-bf17-c87c3d6b6c36');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -1823,10 +1817,8 @@ title="Print to PDF"
   </div>
 </div></div>
 </div>
-<section id="normalisasi">
-<h1>Normalisasi<a class="headerlink" href="#normalisasi" title="Permalink to this headline">#</a></h1>
 <section id="normalisasi-min-and-max">
-<h2>Normalisasi Min and Max<a class="headerlink" href="#normalisasi-min-and-max" title="Permalink to this headline">#</a></h2>
+<h1>Normalisasi Min and Max<a class="headerlink" href="#normalisasi-min-and-max" title="Permalink to this headline">#</a></h1>
 <div class="math notranslate nohighlight">
 \[ X'= \frac{x-x_{min}}{x_{max}-x_{min}}\]</div>
 <div class="cell docutils container">
@@ -1853,7 +1845,7 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-e4ee9fa7-3fd3-4fcf-b7ba-162d3978dc62">
+  <div id="df-a17db96d-05d9-4938-86c5-63c723ec88bf">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -2141,7 +2133,7 @@ title="Print to PDF"
 </table>
 <p>1151 rows × 19 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-e4ee9fa7-3fd3-4fcf-b7ba-162d3978dc62')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-a17db96d-05d9-4938-86c5-63c723ec88bf')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -2192,12 +2184,12 @@ title="Print to PDF"
 
       <script>
         const buttonEl =
-          document.querySelector('#df-e4ee9fa7-3fd3-4fcf-b7ba-162d3978dc62 button.colab-df-convert');
+          document.querySelector('#df-a17db96d-05d9-4938-86c5-63c723ec88bf button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-e4ee9fa7-3fd3-4fcf-b7ba-162d3978dc62');
+          const element = document.querySelector('#df-a17db96d-05d9-4938-86c5-63c723ec88bf');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -2220,7 +2212,7 @@ title="Print to PDF"
 </div>
 </section>
 <section id="save-model-preprocessing">
-<h2>Save Model Preprocessing<a class="headerlink" href="#save-model-preprocessing" title="Permalink to this headline">#</a></h2>
+<h1>Save Model Preprocessing<a class="headerlink" href="#save-model-preprocessing" title="Permalink to this headline">#</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">filename</span> <span class="o">=</span> <span class="s2">&quot;normalisai.sav&quot;</span>
@@ -2234,7 +2226,6 @@ title="Print to PDF"
 </div>
 </div>
 </div>
-</section>
 </section>
 <section id="encoder-label">
 <h1>Encoder Label<a class="headerlink" href="#encoder-label" title="Permalink to this headline">#</a></h1>
@@ -4895,257 +4886,6 @@ acuracy n = 245 = 0.6406926406926406
 acuracy n = 246 = 0.6363636363636364
 acuracy n = 247 = 0.6363636363636364
 acuracy n = 248 = 0.6363636363636364
-acuracy n = 249 = 0.6363636363636364
-acuracy n = 250 = 0.6363636363636364
-acuracy n = 251 = 0.6363636363636364
-acuracy n = 252 = 0.6363636363636364
-acuracy n = 253 = 0.6406926406926406
-acuracy n = 254 = 0.6363636363636364
-acuracy n = 255 = 0.6363636363636364
-acuracy n = 256 = 0.6363636363636364
-acuracy n = 257 = 0.6406926406926406
-acuracy n = 258 = 0.6363636363636364
-acuracy n = 259 = 0.6363636363636364
-acuracy n = 260 = 0.6363636363636364
-acuracy n = 261 = 0.6363636363636364
-acuracy n = 262 = 0.6363636363636364
-acuracy n = 263 = 0.6363636363636364
-acuracy n = 264 = 0.6363636363636364
-acuracy n = 265 = 0.6363636363636364
-acuracy n = 266 = 0.6363636363636364
-acuracy n = 267 = 0.6363636363636364
-acuracy n = 268 = 0.6363636363636364
-acuracy n = 269 = 0.6363636363636364
-acuracy n = 270 = 0.6363636363636364
-acuracy n = 271 = 0.6363636363636364
-acuracy n = 272 = 0.6363636363636364
-acuracy n = 273 = 0.6363636363636364
-acuracy n = 274 = 0.6363636363636364
-acuracy n = 275 = 0.6363636363636364
-acuracy n = 276 = 0.6363636363636364
-acuracy n = 277 = 0.6363636363636364
-acuracy n = 278 = 0.6363636363636364
-acuracy n = 279 = 0.6363636363636364
-acuracy n = 280 = 0.6363636363636364
-acuracy n = 281 = 0.6363636363636364
-acuracy n = 282 = 0.6363636363636364
-acuracy n = 283 = 0.6363636363636364
-acuracy n = 284 = 0.6363636363636364
-acuracy n = 285 = 0.6363636363636364
-acuracy n = 286 = 0.6406926406926406
-acuracy n = 287 = 0.6363636363636364
-acuracy n = 288 = 0.6363636363636364
-acuracy n = 289 = 0.6406926406926406
-acuracy n = 290 = 0.645021645021645
-acuracy n = 291 = 0.645021645021645
-acuracy n = 292 = 0.645021645021645
-acuracy n = 293 = 0.645021645021645
-acuracy n = 294 = 0.645021645021645
-acuracy n = 295 = 0.645021645021645
-acuracy n = 296 = 0.6406926406926406
-acuracy n = 297 = 0.6406926406926406
-acuracy n = 298 = 0.645021645021645
-acuracy n = 299 = 0.6406926406926406
-acuracy n = 300 = 0.645021645021645
-acuracy n = 301 = 0.645021645021645
-acuracy n = 302 = 0.645021645021645
-acuracy n = 303 = 0.645021645021645
-acuracy n = 304 = 0.6406926406926406
-acuracy n = 305 = 0.6406926406926406
-acuracy n = 306 = 0.6406926406926406
-acuracy n = 307 = 0.6406926406926406
-acuracy n = 308 = 0.6406926406926406
-acuracy n = 309 = 0.6406926406926406
-acuracy n = 310 = 0.645021645021645
-acuracy n = 311 = 0.645021645021645
-acuracy n = 312 = 0.645021645021645
-acuracy n = 313 = 0.645021645021645
-acuracy n = 314 = 0.645021645021645
-acuracy n = 315 = 0.6406926406926406
-acuracy n = 316 = 0.6406926406926406
-acuracy n = 317 = 0.6406926406926406
-acuracy n = 318 = 0.6406926406926406
-acuracy n = 319 = 0.6406926406926406
-acuracy n = 320 = 0.6406926406926406
-acuracy n = 321 = 0.6406926406926406
-acuracy n = 322 = 0.6406926406926406
-acuracy n = 323 = 0.6406926406926406
-acuracy n = 324 = 0.6406926406926406
-acuracy n = 325 = 0.6406926406926406
-acuracy n = 326 = 0.6406926406926406
-acuracy n = 327 = 0.6406926406926406
-acuracy n = 328 = 0.6406926406926406
-acuracy n = 329 = 0.6406926406926406
-acuracy n = 330 = 0.6406926406926406
-acuracy n = 331 = 0.6406926406926406
-acuracy n = 332 = 0.6406926406926406
-acuracy n = 333 = 0.6406926406926406
-acuracy n = 334 = 0.6406926406926406
-acuracy n = 335 = 0.6406926406926406
-acuracy n = 336 = 0.6406926406926406
-acuracy n = 337 = 0.6406926406926406
-acuracy n = 338 = 0.6406926406926406
-acuracy n = 339 = 0.6406926406926406
-acuracy n = 340 = 0.6406926406926406
-acuracy n = 341 = 0.6406926406926406
-acuracy n = 342 = 0.6406926406926406
-acuracy n = 343 = 0.645021645021645
-acuracy n = 344 = 0.6406926406926406
-acuracy n = 345 = 0.6406926406926406
-acuracy n = 346 = 0.6406926406926406
-acuracy n = 347 = 0.6406926406926406
-acuracy n = 348 = 0.6406926406926406
-acuracy n = 349 = 0.6406926406926406
-acuracy n = 350 = 0.6406926406926406
-acuracy n = 351 = 0.6406926406926406
-acuracy n = 352 = 0.6406926406926406
-acuracy n = 353 = 0.6406926406926406
-acuracy n = 354 = 0.6406926406926406
-acuracy n = 355 = 0.6406926406926406
-acuracy n = 356 = 0.6406926406926406
-acuracy n = 357 = 0.6406926406926406
-acuracy n = 358 = 0.6406926406926406
-acuracy n = 359 = 0.6406926406926406
-acuracy n = 360 = 0.6406926406926406
-acuracy n = 361 = 0.6406926406926406
-acuracy n = 362 = 0.6406926406926406
-acuracy n = 363 = 0.6406926406926406
-acuracy n = 364 = 0.6406926406926406
-acuracy n = 365 = 0.6406926406926406
-acuracy n = 366 = 0.6406926406926406
-acuracy n = 367 = 0.6406926406926406
-acuracy n = 368 = 0.6406926406926406
-acuracy n = 369 = 0.6406926406926406
-acuracy n = 370 = 0.6406926406926406
-acuracy n = 371 = 0.6406926406926406
-acuracy n = 372 = 0.6406926406926406
-acuracy n = 373 = 0.6406926406926406
-acuracy n = 374 = 0.6406926406926406
-acuracy n = 375 = 0.6406926406926406
-acuracy n = 376 = 0.645021645021645
-acuracy n = 377 = 0.645021645021645
-acuracy n = 378 = 0.645021645021645
-acuracy n = 379 = 0.645021645021645
-acuracy n = 380 = 0.645021645021645
-acuracy n = 381 = 0.645021645021645
-acuracy n = 382 = 0.645021645021645
-acuracy n = 383 = 0.645021645021645
-acuracy n = 384 = 0.645021645021645
-acuracy n = 385 = 0.645021645021645
-acuracy n = 386 = 0.645021645021645
-acuracy n = 387 = 0.645021645021645
-acuracy n = 388 = 0.6406926406926406
-acuracy n = 389 = 0.6406926406926406
-acuracy n = 390 = 0.6406926406926406
-acuracy n = 391 = 0.6406926406926406
-acuracy n = 392 = 0.6406926406926406
-acuracy n = 393 = 0.6406926406926406
-acuracy n = 394 = 0.6406926406926406
-acuracy n = 395 = 0.6406926406926406
-acuracy n = 396 = 0.6406926406926406
-acuracy n = 397 = 0.6406926406926406
-acuracy n = 398 = 0.6406926406926406
-acuracy n = 399 = 0.6406926406926406
-acuracy n = 400 = 0.6406926406926406
-acuracy n = 401 = 0.6406926406926406
-acuracy n = 402 = 0.6406926406926406
-acuracy n = 403 = 0.6406926406926406
-acuracy n = 404 = 0.645021645021645
-acuracy n = 405 = 0.645021645021645
-acuracy n = 406 = 0.645021645021645
-acuracy n = 407 = 0.645021645021645
-acuracy n = 408 = 0.645021645021645
-acuracy n = 409 = 0.645021645021645
-acuracy n = 410 = 0.645021645021645
-acuracy n = 411 = 0.6493506493506493
-acuracy n = 412 = 0.645021645021645
-acuracy n = 413 = 0.645021645021645
-acuracy n = 414 = 0.645021645021645
-acuracy n = 415 = 0.645021645021645
-acuracy n = 416 = 0.645021645021645
-acuracy n = 417 = 0.645021645021645
-acuracy n = 418 = 0.645021645021645
-acuracy n = 419 = 0.645021645021645
-acuracy n = 420 = 0.6493506493506493
-acuracy n = 421 = 0.6493506493506493
-acuracy n = 422 = 0.6493506493506493
-acuracy n = 423 = 0.6493506493506493
-acuracy n = 424 = 0.6493506493506493
-acuracy n = 425 = 0.6493506493506493
-acuracy n = 426 = 0.6493506493506493
-acuracy n = 427 = 0.6493506493506493
-acuracy n = 428 = 0.645021645021645
-acuracy n = 429 = 0.645021645021645
-acuracy n = 430 = 0.645021645021645
-acuracy n = 431 = 0.645021645021645
-acuracy n = 432 = 0.645021645021645
-acuracy n = 433 = 0.645021645021645
-acuracy n = 434 = 0.645021645021645
-acuracy n = 435 = 0.645021645021645
-acuracy n = 436 = 0.645021645021645
-acuracy n = 437 = 0.645021645021645
-acuracy n = 438 = 0.645021645021645
-acuracy n = 439 = 0.645021645021645
-acuracy n = 440 = 0.6493506493506493
-acuracy n = 441 = 0.645021645021645
-acuracy n = 442 = 0.645021645021645
-acuracy n = 443 = 0.6493506493506493
-acuracy n = 444 = 0.6493506493506493
-acuracy n = 445 = 0.6493506493506493
-acuracy n = 446 = 0.6493506493506493
-acuracy n = 447 = 0.645021645021645
-acuracy n = 448 = 0.645021645021645
-acuracy n = 449 = 0.6493506493506493
-acuracy n = 450 = 0.645021645021645
-acuracy n = 451 = 0.6493506493506493
-acuracy n = 452 = 0.6493506493506493
-acuracy n = 453 = 0.6493506493506493
-acuracy n = 454 = 0.645021645021645
-acuracy n = 455 = 0.645021645021645
-acuracy n = 456 = 0.645021645021645
-acuracy n = 457 = 0.645021645021645
-acuracy n = 458 = 0.645021645021645
-acuracy n = 459 = 0.645021645021645
-acuracy n = 460 = 0.645021645021645
-acuracy n = 461 = 0.645021645021645
-acuracy n = 462 = 0.645021645021645
-acuracy n = 463 = 0.645021645021645
-acuracy n = 464 = 0.645021645021645
-acuracy n = 465 = 0.645021645021645
-acuracy n = 466 = 0.645021645021645
-acuracy n = 467 = 0.645021645021645
-acuracy n = 468 = 0.645021645021645
-acuracy n = 469 = 0.645021645021645
-acuracy n = 470 = 0.645021645021645
-acuracy n = 471 = 0.645021645021645
-acuracy n = 472 = 0.645021645021645
-acuracy n = 473 = 0.645021645021645
-acuracy n = 474 = 0.645021645021645
-acuracy n = 475 = 0.645021645021645
-acuracy n = 476 = 0.645021645021645
-acuracy n = 477 = 0.645021645021645
-acuracy n = 478 = 0.645021645021645
-acuracy n = 479 = 0.645021645021645
-acuracy n = 480 = 0.645021645021645
-acuracy n = 481 = 0.645021645021645
-acuracy n = 482 = 0.645021645021645
-acuracy n = 483 = 0.645021645021645
-acuracy n = 484 = 0.645021645021645
-acuracy n = 485 = 0.645021645021645
-acuracy n = 486 = 0.645021645021645
-acuracy n = 487 = 0.645021645021645
-acuracy n = 488 = 0.645021645021645
-acuracy n = 489 = 0.645021645021645
-acuracy n = 490 = 0.645021645021645
-acuracy n = 491 = 0.645021645021645
-acuracy n = 492 = 0.645021645021645
-acuracy n = 493 = 0.645021645021645
-acuracy n = 494 = 0.645021645021645
-acuracy n = 495 = 0.645021645021645
-acuracy n = 496 = 0.645021645021645
-acuracy n = 497 = 0.645021645021645
-acuracy n = 498 = 0.645021645021645
-acuracy n = 499 = 0.645021645021645
 </pre></div>
 </div>
 </div>
@@ -5159,19 +4899,11 @@ acuracy n = 499 = 0.645021645021645
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<img alt="_images/Rethinopathy_86_0.png" src="_images/Rethinopathy_86_0.png" />
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">max</span><span class="p">(</span><span class="n">acuracy</span><span class="p">)</span>
 <span class="c1"># stacking</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.6666666666666666
 </pre></div>
 </div>
 </div>

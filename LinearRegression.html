@@ -52,7 +52,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="Normalisasi" href="Rethinopathy.html" />
+    <link rel="prev" title="Normalisasi Min and Max" href="Rethinopathy.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -135,6 +135,14 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="KNN.html">
+   Tugas 3
+   <strong>
+    KNN (K-Nearest Neighbors) IRIS DATASET
+   </strong>
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="naive%20bayes.html">
    Tugas 4
    <strong>
@@ -169,7 +177,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="Rethinopathy.html">
-   Normalisasi
+   Normalisasi Min and Max
   </a>
  </li>
  <li class="toctree-l1 current active">
@@ -423,7 +431,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-0.026628322332021503
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-0.03139344395201027
 </pre></div>
 </div>
 </div>
@@ -467,7 +475,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([1.72029973])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([28.13196246])
 </pre></div>
 </div>
 </div>
@@ -479,7 +487,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-0.026628322332021503
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-0.03139344395201027
 </pre></div>
 </div>
 </div>
@@ -508,7 +516,7 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-672db354-68d3-4b26-a77a-a1936b7f9c1b">
+  <div id="df-cf101e9b-648b-49e3-9138-14eb8c98f47b">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -533,54 +541,54 @@ title="Print to PDF"
   </thead>
   <tbody>
     <tr>
-      <th>-103.739326</th>
-      <td>-1.239355</td>
+      <th>-26.181246</th>
+      <td>-0.349759</td>
     </tr>
     <tr>
-      <th>-46.163546</th>
-      <td>-0.547995</td>
+      <th>-55.808266</th>
+      <td>-0.734725</td>
     </tr>
     <tr>
-      <th>-94.105804</th>
-      <td>-1.118039</td>
+      <th>8.802200</th>
+      <td>0.115714</td>
     </tr>
     <tr>
-      <th>-90.374710</th>
-      <td>-1.073749</td>
+      <th>13.829624</th>
+      <td>0.181471</td>
     </tr>
     <tr>
-      <th>138.837382</th>
-      <td>1.653656</td>
+      <th>92.569690</th>
+      <td>1.221311</td>
     </tr>
     <tr>
       <th>...</th>
       <td>...</td>
     </tr>
     <tr>
-      <th>13.082653</th>
-      <td>0.150992</td>
+      <th>-91.870083</th>
+      <td>-1.210760</td>
     </tr>
     <tr>
-      <th>87.768986</th>
-      <td>1.044847</td>
+      <th>-71.480287</th>
+      <td>-0.940774</td>
     </tr>
     <tr>
-      <th>78.579243</th>
-      <td>0.933370</td>
+      <th>55.418666</th>
+      <td>0.732471</td>
     </tr>
     <tr>
-      <th>-69.951649</th>
-      <td>-0.834833</td>
+      <th>61.994951</th>
+      <td>0.817447</td>
     </tr>
     <tr>
-      <th>-65.659706</th>
-      <td>-0.780606</td>
+      <th>-16.854436</th>
+      <td>-0.222625</td>
     </tr>
   </tbody>
 </table>
 <p>150 rows × 1 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-672db354-68d3-4b26-a77a-a1936b7f9c1b')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-cf101e9b-648b-49e3-9138-14eb8c98f47b')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -631,12 +639,12 @@ title="Print to PDF"
 
       <script>
         const buttonEl =
-          document.querySelector('#df-672db354-68d3-4b26-a77a-a1936b7f9c1b button.colab-df-convert');
+          document.querySelector('#df-cf101e9b-648b-49e3-9138-14eb8c98f47b button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-672db354-68d3-4b26-a77a-a1936b7f9c1b');
+          const element = document.querySelector('#df-cf101e9b-648b-49e3-9138-14eb8c98f47b');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -664,7 +672,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.collections.PathCollection at 0x7fd6b0570e90&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.collections.PathCollection at 0x7f4e224d5fd0&gt;
 </pre></div>
 </div>
 <img alt="_images/LinearRegression_11_1.png" src="_images/LinearRegression_11_1.png" />
@@ -677,7 +685,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([5.13427088])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([84.36449393])
 </pre></div>
 </div>
 </div>
@@ -715,7 +723,7 @@ title="Print to PDF"
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Normalisasi</p>
+            <p class="prev-next-title">Normalisasi Min and Max</p>
         </div>
     </a>
 </div>
