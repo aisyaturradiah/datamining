@@ -585,6 +585,50 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">google.colab</span> <span class="kn">import</span> <span class="n">drive</span>
+<span class="n">drive</span><span class="o">.</span><span class="n">mount</span><span class="p">(</span><span class="s1">&#39;/content/drive&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">KeyboardInterrupt</span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">2</span><span class="o">-</span><span class="n">d5df0069828e</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">google.colab</span> <span class="kn">import</span> <span class="n">drive</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">drive</span><span class="o">.</span><span class="n">mount</span><span class="p">(</span><span class="s1">&#39;/content/drive&#39;</span><span class="p">)</span>
+
+<span class="nn">/usr/local/lib/python3.7/dist-packages/google/colab/drive.py</span> in <span class="ni">mount</span><span class="nt">(mountpoint, force_remount, timeout_ms, readonly)</span>
+<span class="g g-Whitespace">    </span><span class="mi">104</span>       <span class="n">timeout_ms</span><span class="o">=</span><span class="n">timeout_ms</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">105</span>       <span class="n">ephemeral</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+<span class="ne">--&gt; </span><span class="mi">106</span>       <span class="n">readonly</span><span class="o">=</span><span class="n">readonly</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">107</span> 
+<span class="g g-Whitespace">    </span><span class="mi">108</span> 
+
+<span class="nn">/usr/local/lib/python3.7/dist-packages/google/colab/drive.py</span> in <span class="ni">_mount</span><span class="nt">(mountpoint, force_remount, timeout_ms, ephemeral, readonly)</span>
+<span class="g g-Whitespace">    </span><span class="mi">123</span>   <span class="k">if</span> <span class="n">ephemeral</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">124</span>     <span class="n">_message</span><span class="o">.</span><span class="n">blocking_request</span><span class="p">(</span>
+<span class="ne">--&gt; </span><span class="mi">125</span>         <span class="s1">&#39;request_auth&#39;</span><span class="p">,</span> <span class="n">request</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;authType&#39;</span><span class="p">:</span> <span class="s1">&#39;dfs_ephemeral&#39;</span><span class="p">},</span> <span class="n">timeout_sec</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">126</span> 
+<span class="g g-Whitespace">    </span><span class="mi">127</span>   <span class="n">mountpoint</span> <span class="o">=</span> <span class="n">_os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">expanduser</span><span class="p">(</span><span class="n">mountpoint</span><span class="p">)</span>
+
+<span class="nn">/usr/local/lib/python3.7/dist-packages/google/colab/_message.py</span> in <span class="ni">blocking_request</span><span class="nt">(request_type, request, timeout_sec, parent)</span>
+<span class="g g-Whitespace">    </span><span class="mi">169</span>   <span class="n">request_id</span> <span class="o">=</span> <span class="n">send_request</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">170</span>       <span class="n">request_type</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="n">parent</span><span class="o">=</span><span class="n">parent</span><span class="p">,</span> <span class="n">expect_reply</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">171</span>   <span class="k">return</span> <span class="n">read_reply_from_input</span><span class="p">(</span><span class="n">request_id</span><span class="p">,</span> <span class="n">timeout_sec</span><span class="p">)</span>
+
+<span class="nn">/usr/local/lib/python3.7/dist-packages/google/colab/_message.py</span> in <span class="ni">read_reply_from_input</span><span class="nt">(message_id, timeout_sec)</span>
+<span class="g g-Whitespace">     </span><span class="mi">95</span>     <span class="n">reply</span> <span class="o">=</span> <span class="n">_read_next_input_message</span><span class="p">()</span>
+<span class="g g-Whitespace">     </span><span class="mi">96</span>     <span class="k">if</span> <span class="n">reply</span> <span class="o">==</span> <span class="n">_NOT_READY</span> <span class="ow">or</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">reply</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>
+<span class="ne">---&gt; </span><span class="mi">97</span>       <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.025</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">98</span>       <span class="k">continue</span>
+<span class="g g-Whitespace">     </span><span class="mi">99</span>     <span class="k">if</span> <span class="p">(</span><span class="n">reply</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;type&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;colab_reply&#39;</span> <span class="ow">and</span>
+
+<span class="ne">KeyboardInterrupt</span>: 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">cd</span> /content/drive/MyDrive/datamining/tugas
 </pre></div>
 </div>
@@ -608,7 +652,7 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-e2f05098-e894-44bc-8165-0d4cc24c2553">
+  <div id="df-731702a0-8a3e-4cf3-ac2e-88ccba564909">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -908,7 +952,7 @@ title="Print to PDF"
 </table>
 <p>1151 rows × 20 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-e2f05098-e894-44bc-8165-0d4cc24c2553')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-731702a0-8a3e-4cf3-ac2e-88ccba564909')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -959,12 +1003,12 @@ title="Print to PDF"
 
       <script>
         const buttonEl =
-          document.querySelector('#df-e2f05098-e894-44bc-8165-0d4cc24c2553 button.colab-df-convert');
+          document.querySelector('#df-731702a0-8a3e-4cf3-ac2e-88ccba564909 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-e2f05098-e894-44bc-8165-0d4cc24c2553');
+          const element = document.querySelector('#df-731702a0-8a3e-4cf3-ac2e-88ccba564909');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -1018,7 +1062,7 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-a9440317-9dd4-4adc-ae45-ee9c6e797093">
+  <div id="df-68d4c40a-f30c-44fc-80b6-9a271e464bb9">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -1318,7 +1362,7 @@ title="Print to PDF"
 </table>
 <p>1151 rows × 20 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-a9440317-9dd4-4adc-ae45-ee9c6e797093')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-68d4c40a-f30c-44fc-80b6-9a271e464bb9')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -1369,12 +1413,12 @@ title="Print to PDF"
 
       <script>
         const buttonEl =
-          document.querySelector('#df-a9440317-9dd4-4adc-ae45-ee9c6e797093 button.colab-df-convert');
+          document.querySelector('#df-68d4c40a-f30c-44fc-80b6-9a271e464bb9 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-a9440317-9dd4-4adc-ae45-ee9c6e797093');
+          const element = document.querySelector('#df-68d4c40a-f30c-44fc-80b6-9a271e464bb9');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -1404,7 +1448,7 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-d5d4d995-20a8-44d1-89b9-7aaa972dc99c">
+  <div id="df-ac5a0fff-9576-426b-9a4b-9fc5b690f344">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -1692,7 +1736,7 @@ title="Print to PDF"
 </table>
 <p>1151 rows × 19 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-d5d4d995-20a8-44d1-89b9-7aaa972dc99c')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-ac5a0fff-9576-426b-9a4b-9fc5b690f344')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -1743,12 +1787,12 @@ title="Print to PDF"
 
       <script>
         const buttonEl =
-          document.querySelector('#df-d5d4d995-20a8-44d1-89b9-7aaa972dc99c button.colab-df-convert');
+          document.querySelector('#df-ac5a0fff-9576-426b-9a4b-9fc5b690f344 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-d5d4d995-20a8-44d1-89b9-7aaa972dc99c');
+          const element = document.querySelector('#df-ac5a0fff-9576-426b-9a4b-9fc5b690f344');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -1797,7 +1841,7 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-7357aaac-c746-4619-993a-8838fa2747ad">
+  <div id="df-db049c7d-4f1e-4a3d-a8e1-09646dc86d65">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -2085,7 +2129,7 @@ title="Print to PDF"
 </table>
 <p>1151 rows × 19 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-7357aaac-c746-4619-993a-8838fa2747ad')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-db049c7d-4f1e-4a3d-a8e1-09646dc86d65')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -2136,12 +2180,12 @@ title="Print to PDF"
 
       <script>
         const buttonEl =
-          document.querySelector('#df-7357aaac-c746-4619-993a-8838fa2747ad button.colab-df-convert');
+          document.querySelector('#df-db049c7d-4f1e-4a3d-a8e1-09646dc86d65 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-7357aaac-c746-4619-993a-8838fa2747ad');
+          const element = document.querySelector('#df-db049c7d-4f1e-4a3d-a8e1-09646dc86d65');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -2469,14 +2513,10 @@ title="Print to PDF"
 [CV 1/3] END ...n_neighbors=3, weights=distance;, score=0.606 total time=   0.0s
 [CV 2/3] END ...n_neighbors=3, weights=distance;, score=0.573 total time=   0.0s
 [CV 3/3] END ...n_neighbors=3, weights=distance;, score=0.605 total time=   0.0s
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 1/3] END ....n_neighbors=3, weights=uniform;, score=0.599 total time=   0.0s
+[CV 1/3] END ....n_neighbors=3, weights=uniform;, score=0.599 total time=   0.0s
 [CV 2/3] END ....n_neighbors=3, weights=uniform;, score=0.567 total time=   0.0s
 [CV 3/3] END ....n_neighbors=3, weights=uniform;, score=0.595 total time=   0.0s
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 1/3] END ...n_neighbors=5, weights=distance;, score=0.635 total time=   0.0s
+[CV 1/3] END ...n_neighbors=5, weights=distance;, score=0.635 total time=   0.0s
 [CV 2/3] END ...n_neighbors=5, weights=distance;, score=0.619 total time=   0.0s
 [CV 3/3] END ...n_neighbors=5, weights=distance;, score=0.634 total time=   0.0s
 [CV 1/3] END ....n_neighbors=5, weights=uniform;, score=0.632 total time=   0.0s
@@ -2485,9 +2525,7 @@ title="Print to PDF"
 [CV 1/3] END ...n_neighbors=7, weights=distance;, score=0.638 total time=   0.0s
 [CV 2/3] END ...n_neighbors=7, weights=distance;, score=0.638 total time=   0.0s
 [CV 3/3] END ...n_neighbors=7, weights=distance;, score=0.608 total time=   0.0s
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[CV 1/3] END ....n_neighbors=7, weights=uniform;, score=0.635 total time=   0.0s
+[CV 1/3] END ....n_neighbors=7, weights=uniform;, score=0.635 total time=   0.0s
 [CV 2/3] END ....n_neighbors=7, weights=uniform;, score=0.635 total time=   0.0s
 [CV 3/3] END ....n_neighbors=7, weights=uniform;, score=0.595 total time=   0.0s
 </pre></div>
@@ -2596,568 +2634,497 @@ acuracy n = 5 = 0.6363636363636364
 acuracy n = 6 = 0.6406926406926406
 acuracy n = 7 = 0.6536796536796536
 acuracy n = 8 = 0.6363636363636364
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 9 = 0.6493506493506493
+acuracy n = 9 = 0.6493506493506493
 acuracy n = 10 = 0.6406926406926406
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 11 = 0.6406926406926406
+acuracy n = 11 = 0.6406926406926406
 acuracy n = 12 = 0.6536796536796536
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 13 = 0.6536796536796536
+acuracy n = 13 = 0.6536796536796536
 acuracy n = 14 = 0.6536796536796536
 acuracy n = 15 = 0.6493506493506493
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 16 = 0.645021645021645
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 17 = 0.6493506493506493
+acuracy n = 16 = 0.645021645021645
+acuracy n = 17 = 0.6493506493506493
 acuracy n = 18 = 0.645021645021645
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 19 = 0.6493506493506493
+acuracy n = 19 = 0.6493506493506493
 acuracy n = 20 = 0.6493506493506493
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 21 = 0.6536796536796536
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 22 = 0.6536796536796536
+acuracy n = 21 = 0.6536796536796536
+acuracy n = 22 = 0.6536796536796536
 acuracy n = 23 = 0.6493506493506493
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 24 = 0.6493506493506493
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 25 = 0.6493506493506493
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 26 = 0.658008658008658
+acuracy n = 24 = 0.6493506493506493
+acuracy n = 25 = 0.6493506493506493
+acuracy n = 26 = 0.658008658008658
 acuracy n = 27 = 0.6536796536796536
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 28 = 0.6493506493506493
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 29 = 0.6406926406926406
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 30 = 0.6363636363636364
+acuracy n = 28 = 0.6493506493506493
+acuracy n = 29 = 0.6406926406926406
+acuracy n = 30 = 0.6363636363636364
 acuracy n = 31 = 0.6320346320346321
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 32 = 0.6406926406926406
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 33 = 0.6363636363636364
+acuracy n = 32 = 0.6406926406926406
+acuracy n = 33 = 0.6363636363636364
 acuracy n = 34 = 0.6363636363636364
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 35 = 0.6406926406926406
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 36 = 0.6493506493506493
+acuracy n = 35 = 0.6406926406926406
+acuracy n = 36 = 0.6493506493506493
 acuracy n = 37 = 0.6493506493506493
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 38 = 0.6536796536796536
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 39 = 0.645021645021645
+acuracy n = 38 = 0.6536796536796536
+acuracy n = 39 = 0.645021645021645
 acuracy n = 40 = 0.658008658008658
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 41 = 0.6536796536796536
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 42 = 0.6493506493506493
+acuracy n = 41 = 0.6536796536796536
+acuracy n = 42 = 0.6493506493506493
 acuracy n = 43 = 0.6536796536796536
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 44 = 0.6536796536796536
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 45 = 0.6536796536796536
+acuracy n = 44 = 0.6536796536796536
+acuracy n = 45 = 0.6536796536796536
 acuracy n = 46 = 0.6536796536796536
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 47 = 0.6536796536796536
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 48 = 0.658008658008658
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 49 = 0.658008658008658
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 50 = 0.6536796536796536
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 51 = 0.658008658008658
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 52 = 0.658008658008658
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 53 = 0.658008658008658
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 54 = 0.658008658008658
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 55 = 0.645021645021645
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 56 = 0.6536796536796536
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 57 = 0.645021645021645
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 58 = 0.6623376623376623
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 59 = 0.645021645021645
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 60 = 0.658008658008658
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 61 = 0.6493506493506493
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 62 = 0.6623376623376623
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 63 = 0.6493506493506493
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 64 = 0.6536796536796536
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 65 = 0.6536796536796536
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 66 = 0.6493506493506493
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 67 = 0.6536796536796536
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 68 = 0.6536796536796536
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 69 = 0.645021645021645
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 70 = 0.645021645021645
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 71 = 0.645021645021645
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 72 = 0.645021645021645
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 73 = 0.645021645021645
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 74 = 0.645021645021645
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 75 = 0.645021645021645
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 76 = 0.645021645021645
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 77 = 0.645021645021645
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 78 = 0.645021645021645
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 79 = 0.6493506493506493
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 80 = 0.6493506493506493
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 81 = 0.6493506493506493
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 82 = 0.6493506493506493
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 83 = 0.6493506493506493
+acuracy n = 47 = 0.6536796536796536
+acuracy n = 48 = 0.658008658008658
+acuracy n = 49 = 0.658008658008658
+acuracy n = 50 = 0.6536796536796536
+acuracy n = 51 = 0.658008658008658
+acuracy n = 52 = 0.658008658008658
+acuracy n = 53 = 0.658008658008658
+acuracy n = 54 = 0.658008658008658
+acuracy n = 55 = 0.645021645021645
+acuracy n = 56 = 0.6536796536796536
+acuracy n = 57 = 0.645021645021645
+acuracy n = 58 = 0.6623376623376623
+acuracy n = 59 = 0.645021645021645
+acuracy n = 60 = 0.658008658008658
+acuracy n = 61 = 0.6493506493506493
+acuracy n = 62 = 0.6623376623376623
+acuracy n = 63 = 0.6493506493506493
+acuracy n = 64 = 0.6536796536796536
+acuracy n = 65 = 0.6536796536796536
+acuracy n = 66 = 0.6493506493506493
+acuracy n = 67 = 0.6536796536796536
+acuracy n = 68 = 0.6536796536796536
+acuracy n = 69 = 0.645021645021645
+acuracy n = 70 = 0.645021645021645
+acuracy n = 71 = 0.645021645021645
+acuracy n = 72 = 0.645021645021645
+acuracy n = 73 = 0.645021645021645
+acuracy n = 74 = 0.645021645021645
+acuracy n = 75 = 0.645021645021645
+acuracy n = 76 = 0.645021645021645
+acuracy n = 77 = 0.645021645021645
+acuracy n = 78 = 0.645021645021645
+acuracy n = 79 = 0.6493506493506493
+acuracy n = 80 = 0.6493506493506493
+acuracy n = 81 = 0.6493506493506493
+acuracy n = 82 = 0.6493506493506493
+acuracy n = 83 = 0.6493506493506493
 acuracy n = 84 = 0.645021645021645
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 85 = 0.645021645021645
+acuracy n = 85 = 0.645021645021645
 acuracy n = 86 = 0.645021645021645
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 87 = 0.645021645021645
+acuracy n = 87 = 0.645021645021645
 acuracy n = 88 = 0.645021645021645
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 89 = 0.6493506493506493
+acuracy n = 89 = 0.6493506493506493
 acuracy n = 90 = 0.6493506493506493
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 91 = 0.6493506493506493
+acuracy n = 91 = 0.6493506493506493
 acuracy n = 92 = 0.645021645021645
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 93 = 0.645021645021645
+acuracy n = 93 = 0.645021645021645
 acuracy n = 94 = 0.645021645021645
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 95 = 0.645021645021645
+acuracy n = 95 = 0.645021645021645
 acuracy n = 96 = 0.645021645021645
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 97 = 0.645021645021645
+acuracy n = 97 = 0.645021645021645
 acuracy n = 98 = 0.645021645021645
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 99 = 0.645021645021645
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 100 = 0.645021645021645
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 101 = 0.645021645021645
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 102 = 0.645021645021645
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 103 = 0.645021645021645
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 104 = 0.645021645021645
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 105 = 0.645021645021645
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 106 = 0.645021645021645
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 107 = 0.645021645021645
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 108 = 0.645021645021645
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 109 = 0.645021645021645
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 110 = 0.645021645021645
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 111 = 0.6406926406926406
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 112 = 0.645021645021645
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 113 = 0.645021645021645
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 114 = 0.645021645021645
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 115 = 0.645021645021645
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 116 = 0.645021645021645
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 117 = 0.645021645021645
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 118 = 0.645021645021645
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 119 = 0.645021645021645
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 120 = 0.645021645021645
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 121 = 0.645021645021645
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 122 = 0.645021645021645
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 123 = 0.645021645021645
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 124 = 0.645021645021645
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 125 = 0.6406926406926406
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 126 = 0.645021645021645
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 127 = 0.645021645021645
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 128 = 0.645021645021645
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 129 = 0.645021645021645
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 130 = 0.645021645021645
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 131 = 0.645021645021645
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 132 = 0.645021645021645
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 133 = 0.645021645021645
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 134 = 0.645021645021645
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 135 = 0.645021645021645
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 136 = 0.645021645021645
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 137 = 0.645021645021645
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 138 = 0.645021645021645
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 139 = 0.645021645021645
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 140 = 0.645021645021645
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 141 = 0.645021645021645
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 142 = 0.6406926406926406
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 143 = 0.6406926406926406
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 144 = 0.6406926406926406
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 145 = 0.6406926406926406
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 146 = 0.6406926406926406
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 147 = 0.6406926406926406
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 148 = 0.6406926406926406
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 149 = 0.6406926406926406
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 150 = 0.6406926406926406
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 151 = 0.645021645021645
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 152 = 0.645021645021645
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 153 = 0.645021645021645
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 154 = 0.645021645021645
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 155 = 0.645021645021645
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 156 = 0.645021645021645
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 157 = 0.645021645021645
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 158 = 0.645021645021645
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 159 = 0.645021645021645
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 160 = 0.645021645021645
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 161 = 0.645021645021645
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 162 = 0.645021645021645
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 163 = 0.645021645021645
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 164 = 0.645021645021645
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 165 = 0.645021645021645
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 166 = 0.645021645021645
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 167 = 0.645021645021645
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 168 = 0.645021645021645
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>acuracy n = 169 = 0.645021645021645
-</pre></div>
-</div>
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">KeyboardInterrupt</span>Traceback (most recent call last)
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">32</span><span class="o">-</span><span class="n">be82bc34d1b3</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">8</span>           <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">9</span>   <span class="n">bag</span> <span class="o">=</span> <span class="n">bag</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">training</span><span class="p">,</span> <span class="n">training_label</span><span class="p">)</span>
-<span class="ne">---&gt; </span><span class="mi">10</span>   <span class="n">y_test_pred</span> <span class="o">=</span> <span class="n">bag</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">test</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">11</span>   <span class="n">bag_test</span> <span class="o">=</span> <span class="n">accuracy_score</span><span class="p">(</span><span class="n">test_label</span><span class="p">,</span> <span class="n">y_test_pred</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">12</span>   <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;acuracy n = </span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s1"> = </span><span class="si">{</span><span class="n">bag_test</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
-
-<span class="nn">/usr/local/lib/python3.7/dist-packages/sklearn/ensemble/_bagging.py</span> in <span class="ni">predict</span><span class="nt">(self, X)</span>
-<span class="g g-Whitespace">    </span><span class="mi">742</span>             <span class="n">The</span> <span class="n">predicted</span> <span class="n">classes</span><span class="o">.</span>
-<span class="g g-Whitespace">    </span><span class="mi">743</span>         <span class="sd">&quot;&quot;&quot;</span>
-<span class="ne">--&gt; </span><span class="mi">744</span><span class="sd">         predicted_probabilitiy = self.predict_proba(X)</span>
-<span class="g g-Whitespace">    </span><span class="mi">745</span><span class="sd">         return self.classes_.take((np.argmax(predicted_probabilitiy, axis=1)), axis=0)</span>
-<span class="g g-Whitespace">    </span><span class="mi">746</span><span class="sd"> </span>
-
-<span class="nn">/usr/local/lib/python3.7/dist-packages/sklearn/ensemble/_bagging.py</span> in <span class="ni">predict_proba</span><span class="nt">(self, X)</span>
-<span class="g g-Whitespace">    </span><span class="mi">791</span><span class="sd">                 self.n_classes_,</span>
-<span class="g g-Whitespace">    </span><span class="mi">792</span><span class="sd">             )</span>
-<span class="nn">--&gt; 793             for i</span> in <span class="ni">range</span><span class="nt">(n_jobs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">794</span><span class="sd">         )</span>
-<span class="g g-Whitespace">    </span><span class="mi">795</span><span class="sd"> </span>
-
-<span class="nn">/usr/local/lib/python3.7/dist-packages/joblib/parallel.py</span> in <span class="ni">__call__</span><span class="nt">(self, iterable)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1083</span><span class="sd">             # remaining jobs.</span>
-<span class="g g-Whitespace">   </span><span class="mi">1084</span><span class="sd">             self._iterating = False</span>
-<span class="ne">-&gt; </span><span class="mi">1085</span><span class="sd">             if self.dispatch_one_batch(iterator):</span>
-<span class="g g-Whitespace">   </span><span class="mi">1086</span><span class="sd">                 self._iterating = self._original_iterator is not None</span>
-<span class="g g-Whitespace">   </span><span class="mi">1087</span><span class="sd"> </span>
-
-<span class="nn">/usr/local/lib/python3.7/dist-packages/joblib/parallel.py</span> in <span class="ni">dispatch_one_batch</span><span class="nt">(self, iterator)</span>
-<span class="g g-Whitespace">    </span><span class="mi">899</span><span class="sd">                 return False</span>
-<span class="g g-Whitespace">    </span><span class="mi">900</span><span class="sd">             else:</span>
-<span class="ne">--&gt; </span><span class="mi">901</span><span class="sd">                 self._dispatch(tasks)</span>
-<span class="g g-Whitespace">    </span><span class="mi">902</span><span class="sd">                 return True</span>
-<span class="g g-Whitespace">    </span><span class="mi">903</span><span class="sd"> </span>
-
-<span class="nn">/usr/local/lib/python3.7/dist-packages/joblib/parallel.py</span> in <span class="ni">_dispatch</span><span class="nt">(self, batch)</span>
-<span class="g g-Whitespace">    </span><span class="mi">817</span><span class="sd">         with self._lock:</span>
-<span class="g g-Whitespace">    </span><span class="mi">818</span><span class="sd">             job_idx = len(self._jobs)</span>
-<span class="ne">--&gt; </span><span class="mi">819</span><span class="sd">             job = self._backend.apply_async(batch, callback=cb)</span>
-<span class="g g-Whitespace">    </span><span class="mi">820</span><span class="sd">             # A job can complete so quickly than its callback is</span>
-<span class="g g-Whitespace">    </span><span class="mi">821</span><span class="sd">             # called before we get here, causing self._jobs to</span>
-
-<span class="nn">/usr/local/lib/python3.7/dist-packages/joblib/_parallel_backends.py</span> in <span class="ni">apply_async</span><span class="nt">(self, func, callback)</span>
-<span class="g g-Whitespace">    </span><span class="mi">206</span><span class="sd">     def apply_async(self, func, callback=None):</span>
-<span class="g g-Whitespace">    </span><span class="mi">207</span><span class="sd">         &quot;&quot;&quot;</span><span class="n">Schedule</span> <span class="n">a</span> <span class="n">func</span> <span class="n">to</span> <span class="n">be</span> <span class="n">run</span><span class="s2">&quot;&quot;&quot;</span>
-<span class="ne">--&gt; </span><span class="mi">208</span><span class="s2">         result = ImmediateResult(func)</span>
-<span class="g g-Whitespace">    </span><span class="mi">209</span><span class="s2">         if callback:</span>
-<span class="g g-Whitespace">    </span><span class="mi">210</span><span class="s2">             callback(result)</span>
-
-<span class="nn">/usr/local/lib/python3.7/dist-packages/joblib/_parallel_backends.py</span> in <span class="ni">__init__</span><span class="nt">(self, batch)</span>
-<span class="g g-Whitespace">    </span><span class="mi">595</span><span class="s2">         # Don&#39;t delay the application, to avoid keeping the input</span>
-<span class="g g-Whitespace">    </span><span class="mi">596</span><span class="s2">         # arguments in memory</span>
-<span class="ne">--&gt; </span><span class="mi">597</span><span class="s2">         self.results = batch()</span>
-<span class="g g-Whitespace">    </span><span class="mi">598</span><span class="s2"> </span>
-<span class="g g-Whitespace">    </span><span class="mi">599</span><span class="s2">     def get(self):</span>
-
-<span class="nn">/usr/local/lib/python3.7/dist-packages/joblib/parallel.py</span> in <span class="ni">__call__</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">    </span><span class="mi">287</span><span class="s2">         with parallel_backend(self._backend, n_jobs=self._n_jobs):</span>
-<span class="g g-Whitespace">    </span><span class="mi">288</span><span class="s2">             return [func(*args, **kwargs)</span>
-<span class="ne">--&gt; </span><span class="mi">289</span><span class="s2">                     for func, args, kwargs in self.items]</span>
-<span class="g g-Whitespace">    </span><span class="mi">290</span><span class="s2"> </span>
-<span class="g g-Whitespace">    </span><span class="mi">291</span><span class="s2">     def __reduce__(self):</span>
-
-<span class="nn">/usr/local/lib/python3.7/dist-packages/joblib/parallel.py</span> in <span class="ni">&lt;listcomp&gt;</span><span class="nt">(.0)</span>
-<span class="g g-Whitespace">    </span><span class="mi">287</span><span class="s2">         with parallel_backend(self._backend, n_jobs=self._n_jobs):</span>
-<span class="g g-Whitespace">    </span><span class="mi">288</span><span class="s2">             return [func(*args, **kwargs)</span>
-<span class="ne">--&gt; </span><span class="mi">289</span><span class="s2">                     for func, args, kwargs in self.items]</span>
-<span class="g g-Whitespace">    </span><span class="mi">290</span><span class="s2"> </span>
-<span class="g g-Whitespace">    </span><span class="mi">291</span><span class="s2">     def __reduce__(self):</span>
-
-<span class="nn">/usr/local/lib/python3.7/dist-packages/sklearn/utils/fixes.py</span> in <span class="ni">__call__</span><span class="nt">(self, *args, **kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">214</span><span class="s2">     def __call__(self, *args, **kwargs):</span>
-<span class="g g-Whitespace">    </span><span class="mi">215</span><span class="s2">         with config_context(**self.config):</span>
-<span class="ne">--&gt; </span><span class="mi">216</span><span class="s2">             return self.function(*args, **kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">217</span><span class="s2"> </span>
-<span class="g g-Whitespace">    </span><span class="mi">218</span><span class="s2"> </span>
-
-<span class="nn">/usr/local/lib/python3.7/dist-packages/sklearn/ensemble/_bagging.py</span> in <span class="ni">_parallel_predict_proba</span><span class="nt">(estimators, estimators_features, X, n_classes)</span>
-<span class="g g-Whitespace">    </span><span class="mi">139</span><span class="s2">     for estimator, features in zip(estimators, estimators_features):</span>
-<span class="g g-Whitespace">    </span><span class="mi">140</span><span class="s2">         if hasattr(estimator, &quot;predict_proba&quot;):</span>
-<span class="ne">--&gt; </span><span class="mi">141</span><span class="s2">             proba_estimator = estimator.predict_proba(X[:, features])</span>
-<span class="g g-Whitespace">    </span><span class="mi">142</span><span class="s2"> </span>
-<span class="g g-Whitespace">    </span><span class="mi">143</span><span class="s2">             if n_classes == len(estimator.classes_):</span>
-
-<span class="nn">/usr/local/lib/python3.7/dist-packages/sklearn/naive_bayes.py</span> in <span class="ni">predict_proba</span><span class="nt">(self, X)</span>
-<span class="g g-Whitespace">    </span><span class="mi">123</span><span class="s2">             order, as they appear in the attribute :term:`classes_`.</span>
-<span class="g g-Whitespace">    </span><span class="mi">124</span><span class="s2">         &quot;&quot;&quot;</span>
-<span class="ne">--&gt; </span><span class="mi">125</span>         <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">predict_log_proba</span><span class="p">(</span><span class="n">X</span><span class="p">))</span>
-<span class="g g-Whitespace">    </span><span class="mi">126</span> 
-<span class="g g-Whitespace">    </span><span class="mi">127</span> 
-
-<span class="nn">/usr/local/lib/python3.7/dist-packages/sklearn/naive_bayes.py</span> in <span class="ni">predict_log_proba</span><span class="nt">(self, X)</span>
-<span class="g g-Whitespace">    </span><span class="mi">101</span>         <span class="sd">&quot;&quot;&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">102</span><span class="sd">         check_is_fitted(self)</span>
-<span class="ne">--&gt; </span><span class="mi">103</span><span class="sd">         X = self._check_X(X)</span>
-<span class="g g-Whitespace">    </span><span class="mi">104</span><span class="sd">         jll = self._joint_log_likelihood(X)</span>
-<span class="g g-Whitespace">    </span><span class="mi">105</span><span class="sd">         # normalize by P(x) = P(f_1, ..., f_n)</span>
-
-<span class="nn">/usr/local/lib/python3.7/dist-packages/sklearn/naive_bayes.py</span> in <span class="ni">_check_X</span><span class="nt">(self, X)</span>
-<span class="g g-Whitespace">    </span><span class="mi">249</span><span class="sd">     def _check_X(self, X):</span>
-<span class="g g-Whitespace">    </span><span class="mi">250</span><span class="sd">         &quot;&quot;&quot;</span><span class="n">Validate</span> <span class="n">X</span><span class="p">,</span> <span class="n">used</span> <span class="n">only</span> <span class="ow">in</span> <span class="n">predict</span><span class="o">*</span> <span class="n">methods</span><span class="o">.</span><span class="s2">&quot;&quot;&quot;</span>
-<span class="ne">--&gt; </span><span class="mi">251</span><span class="s2">         return self._validate_data(X, reset=False)</span>
-<span class="g g-Whitespace">    </span><span class="mi">252</span><span class="s2"> </span>
-<span class="g g-Whitespace">    </span><span class="mi">253</span><span class="s2">     @staticmethod</span>
-
-<span class="nn">/usr/local/lib/python3.7/dist-packages/sklearn/base.py</span> in <span class="ni">_validate_data</span><span class="nt">(self, X, y, reset, validate_separately, **check_params)</span>
-<span class="g g-Whitespace">    </span><span class="mi">564</span><span class="s2">             raise ValueError(&quot;Validation should be done on X, y or both.&quot;)</span>
-<span class="g g-Whitespace">    </span><span class="mi">565</span><span class="s2">         elif not no_val_X and no_val_y:</span>
-<span class="ne">--&gt; </span><span class="mi">566</span><span class="s2">             X = check_array(X, **check_params)</span>
-<span class="g g-Whitespace">    </span><span class="mi">567</span><span class="s2">             out = X</span>
-<span class="g g-Whitespace">    </span><span class="mi">568</span><span class="s2">         elif no_val_X and not no_val_y:</span>
-
-<span class="nn">/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py</span> in <span class="ni">check_array</span><span class="nt">(array, accept_sparse, accept_large_sparse, dtype, order, copy, force_all_finite, ensure_2d, allow_nd, ensure_min_samples, ensure_min_features, estimator)</span>
-<span class="g g-Whitespace">    </span><span class="mi">606</span><span class="s2">     dtype_numeric = isinstance(dtype, str) and dtype == &quot;numeric&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">607</span><span class="s2"> </span>
-<span class="ne">--&gt; </span><span class="mi">608</span><span class="s2">     dtype_orig = getattr(array, &quot;dtype&quot;, None)</span>
-<span class="g g-Whitespace">    </span><span class="mi">609</span><span class="s2">     if not hasattr(dtype_orig, &quot;kind&quot;):</span>
-<span class="g g-Whitespace">    </span><span class="mi">610</span><span class="s2">         # not a data type (e.g. a column named dtype in a pandas DataFrame)</span>
-
-<span class="ne">KeyboardInterrupt</span>: 
+acuracy n = 99 = 0.645021645021645
+acuracy n = 100 = 0.645021645021645
+acuracy n = 101 = 0.645021645021645
+acuracy n = 102 = 0.645021645021645
+acuracy n = 103 = 0.645021645021645
+acuracy n = 104 = 0.645021645021645
+acuracy n = 105 = 0.645021645021645
+acuracy n = 106 = 0.645021645021645
+acuracy n = 107 = 0.645021645021645
+acuracy n = 108 = 0.645021645021645
+acuracy n = 109 = 0.645021645021645
+acuracy n = 110 = 0.645021645021645
+acuracy n = 111 = 0.6406926406926406
+acuracy n = 112 = 0.645021645021645
+acuracy n = 113 = 0.645021645021645
+acuracy n = 114 = 0.645021645021645
+acuracy n = 115 = 0.645021645021645
+acuracy n = 116 = 0.645021645021645
+acuracy n = 117 = 0.645021645021645
+acuracy n = 118 = 0.645021645021645
+acuracy n = 119 = 0.645021645021645
+acuracy n = 120 = 0.645021645021645
+acuracy n = 121 = 0.645021645021645
+acuracy n = 122 = 0.645021645021645
+acuracy n = 123 = 0.645021645021645
+acuracy n = 124 = 0.645021645021645
+acuracy n = 125 = 0.6406926406926406
+acuracy n = 126 = 0.645021645021645
+acuracy n = 127 = 0.645021645021645
+acuracy n = 128 = 0.645021645021645
+acuracy n = 129 = 0.645021645021645
+acuracy n = 130 = 0.645021645021645
+acuracy n = 131 = 0.645021645021645
+acuracy n = 132 = 0.645021645021645
+acuracy n = 133 = 0.645021645021645
+acuracy n = 134 = 0.645021645021645
+acuracy n = 135 = 0.645021645021645
+acuracy n = 136 = 0.645021645021645
+acuracy n = 137 = 0.645021645021645
+acuracy n = 138 = 0.645021645021645
+acuracy n = 139 = 0.645021645021645
+acuracy n = 140 = 0.645021645021645
+acuracy n = 141 = 0.645021645021645
+acuracy n = 142 = 0.6406926406926406
+acuracy n = 143 = 0.6406926406926406
+acuracy n = 144 = 0.6406926406926406
+acuracy n = 145 = 0.6406926406926406
+acuracy n = 146 = 0.6406926406926406
+acuracy n = 147 = 0.6406926406926406
+acuracy n = 148 = 0.6406926406926406
+acuracy n = 149 = 0.6406926406926406
+acuracy n = 150 = 0.6406926406926406
+acuracy n = 151 = 0.645021645021645
+acuracy n = 152 = 0.645021645021645
+acuracy n = 153 = 0.645021645021645
+acuracy n = 154 = 0.645021645021645
+acuracy n = 155 = 0.645021645021645
+acuracy n = 156 = 0.645021645021645
+acuracy n = 157 = 0.645021645021645
+acuracy n = 158 = 0.645021645021645
+acuracy n = 159 = 0.645021645021645
+acuracy n = 160 = 0.645021645021645
+acuracy n = 161 = 0.645021645021645
+acuracy n = 162 = 0.645021645021645
+acuracy n = 163 = 0.645021645021645
+acuracy n = 164 = 0.645021645021645
+acuracy n = 165 = 0.645021645021645
+acuracy n = 166 = 0.645021645021645
+acuracy n = 167 = 0.645021645021645
+acuracy n = 168 = 0.645021645021645
+acuracy n = 169 = 0.645021645021645
+acuracy n = 170 = 0.645021645021645
+acuracy n = 171 = 0.645021645021645
+acuracy n = 172 = 0.645021645021645
+acuracy n = 173 = 0.645021645021645
+acuracy n = 174 = 0.645021645021645
+acuracy n = 175 = 0.645021645021645
+acuracy n = 176 = 0.645021645021645
+acuracy n = 177 = 0.645021645021645
+acuracy n = 178 = 0.645021645021645
+acuracy n = 179 = 0.645021645021645
+acuracy n = 180 = 0.645021645021645
+acuracy n = 181 = 0.645021645021645
+acuracy n = 182 = 0.645021645021645
+acuracy n = 183 = 0.645021645021645
+acuracy n = 184 = 0.645021645021645
+acuracy n = 185 = 0.645021645021645
+acuracy n = 186 = 0.645021645021645
+acuracy n = 187 = 0.645021645021645
+acuracy n = 188 = 0.645021645021645
+acuracy n = 189 = 0.645021645021645
+acuracy n = 190 = 0.645021645021645
+acuracy n = 191 = 0.645021645021645
+acuracy n = 192 = 0.645021645021645
+acuracy n = 193 = 0.645021645021645
+acuracy n = 194 = 0.645021645021645
+acuracy n = 195 = 0.645021645021645
+acuracy n = 196 = 0.645021645021645
+acuracy n = 197 = 0.645021645021645
+acuracy n = 198 = 0.645021645021645
+acuracy n = 199 = 0.645021645021645
+acuracy n = 200 = 0.645021645021645
+acuracy n = 201 = 0.645021645021645
+acuracy n = 202 = 0.645021645021645
+acuracy n = 203 = 0.645021645021645
+acuracy n = 204 = 0.645021645021645
+acuracy n = 205 = 0.645021645021645
+acuracy n = 206 = 0.645021645021645
+acuracy n = 207 = 0.645021645021645
+acuracy n = 208 = 0.645021645021645
+acuracy n = 209 = 0.645021645021645
+acuracy n = 210 = 0.6493506493506493
+acuracy n = 211 = 0.645021645021645
+acuracy n = 212 = 0.6493506493506493
+acuracy n = 213 = 0.6493506493506493
+acuracy n = 214 = 0.6493506493506493
+acuracy n = 215 = 0.6493506493506493
+acuracy n = 216 = 0.6493506493506493
+acuracy n = 217 = 0.645021645021645
+acuracy n = 218 = 0.645021645021645
+acuracy n = 219 = 0.645021645021645
+acuracy n = 220 = 0.645021645021645
+acuracy n = 221 = 0.645021645021645
+acuracy n = 222 = 0.645021645021645
+acuracy n = 223 = 0.645021645021645
+acuracy n = 224 = 0.645021645021645
+acuracy n = 225 = 0.645021645021645
+acuracy n = 226 = 0.645021645021645
+acuracy n = 227 = 0.645021645021645
+acuracy n = 228 = 0.645021645021645
+acuracy n = 229 = 0.645021645021645
+acuracy n = 230 = 0.645021645021645
+acuracy n = 231 = 0.645021645021645
+acuracy n = 232 = 0.645021645021645
+acuracy n = 233 = 0.6493506493506493
+acuracy n = 234 = 0.645021645021645
+acuracy n = 235 = 0.645021645021645
+acuracy n = 236 = 0.645021645021645
+acuracy n = 237 = 0.645021645021645
+acuracy n = 238 = 0.645021645021645
+acuracy n = 239 = 0.645021645021645
+acuracy n = 240 = 0.645021645021645
+acuracy n = 241 = 0.645021645021645
+acuracy n = 242 = 0.645021645021645
+acuracy n = 243 = 0.645021645021645
+acuracy n = 244 = 0.645021645021645
+acuracy n = 245 = 0.645021645021645
+acuracy n = 246 = 0.645021645021645
+acuracy n = 247 = 0.645021645021645
+acuracy n = 248 = 0.645021645021645
+acuracy n = 249 = 0.645021645021645
+acuracy n = 250 = 0.645021645021645
+acuracy n = 251 = 0.645021645021645
+acuracy n = 252 = 0.645021645021645
+acuracy n = 253 = 0.645021645021645
+acuracy n = 254 = 0.645021645021645
+acuracy n = 255 = 0.645021645021645
+acuracy n = 256 = 0.645021645021645
+acuracy n = 257 = 0.645021645021645
+acuracy n = 258 = 0.6406926406926406
+acuracy n = 259 = 0.645021645021645
+acuracy n = 260 = 0.6406926406926406
+acuracy n = 261 = 0.6406926406926406
+acuracy n = 262 = 0.6406926406926406
+acuracy n = 263 = 0.6406926406926406
+acuracy n = 264 = 0.6406926406926406
+acuracy n = 265 = 0.6406926406926406
+acuracy n = 266 = 0.6406926406926406
+acuracy n = 267 = 0.6406926406926406
+acuracy n = 268 = 0.6406926406926406
+acuracy n = 269 = 0.6406926406926406
+acuracy n = 270 = 0.6406926406926406
+acuracy n = 271 = 0.6406926406926406
+acuracy n = 272 = 0.6406926406926406
+acuracy n = 273 = 0.6406926406926406
+acuracy n = 274 = 0.6406926406926406
+acuracy n = 275 = 0.6406926406926406
+acuracy n = 276 = 0.6406926406926406
+acuracy n = 277 = 0.6406926406926406
+acuracy n = 278 = 0.6406926406926406
+acuracy n = 279 = 0.6406926406926406
+acuracy n = 280 = 0.6406926406926406
+acuracy n = 281 = 0.6406926406926406
+acuracy n = 282 = 0.6406926406926406
+acuracy n = 283 = 0.6406926406926406
+acuracy n = 284 = 0.6406926406926406
+acuracy n = 285 = 0.6406926406926406
+acuracy n = 286 = 0.6406926406926406
+acuracy n = 287 = 0.6406926406926406
+acuracy n = 288 = 0.6406926406926406
+acuracy n = 289 = 0.6406926406926406
+acuracy n = 290 = 0.6406926406926406
+acuracy n = 291 = 0.6406926406926406
+acuracy n = 292 = 0.6406926406926406
+acuracy n = 293 = 0.6406926406926406
+acuracy n = 294 = 0.6406926406926406
+acuracy n = 295 = 0.6406926406926406
+acuracy n = 296 = 0.6406926406926406
+acuracy n = 297 = 0.6406926406926406
+acuracy n = 298 = 0.6406926406926406
+acuracy n = 299 = 0.6406926406926406
+acuracy n = 300 = 0.645021645021645
+acuracy n = 301 = 0.6406926406926406
+acuracy n = 302 = 0.6406926406926406
+acuracy n = 303 = 0.6406926406926406
+acuracy n = 304 = 0.6406926406926406
+acuracy n = 305 = 0.6406926406926406
+acuracy n = 306 = 0.6406926406926406
+acuracy n = 307 = 0.6406926406926406
+acuracy n = 308 = 0.6406926406926406
+acuracy n = 309 = 0.6406926406926406
+acuracy n = 310 = 0.6406926406926406
+acuracy n = 311 = 0.6406926406926406
+acuracy n = 312 = 0.6406926406926406
+acuracy n = 313 = 0.6406926406926406
+acuracy n = 314 = 0.6406926406926406
+acuracy n = 315 = 0.6406926406926406
+acuracy n = 316 = 0.6406926406926406
+acuracy n = 317 = 0.6406926406926406
+acuracy n = 318 = 0.6406926406926406
+acuracy n = 319 = 0.6406926406926406
+acuracy n = 320 = 0.6406926406926406
+acuracy n = 321 = 0.6406926406926406
+acuracy n = 322 = 0.6406926406926406
+acuracy n = 323 = 0.6406926406926406
+acuracy n = 324 = 0.6406926406926406
+acuracy n = 325 = 0.6406926406926406
+acuracy n = 326 = 0.6406926406926406
+acuracy n = 327 = 0.6406926406926406
+acuracy n = 328 = 0.6406926406926406
+acuracy n = 329 = 0.6406926406926406
+acuracy n = 330 = 0.6406926406926406
+acuracy n = 331 = 0.6406926406926406
+acuracy n = 332 = 0.6406926406926406
+acuracy n = 333 = 0.6406926406926406
+acuracy n = 334 = 0.6406926406926406
+acuracy n = 335 = 0.6406926406926406
+acuracy n = 336 = 0.6406926406926406
+acuracy n = 337 = 0.6406926406926406
+acuracy n = 338 = 0.6406926406926406
+acuracy n = 339 = 0.6406926406926406
+acuracy n = 340 = 0.6406926406926406
+acuracy n = 341 = 0.6406926406926406
+acuracy n = 342 = 0.6406926406926406
+acuracy n = 343 = 0.6406926406926406
+acuracy n = 344 = 0.6406926406926406
+acuracy n = 345 = 0.6406926406926406
+acuracy n = 346 = 0.6406926406926406
+acuracy n = 347 = 0.6406926406926406
+acuracy n = 348 = 0.6406926406926406
+acuracy n = 349 = 0.6406926406926406
+acuracy n = 350 = 0.6406926406926406
+acuracy n = 351 = 0.6406926406926406
+acuracy n = 352 = 0.6406926406926406
+acuracy n = 353 = 0.6406926406926406
+acuracy n = 354 = 0.6406926406926406
+acuracy n = 355 = 0.6406926406926406
+acuracy n = 356 = 0.6406926406926406
+acuracy n = 357 = 0.6406926406926406
+acuracy n = 358 = 0.6406926406926406
+acuracy n = 359 = 0.6406926406926406
+acuracy n = 360 = 0.6406926406926406
+acuracy n = 361 = 0.6406926406926406
+acuracy n = 362 = 0.6406926406926406
+acuracy n = 363 = 0.6406926406926406
+acuracy n = 364 = 0.6406926406926406
+acuracy n = 365 = 0.6406926406926406
+acuracy n = 366 = 0.6406926406926406
+acuracy n = 367 = 0.6406926406926406
+acuracy n = 368 = 0.6406926406926406
+acuracy n = 369 = 0.6406926406926406
+acuracy n = 370 = 0.6406926406926406
+acuracy n = 371 = 0.6406926406926406
+acuracy n = 372 = 0.6406926406926406
+acuracy n = 373 = 0.6406926406926406
+acuracy n = 374 = 0.6406926406926406
+acuracy n = 375 = 0.6406926406926406
+acuracy n = 376 = 0.6406926406926406
+acuracy n = 377 = 0.6406926406926406
+acuracy n = 378 = 0.6406926406926406
+acuracy n = 379 = 0.6406926406926406
+acuracy n = 380 = 0.6406926406926406
+acuracy n = 381 = 0.6406926406926406
+acuracy n = 382 = 0.6406926406926406
+acuracy n = 383 = 0.6406926406926406
+acuracy n = 384 = 0.6406926406926406
+acuracy n = 385 = 0.6406926406926406
+acuracy n = 386 = 0.6406926406926406
+acuracy n = 387 = 0.6406926406926406
+acuracy n = 388 = 0.6406926406926406
+acuracy n = 389 = 0.6406926406926406
+acuracy n = 390 = 0.6406926406926406
+acuracy n = 391 = 0.6406926406926406
+acuracy n = 392 = 0.6406926406926406
+acuracy n = 393 = 0.6406926406926406
+acuracy n = 394 = 0.6406926406926406
+acuracy n = 395 = 0.6406926406926406
+acuracy n = 396 = 0.6406926406926406
+acuracy n = 397 = 0.6406926406926406
+acuracy n = 398 = 0.6406926406926406
+acuracy n = 399 = 0.6406926406926406
+acuracy n = 400 = 0.6406926406926406
+acuracy n = 401 = 0.6406926406926406
+acuracy n = 402 = 0.6406926406926406
+acuracy n = 403 = 0.6406926406926406
+acuracy n = 404 = 0.6406926406926406
+acuracy n = 405 = 0.6406926406926406
+acuracy n = 406 = 0.6406926406926406
+acuracy n = 407 = 0.6406926406926406
+acuracy n = 408 = 0.6406926406926406
+acuracy n = 409 = 0.6406926406926406
+acuracy n = 410 = 0.6406926406926406
+acuracy n = 411 = 0.6406926406926406
+acuracy n = 412 = 0.6406926406926406
+acuracy n = 413 = 0.6406926406926406
+acuracy n = 414 = 0.6406926406926406
+acuracy n = 415 = 0.6406926406926406
+acuracy n = 416 = 0.6406926406926406
+acuracy n = 417 = 0.6406926406926406
+acuracy n = 418 = 0.6406926406926406
+acuracy n = 419 = 0.6406926406926406
+acuracy n = 420 = 0.6406926406926406
+acuracy n = 421 = 0.6406926406926406
+acuracy n = 422 = 0.6406926406926406
+acuracy n = 423 = 0.6406926406926406
+acuracy n = 424 = 0.6406926406926406
+acuracy n = 425 = 0.6406926406926406
+acuracy n = 426 = 0.6406926406926406
+acuracy n = 427 = 0.6406926406926406
+acuracy n = 428 = 0.6406926406926406
+acuracy n = 429 = 0.645021645021645
+acuracy n = 430 = 0.645021645021645
+acuracy n = 431 = 0.645021645021645
+acuracy n = 432 = 0.645021645021645
+acuracy n = 433 = 0.6406926406926406
+acuracy n = 434 = 0.6406926406926406
+acuracy n = 435 = 0.6406926406926406
+acuracy n = 436 = 0.6406926406926406
+acuracy n = 437 = 0.6406926406926406
+acuracy n = 438 = 0.6406926406926406
+acuracy n = 439 = 0.645021645021645
+acuracy n = 440 = 0.645021645021645
+acuracy n = 441 = 0.6406926406926406
+acuracy n = 442 = 0.6406926406926406
+acuracy n = 443 = 0.6406926406926406
+acuracy n = 444 = 0.6406926406926406
+acuracy n = 445 = 0.6406926406926406
+acuracy n = 446 = 0.6406926406926406
+acuracy n = 447 = 0.6406926406926406
+acuracy n = 448 = 0.6406926406926406
+acuracy n = 449 = 0.6406926406926406
+acuracy n = 450 = 0.6406926406926406
+acuracy n = 451 = 0.645021645021645
+acuracy n = 452 = 0.645021645021645
+acuracy n = 453 = 0.645021645021645
+acuracy n = 454 = 0.645021645021645
+acuracy n = 455 = 0.645021645021645
+acuracy n = 456 = 0.645021645021645
+acuracy n = 457 = 0.645021645021645
+acuracy n = 458 = 0.645021645021645
+acuracy n = 459 = 0.645021645021645
+acuracy n = 460 = 0.645021645021645
+acuracy n = 461 = 0.645021645021645
+acuracy n = 462 = 0.645021645021645
+acuracy n = 463 = 0.645021645021645
+acuracy n = 464 = 0.645021645021645
+acuracy n = 465 = 0.645021645021645
+acuracy n = 466 = 0.645021645021645
+acuracy n = 467 = 0.6406926406926406
+acuracy n = 468 = 0.6406926406926406
+acuracy n = 469 = 0.6406926406926406
+acuracy n = 470 = 0.6406926406926406
+acuracy n = 471 = 0.6406926406926406
+acuracy n = 472 = 0.6406926406926406
+acuracy n = 473 = 0.6406926406926406
+acuracy n = 474 = 0.6406926406926406
+acuracy n = 475 = 0.6406926406926406
+acuracy n = 476 = 0.6406926406926406
+acuracy n = 477 = 0.6406926406926406
+acuracy n = 478 = 0.6406926406926406
+acuracy n = 479 = 0.6406926406926406
+acuracy n = 480 = 0.6406926406926406
+acuracy n = 481 = 0.6406926406926406
+acuracy n = 482 = 0.6406926406926406
+acuracy n = 483 = 0.6406926406926406
+acuracy n = 484 = 0.6406926406926406
+acuracy n = 485 = 0.6406926406926406
+acuracy n = 486 = 0.6406926406926406
+acuracy n = 487 = 0.6406926406926406
+acuracy n = 488 = 0.6406926406926406
+acuracy n = 489 = 0.6406926406926406
+acuracy n = 490 = 0.6406926406926406
+acuracy n = 491 = 0.6406926406926406
+acuracy n = 492 = 0.6406926406926406
+acuracy n = 493 = 0.6406926406926406
+acuracy n = 494 = 0.6406926406926406
+acuracy n = 495 = 0.6406926406926406
+acuracy n = 496 = 0.6406926406926406
+acuracy n = 497 = 0.6406926406926406
+acuracy n = 498 = 0.6406926406926406
+acuracy n = 499 = 0.6406926406926406
 </pre></div>
 </div>
 </div>
@@ -3172,7 +3139,7 @@ acuracy n = 98 = 0.645021645021645
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/Rethinopathy_42_0.png" src="_images/Rethinopathy_42_0.png" />
+<img alt="_images/Rethinopathy_43_0.png" src="_images/Rethinopathy_43_0.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -3739,7 +3706,7 @@ acuracy n = 499 = 0.645021645021645
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/Rethinopathy_49_0.png" src="_images/Rethinopathy_49_0.png" />
+<img alt="_images/Rethinopathy_50_0.png" src="_images/Rethinopathy_50_0.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -4615,7 +4582,7 @@ acuracy n = 499 = 0.6406926406926406
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/Rethinopathy_77_0.png" src="_images/Rethinopathy_77_0.png" />
+<img alt="_images/Rethinopathy_78_0.png" src="_images/Rethinopathy_78_0.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -5180,7 +5147,7 @@ acuracy n = 499 = 0.645021645021645
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/Rethinopathy_84_0.png" src="_images/Rethinopathy_84_0.png" />
+<img alt="_images/Rethinopathy_85_0.png" src="_images/Rethinopathy_85_0.png" />
 </div>
 </div>
 <div class="cell docutils container">
