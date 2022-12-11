@@ -546,7 +546,7 @@ menggunakan internal decision making logic. Hal ini tidak terdapat dapat pada je
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-0fdcbab8-1729-46c8-9e95-b4a09276d63a">
+  <div id="df-07dfc0ae-e8d9-4bef-92f0-813568289b1f">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -666,7 +666,7 @@ menggunakan internal decision making logic. Hal ini tidak terdapat dapat pada je
 </table>
 <p>150 rows × 5 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-0fdcbab8-1729-46c8-9e95-b4a09276d63a')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-07dfc0ae-e8d9-4bef-92f0-813568289b1f')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -717,12 +717,12 @@ menggunakan internal decision making logic. Hal ini tidak terdapat dapat pada je
 
       <script>
         const buttonEl =
-          document.querySelector('#df-0fdcbab8-1729-46c8-9e95-b4a09276d63a button.colab-df-convert');
+          document.querySelector('#df-07dfc0ae-e8d9-4bef-92f0-813568289b1f button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-0fdcbab8-1729-46c8-9e95-b4a09276d63a');
+          const element = document.querySelector('#df-07dfc0ae-e8d9-4bef-92f0-813568289b1f');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -817,7 +817,7 @@ menggunakan internal decision making logic. Hal ini tidak terdapat dapat pada je
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-12bad635-ba22-4e5f-b737-133b9a6954c1">
+  <div id="df-d3ae68fa-74a8-4485-b409-fb6fed26db12">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -995,7 +995,7 @@ menggunakan internal decision making logic. Hal ini tidak terdapat dapat pada je
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-12bad635-ba22-4e5f-b737-133b9a6954c1')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-d3ae68fa-74a8-4485-b409-fb6fed26db12')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -1046,12 +1046,12 @@ menggunakan internal decision making logic. Hal ini tidak terdapat dapat pada je
 
       <script>
         const buttonEl =
-          document.querySelector('#df-12bad635-ba22-4e5f-b737-133b9a6954c1 button.colab-df-convert');
+          document.querySelector('#df-d3ae68fa-74a8-4485-b409-fb6fed26db12 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-12bad635-ba22-4e5f-b737-133b9a6954c1');
+          const element = document.querySelector('#df-d3ae68fa-74a8-4485-b409-fb6fed26db12');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -1074,48 +1074,7 @@ menggunakan internal decision making logic. Hal ini tidak terdapat dapat pada je
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">correct</span> <span class="o">=</span> <span class="n">data_predic</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">data_predic</span><span class="p">[</span><span class="s2">&quot;variety&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="n">data_predic</span><span class="p">[</span><span class="s2">&quot;Predict&quot;</span><span class="p">]]</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">KeyError</span>Traceback (most recent call last)
-<span class="nn">/usr/local/lib/python3.7/dist-packages/pandas/core/indexes/base.py</span> in <span class="ni">get_loc</span><span class="nt">(self, key, method, tolerance)</span>
-<span class="g g-Whitespace">   </span><span class="mi">3360</span>             <span class="k">try</span><span class="p">:</span>
-<span class="ne">-&gt; </span><span class="mi">3361</span>                 <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_engine</span><span class="o">.</span><span class="n">get_loc</span><span class="p">(</span><span class="n">casted_key</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">3362</span>             <span class="k">except</span> <span class="ne">KeyError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
-
-<span class="nn">/usr/local/lib/python3.7/dist-packages/pandas/_libs/index.pyx</span> in <span class="ni">pandas._libs.index.IndexEngine.get_loc</span><span class="nt">()</span>
-
-<span class="nn">/usr/local/lib/python3.7/dist-packages/pandas/_libs/index.pyx</span> in <span class="ni">pandas._libs.index.IndexEngine.get_loc</span><span class="nt">()</span>
-
-<span class="nn">pandas/_libs/hashtable_class_helper.pxi</span> in <span class="ni">pandas._libs.hashtable.PyObjectHashTable.get_item</span><span class="nt">()</span>
-
-<span class="nn">pandas/_libs/hashtable_class_helper.pxi</span> in <span class="ni">pandas._libs.hashtable.PyObjectHashTable.get_item</span><span class="nt">()</span>
-
-<span class="ne">KeyError</span>: &#39;variety&#39;
-
-<span class="n">The</span> <span class="n">above</span> <span class="n">exception</span> <span class="n">was</span> <span class="n">the</span> <span class="n">direct</span> <span class="n">cause</span> <span class="n">of</span> <span class="n">the</span> <span class="n">following</span> <span class="n">exception</span><span class="p">:</span>
-
-<span class="ne">KeyError</span>Traceback (most recent call last)
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">9</span><span class="o">-</span><span class="mf">752e438</span><span class="n">ba6cb</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">correct</span> <span class="o">=</span> <span class="n">data_predic</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">data_predic</span><span class="p">[</span><span class="s2">&quot;variety&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="n">data_predic</span><span class="p">[</span><span class="s2">&quot;Predict&quot;</span><span class="p">]]</span>
-
-<span class="nn">/usr/local/lib/python3.7/dist-packages/pandas/core/frame.py</span> in <span class="ni">__getitem__</span><span class="nt">(self, key)</span>
-<span class="g g-Whitespace">   </span><span class="mi">3456</span>             <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">nlevels</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">3457</span>                 <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_getitem_multilevel</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
-<span class="ne">-&gt; </span><span class="mi">3458</span>             <span class="n">indexer</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">get_loc</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">3459</span>             <span class="k">if</span> <span class="n">is_integer</span><span class="p">(</span><span class="n">indexer</span><span class="p">):</span>
-<span class="g g-Whitespace">   </span><span class="mi">3460</span>                 <span class="n">indexer</span> <span class="o">=</span> <span class="p">[</span><span class="n">indexer</span><span class="p">]</span>
-
-<span class="nn">/usr/local/lib/python3.7/dist-packages/pandas/core/indexes/base.py</span> in <span class="ni">get_loc</span><span class="nt">(self, key, method, tolerance)</span>
-<span class="g g-Whitespace">   </span><span class="mi">3361</span>                 <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_engine</span><span class="o">.</span><span class="n">get_loc</span><span class="p">(</span><span class="n">casted_key</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">3362</span>             <span class="k">except</span> <span class="ne">KeyError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
-<span class="ne">-&gt; </span><span class="mi">3363</span>                 <span class="k">raise</span> <span class="ne">KeyError</span><span class="p">(</span><span class="n">key</span><span class="p">)</span> <span class="kn">from</span> <span class="nn">err</span>
-<span class="g g-Whitespace">   </span><span class="mi">3364</span> 
-<span class="g g-Whitespace">   </span><span class="mi">3365</span>         <span class="k">if</span> <span class="n">is_scalar</span><span class="p">(</span><span class="n">key</span><span class="p">)</span> <span class="ow">and</span> <span class="n">isna</span><span class="p">(</span><span class="n">key</span><span class="p">)</span> <span class="ow">and</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">hasnans</span><span class="p">:</span>
-
-<span class="ne">KeyError</span>: &#39;variety&#39;
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">correct</span> <span class="o">=</span> <span class="n">data_predic</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">data_predic</span><span class="p">[</span><span class="s2">&quot;species&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="n">data_predic</span><span class="p">[</span><span class="s2">&quot;Predict&quot;</span><span class="p">]]</span>
 </pre></div>
 </div>
 </div>
